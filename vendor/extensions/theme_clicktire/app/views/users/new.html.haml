@@ -1,0 +1,12 @@
+= error_messages_for :user
+- @body_id = 'signup'
+#new-customer
+  - hook :signup do
+    %h2= t("new_customer")
+    - semantic_form_for @user do |form|
+      - hook :signup_inside_form do
+        = render 'shared/user_form', :f => form
+        - form.buttons do
+          = form.commit_button t("create"), :button_html => {:class => 'button primary'}
+  = t("or")
+  = link_to t("login_as_existing"), login_path

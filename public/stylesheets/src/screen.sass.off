@@ -1,0 +1,52 @@
+@import "compass/reset"
+@import "partials/base"
+@import "blueprint"    
+@import "compass/layout/sticky-footer"
+@import "compass/utilities/text/replacement"
+@import "compass/utilities/lists"
+
+// couple of partials to try and keep things clean for development
+@import "partials/clicktire_forms"
+@import "partials/clicktire"
+@import "partials/gritter"
+
++sticky-footer(30px, "#root", "#root_footer", "#footer")
+
++blueprint-typography
+
+body
+  background-color: #fff
+.two-col
+  +container
+  #header
+    +column($blueprint_grid_columns)
+    h1
+      +replace-text("clicktire.png")
+      width: 150px
+      height: 116px
+  #sidebar
+    $sidebar_columns: floor($blueprint_grid_columns / 3)
+    +column($sidebar_columns)
+  #content 
+    $content_columns: ceil(2 * $blueprint_grid_columns / 3) 
+    +column($content_columns, true)
+
+.one-col
+  +container
+  #header
+    +column($blueprint_grid_columns)
+    h1
+      +replace-text("clicktire.png")
+      width: 150px
+      height: 116px
+  #content 
+    +column($blueprint_grid_columns, true)
+            
+#footer
+  +container
+  #language-bar
+    float: right
+    display: inline
+    ul
+      li
+        display: inline

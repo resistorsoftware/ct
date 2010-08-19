@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+
+
+
+
+
+
+
+
+<html>
+
+	<head>
+		<!--JW: temporary method of IE7 emulation-->
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=IE7"/>
+		
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+				<title>Login : The Tire Rack Wholesale</title>
+		<script type="text/javascript"><!--
+function checkFields(){
+ if(document.forms[0].customerID.value == "" ||
+ document.forms[0].passWord.value == ""){
+ alert("All fields must be filled in");
+ return false;
+ }
+ if(document.forms[0].customerID.value.indexOf(" ") > -1){
+	 var array = document.forms[0].customerID.value.split(" ");
+	 var newCustomerID = "";
+	 for(i = 0; i < array.length; ++i){
+		 newCustomerID += array[i];
+	 }
+	 document.forms[0].customerID.value = newCustomerID;
+  }
+ return true;
+}
+// -->
+		</script>
+		<link href="/tirerack.css" type="text/css" rel="stylesheet" media="all">
+		<link href="/css/print.css" type="text/css" rel="stylesheet" media="print">
+		<!--[if lt IE 7]><link href="/css/ie/ie6.css" rel="stylesheet" type="text/css" media="all"><![endif]-->
+		<!--[if IE 7]><link href="/css/ie/ie7.css" rel="stylesheet" type="text/css" media="all"><![endif]-->
+		<!--[if gt IE 7]><link href="/css/ie/ie8.css" rel="stylesheet" type="text/css" media="all"><![endif]-->
+		
+		<style type="text/css" media="screen"><!--.mainsmall a:visited { color: #003366 }--></style>
+		<csactions>
+			<csaction name="BDE89D7122" class="Open Window" type="onevent" val0="findacctnumb.jsp" val1="" val2="540" val3="650" val4="true" val5="true" val6="false" val7="false" val8="false" val9="false" val10="false" urlparams="1"></csaction>
+		</csactions>
+		<csscriptdict import>
+			<script type="text/javascript" src="../GeneratedItems/TRScripts.js"></script>
+		</csscriptdict>
+		<csactiondict>
+			<script type="text/javascript"><!--
+CSAct[/*CMP*/ 'BDE89D7122'] = new Array(CSOpenWindow,/*URL*/ 'findacctnumb.jsp','',540,650,true,true,false,false,false,false,false);
+
+// --></script>
+		</csactiondict>
+                <script type="text/javascript">
+                function amIaPopUp() {
+                        /* if this window was opened from another page on our site,
+                           close this window and send the window that opened it to 
+                           Login.jsp ALS 5/06 */
+                        if(window.opener &&
+			   window.opener.location) {
+		 	     var loc;
+			     try {
+			     	loc = window.opener.location.toString();
+			     } catch(e) {
+			     }
+			     if(loc && 
+                        	loc.indexOf("www.tirerackwholesale.com") < 10) {
+                               	  window.opener.location="/whlogin/Login.jsp";
+                               	  self.close();
+			     }
+                        }
+                }
+                </script>
+	</head>
+
+	<body onLoad='self.focus();document.login.customerID.focus();amIaPopUp()'>
+		<!--[if lt IE 7]>
+		<script type="text/javascript" src="/scripts/WCH.js"></script>
+		<script type="text/javascript" src="/scripts/ADxMenu.js"></script>
+		<![endif]--><table border="0" cellpadding="0" cellspacing="0" id="Table_01">
+			<tr bgcolor="#003366">
+				<td colspan="3" height="56"><a title="To Front Page" href="/index.jsp"><img src="/images/wholesale/nav/logo.gif" width="259" height="56" alt="TireRackWholesale.com" border="0"></a></td>
+				<td colspan="2" align="right"><img src="/images/wholesale/tournav/phone.gif" height="56" alt="800-981-3943" border="0"></td>
+			</tr>
+		</table>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<div id="mainflyoutnav">
+	<ul class="adxm menu">
+		<li><a href="/tour/index.jsp"><img src="/images/wholesale/nav/adx/wholesaleadvantage.gif" alt="WHOLESALE ADVANTAGE" height="19" width="177"></a></li>
+		<li><a href="/whlogin/criteria.jsp"><img style="border-left: 1px solid #fff;" src="/images/wholesale/nav/adx/accountapplication.gif" alt="ACCOUNT APPLICATION" height="19" width="169"></a></li>
+		<li><a href="/tour/contact.jsp"><img style="border-left: 1px solid #fff; border-right: 1px solid #fff;" src="/images/wholesale/nav/adx/contactus.gif" alt="CONTACT US" height="19" width="109"></a></li>
+		<li id="shoppingtoolstab" class="submenu"><a href="/whlogin/Login.jsp"><img style="border-left: 1px solid #fff;" src="/images/wholesale/nav/adx/log_in.gif" alt="LOG IN" height="19" width="87"></a></li>
+	</ul>
+</div>
+
+		<!--Tour bar last updated 07/21/07-->
+		<div id="subnavbar">
+			<ul id="subnavlist">
+				<li id="subnavcat"><a href="/tour/index.jsp">Wholesale Advantage</a>
+				<li id="subnavfirst"><a href="/tour/qualityselection.jsp">Quality &amp; Selection</a>
+				<li><a href="/tour/inventorypower.jsp">Inventory Power</a>
+				<li><a href="/tour/tech_exp.jsp">Technical Expertise</a>
+				<li><a href="/tour/shipping.jsp">Shipping Methods</a>
+				<li><a href="/tour/marketing.jsp">Marketing Tools</a>
+			</ul>
+		</div>
+		<!--end Tour bar-->
+
+		
+		<table width="760" border="0" cellspacing="0" cellpadding="0">
+				<tr valign="top">
+					<td colspan="3" width="760"><img src="/images/wholesale/login_collage2.jpg" alt="" height="64" width="760" border="0">
+  				
+					<p><br /><strong>Thank you for your interest in Tire Rack Wholesale. Please log in and we will then re-direct you to the page you requested.</strong></p>
+				
+
+					<table width="760" border="0" cellspacing="0" cellpadding="0" bgcolor="#cccccc">
+						<tr valign="top">
+							<td colspan="3" width="505"><img src="/images/wholesale/current_accounts.gif" alt="Current Accounts" height="20" width="505" border="0"></td>
+							<td bgcolor="white" width="1"></td>
+							<td width="254"><img src="/images/wholesale/prospective_accounts.gif" alt="Prospective Accounts" height="20" width="254" border="0"></td>
+						</tr>
+						<tr valign="top">
+							<td width="252">
+								<table border="0" cellspacing="2" cellpadding="2" bgcolor="#cccccc">
+									<tr valign="top">
+										<td><span class="boldblue">Log-In</span><br>
+											
+											<table width="244" border="0" cellspacing="2" cellpadding="0">
+												<form action="/whlogin/Portal.jsp" method="post" onsubmit="return checkFields()" name="login">
+													<tr>
+														<td align="right" width="85"><input type="hidden" name="page" value='/404error.jsp'> <b>User Name:</b></td>
+														<td width="84"><input type="text" name="customerID" size="12" maxlength="30"  tabindex="1"></td>
+														<td width="67"><span class="mainsmall"><a href="/whlogin/GetLoginInfo.jsp">Forgot User Name</a></span></td>
+													</tr>
+													<tr>
+														<td align="right" width="85"><b>Password:</b></td>
+														<td width="84"><input type="password" name="passWord" size="12" maxlength="30" tabindex="2"></td>
+														<td width="67"><span class="mainsmall"><a href="/whlogin/GetLoginInfo.jsp?byID=true">Forgot Password</a></span></td>
+													</tr>
+													<tr>
+														<td width="85"></td>
+														<td width="84"><input type="image" src="/images/wholesale/buttons/absolutewidth/submit.gif" alt="Submit" border="0" height="16" width="46"></td>
+														<td width="67"></td>
+													</tr>
+												</form>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td bgcolor="white" width="1"><img src="/images/trans.gif" class="spacer" alt="" height="1" width="1" border="0"></td>
+							<td width="252">
+								<table border="0" cellspacing="2" cellpadding="2" bgcolor="#cccccc">
+									<tr valign="top">
+										<td><span class="boldblue">Create a Log-In</span><br>
+											<p>To create a user name and password, you'll need your <a href="#" onclick="CSAction(new Array(/*CMP*/'BDE89D7122'));return CSClickReturn()" csclick="BDE89D7122">account number</a> and your ZIP Code.</p>
+											<a href="FirstLogin.jsp"><img src="/images/wholesale/buttons/absolutewidth/create_log_in.gif" alt="Create Log-In" border="0" height="16" width="81"></a></td>
+									</tr>
+								</table>
+							</td>
+							<td bgcolor="white" width="1"><img src="/images/trans.gif" class="spacer" alt="" height="1" width="1" border="0"></td>
+							<td width="254">
+								<table border="0" cellspacing="2" cellpadding="2" bgcolor="#cccccc">
+									<tr valign="top">
+										<td><span class="boldblue">Open a Wholesale Account</span><br>
+											<p>You can submit your account application online.</p>
+											<br>
+												<a href="criteria.jsp"><img src="/images/wholesale/buttons/absolutewidth/apply_now.gif" alt="Apply Now" border="0" height="16" width="65"></a>
+										</td>
+									</tr>
+								</table>
+							</td>
+							</form></tr>
+					</table>
+				</td>
+				</tr>
+			</table>
+
+		<br>
+		<br>
+		<table border="0" cellspacing="0" cellpadding="0" id="footer">
+			<tr valign="top" height="8">
+				<td align="center" height="8"><img src="/images/wholesale/3pt_rule.gif" alt="" height="3" width="100%" border="0"></td>
+			</tr>
+			<tr valign="top">
+				<td align="center"><span class="bluelinkssmaller"><a href="/tour/contact.jsp">Contact Info</a></span> | <span class="bluelinkssmaller"><a href="/tour/privacy.jsp">Privacy Pledge</a></span> | <span class="bluelinkssmaller"><a href="/order/terms_of_use.pdf" target="_blank">Terms of Use (PDF)</a></span><br>
+					<br><span class="mainsmaller"><span class="bluelinkssmaller"><a href="/tour/copy.jsp">&copy; 2010</a></span> The Tire Rack Wholesale<br>Confidential Dealer Pricing &amp; Specials</span>
+				</td>
+			</tr>
+		</table>
+
+		
+
+
+<!-- SiteCatalyst code version: H.11. Copyright 1997-2007 Omniture, Inc. More info available at http://www.omniture.com -->
+<script language="JavaScript" src="/GeneratedItems/s_code.js"></script>
+<script language="JavaScript"><!--
+s.pageName="Login Login Page"
+s.server=""
+s.channel="Login"
+s.pageType=""
+s.prop1=""
+s.prop2=""
+s.prop3=""
+s.prop4=""
+s.prop5=""
+/* E-commerce Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//-->
+</script>
+<script language="JavaScript">
+<!-- if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-') //-->
+</script>
+<noscript>
+<a href="https://www.omniture.com" title="Web Analytics"><img src="https://tirewholesale.112.2O7.net/b/ss/tirewholesale/1/H.11--NS/0?[AQB]&cdp=3&[AQE]" height="1" width="1" border="0" alt="" /></a>
+</noscript>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.11. -->
+</body>
+
+
+</html>

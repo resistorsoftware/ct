@@ -1,0 +1,42 @@
+<%
+  paginated_products = Spree::Config.searcher.products if params.key?(:keywords) 
+  paginated_products ||= products
+  
+%>
+<% if products.empty? %>
+  <%= t(:no_products_found) %>
+<% end %>
+ 
+<% if products.any? %>
+<div class="product-listing">
+  <% products.each do |product| %>                     
+  
+  <% if products.index(product) > 0 and products.index(product) % 3 == 0 %>
+  <%   klass = 'product last'%>
+  <% else%>
+  <%   klass = 'product'%>
+  <% end %>
+  
+    <% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
+      <div id="product_<%= product.id %>" class="<%= klass%>">
+        <%= link_to small_image(product), product %><br/>
+        <%= link_to product.name + "<span class='price selling'>&nbsp;#{product_price(product)}</span>", product, :class => 'info' %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<% end %>
+
+<div style="clear:both">&nbsp;</div> 
+<hr class="space" />
+ 
+<% if paginated_products.respond_to?(:total_pages)
+      params.delete(:search)
+      params.delete(:taxon)
+      
+%><%= will_paginate(paginated_products,
+                    :previous_label => "&#171; #{t('previous')}",
+                    :next_label => "#{t('next')} &#187;") %>
+<% end -%>
+ 
+<hr class="space" />

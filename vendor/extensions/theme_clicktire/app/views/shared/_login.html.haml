@@ -1,0 +1,26 @@
+- semantic_form_for  @user_session, :url => user_session_path do |form|
+  
+  #password-credentials
+    - form.inputs do
+      = form.input :login, :label => t("email"), :required => true
+      = form.input :password, :label => t("password"), :required => true
+
+  - if Spree::Config[:allow_openid]
+    #openid-credentials
+      - form.inputs do
+        = form.input :openid_identifier, :label => t('OpenID', :default => 'OpenID'), :input_html => {:class => 'openid_url', :size => 28}, :required => true
+  
+  %p
+    - form.inputs do
+      = form.input :remember_me, :as => :boolean, :label => t('remember_me')
+  %p
+    - form.buttons do
+      = form.commit_button :button_html => {:class => "button primary"}, :value => t("log_in")
+
+- if Spree::Config[:allow_openid]
+  %hr
+  %p#enable_login_via_openid
+    %a{:href => '#'}= t :enable_login_via_openid
+  %p#enable_login_via_login_password
+    %a{:href => '#'}= t :enable_login_via_login_password
+  = javascript_include_tag 'open_id'

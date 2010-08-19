@@ -1,0 +1,42 @@
+!!! Strict
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+  %head
+    %title ClickTire :: Urban Auto Online Discount Tires, Wheels and Accessories
+    %meta{'http-equiv' => 'Content-Type', 'content' => "text/html;charset=UTF-8"}
+    %link{:rel => 'shortcut icon', :href => 'images/favicon.ico', :type => 'image/x-icon'}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Inconsolata"}
+    - hook :inside_head do
+      = render :partial => 'shared/head'
+  %body.home
+    #root
+      %div{:class => "#{@content_for_sidebar.nil? ? 'one-col' : 'two-col'}"}
+        #header
+          .logo
+            %h1 Clicktire
+          .navigation  
+            %ul#nav-bar
+              = render 'shared/nav_bar'
+            = render 'shared/language_bar' if Spree::Config[:allow_locale_switching]
+          #menubar
+            %ul
+              %li
+                %a{:href=>"/"}= t('home')
+              %li
+                %a{:href=>"/t/wheels"}= t('wheels')
+              %li
+                %a{:href=>"/t/tires"}= t('tires')
+          #search_box  
+        - if @content_for_sidebar
+          #sidebar
+            .ct
+              - hook :sidebar do
+                = yield :sidebar  
+        #content
+          = breadcrumbs(@taxon) if @taxon
+          - if flash[:notice]
+            .flash.notice= flash[:notice]
+          - if flash[:error]
+            .flash.errors= flash[:error]
+          = yield 
+        #root_footer
+    = render :partial => 'shared/footer'

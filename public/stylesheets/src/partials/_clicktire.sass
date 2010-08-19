@@ -1,0 +1,77 @@
+=roundedbox($radius)
+  -moz-border-radius-topright: $radius
+  -webkit-border-top-right-radius: $radius
+  -moz-border-radius-bottomright: $radius
+  -webkit-border-bottom-right-radius: $radius
+  -moz-border-radius-topleft: $radius
+  -webkit-border-top-left-radius: $radius
+  -moz-border-radius-bottomleft: $radius
+  -webkit-border-bottom-left-radius: $radius
+  
+#header
+  .logo
+    +column(8)
+  .navigation
+    +column(16, true)
+    margin-top: 20px
+#nav-bar
+  +horizontal-list
+    
+#content
+  margin-top: 20px
+
+#sidebar
+  margin-top: 20px
+
+#footer
+  text-align: center
+  
+.ct
+  padding: 5px
+
+.breadcrumbs
+  +horizontal-list
+.taxon
+  +horizontal-list
+.product
+  +column(4)
+.product.last
+  +last
+
+.psg
+  height: 30px
+  label
+    +column(2)
+  select
+    +column(4, true)
+
+.psg-links
+  clear: left
+  +roundedbox(5px)
+  height: 30px
+  padding-top: 5px
+  background-color: #dedede
+  
+.psg-save
+  padding-left: 20px
+  background: sprite-image("icons/lock_add.png", 20px, 0, 20px) no-repeat
+  +prepend(1)
+  +column(3)
+  
+.psg-clear
+  padding-left: 20px
+  background: sprite-image("icons/lock_open.png", 0, 0, 20px) no-repeat 
+  +column(3, true)
+  
+  
+#taxonomies
+  clear: left
+
+#tire_filter
+  +roundedbox(5px)
+  background-color: #efefef
+  
+.tire-data-on, .wheel-data-on
+  +roundedbox(5px)
+  background-color: #666
+  color: #ffc
