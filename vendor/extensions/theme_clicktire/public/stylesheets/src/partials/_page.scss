@@ -106,7 +106,7 @@ body {
  //border: 1px solid;
  @include column(6, true);
  position: relative;
- @include prepend-top(33px);
+ @include prepend-top(17px);
  #taxon {  display: none; }
  #keywords { width: 220px;}
  button {

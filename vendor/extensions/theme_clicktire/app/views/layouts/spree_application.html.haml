@@ -25,7 +25,18 @@
                 %a{:href=>"/t/wheels"}= t('wheels')
               %li
                 %a{:href=>"/t/tires"}= t('tires')
-          #search_box  
+          #search_box
+            %ul
+              %li
+                - form_tag products_url, :method => :get do
+                  = text_field_tag :keywords, params[:keywords]
+                  = tag("button", {:value => t(:search), :name => nil, :type=>'submit'}) 
+        #sidebar-l
+          %h2.sb01 Tires &
+          %h2.sb02 wheels
+          %h2.sb03 across Canada
+          %h3.shipping Shipping across Canada
+          %h3.install We also install at our facility
         - if @content_for_sidebar
           #sidebar
             .ct
