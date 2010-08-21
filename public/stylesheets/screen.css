@@ -1198,21 +1198,17 @@ form.bp textarea {
   width: 100%;
 }
 /* line 75, src/partials/_home.scss */
-#sidebar .ct #tire_filter .psg-links {
-  display: none;
-}
-/* line 78, src/partials/_home.scss */
 #sidebar .ct #tire_filter .buttons {
   margin-top: 15px;
 }
-/* line 80, src/partials/_home.scss */
+/* line 77, src/partials/_home.scss */
 #sidebar .ct #tire_filter .buttons input {
   padding: 7px 17px;
   width: 100%;
   margin-top: 15px;
 }
 
-/* line 90, src/partials/_home.scss */
+/* line 87, src/partials/_home.scss */
 #sidebar-r {
   display: inline;
   float: left;
@@ -1225,7 +1221,7 @@ form.bp textarea {
 * html #sidebar-r {
   overflow-x: hidden;
 }
-/* line 94, src/partials/_home.scss */
+/* line 91, src/partials/_home.scss */
 #sidebar-r .c-leaf {
   background: url("../images/sprite.png");
   text-indent: -999px;
@@ -1233,11 +1229,11 @@ form.bp textarea {
   margin-top: 270px;
   width: 160px;
 }
-/* line 101, src/partials/_home.scss */
+/* line 98, src/partials/_home.scss */
 #sidebar-r ul {
   margin-top: 30px;
 }
-/* line 103, src/partials/_home.scss */
+/* line 100, src/partials/_home.scss */
 #sidebar-r ul li {
   margin-bottom: 10px;
   list-style-image: none;

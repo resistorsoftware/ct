@@ -72,9 +72,6 @@
 			select {
 			  width: 100%;
 			}
-			.psg-links {
-			  display:none;
-			}
 			.buttons{
   			@include prepend-top(15px);
 				input{

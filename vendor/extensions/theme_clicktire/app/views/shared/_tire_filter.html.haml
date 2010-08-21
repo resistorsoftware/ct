@@ -24,8 +24,8 @@
         .inches <%=inches%>
         .oe <%=oe %>
         .tiresize <%=tiresize%>
-  .psg-links    
-    %a{:href => "#", :class => "psg-save", :title => "Save Year, Make and Model"} Save Search
-    %a{:href => "#", :class => "psg-clear", :title => "Clear Year, Make and Model"} Clear Search
+  .buttons    
+    %input{:type => 'submit', :class => "psg-save", :value => "Lock Vehicle"}
+    %input{:type=>"submit", :class => "psg-clear", :value => "Unlock and Reset"}
          
     
