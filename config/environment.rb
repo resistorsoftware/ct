@@ -44,6 +44,7 @@ Spree::Initializer.run do |config|
   config.gem 'formtastic', :version => '0.9.10'
   config.gem 'nokogiri', :version => '1.4.1'
   config.gem 'compass', :version => '0.10.3'
+  config.gem 'sunspot_rails', :lib => 'sunspot/rails'
 
   # Only load the plugins named here, in the order given. By default, all plugins
   # in vendor/plugins are loaded in alphabetical order.

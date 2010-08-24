@@ -13,7 +13,8 @@ class ThemeClicktireExtension < Spree::Extension
   # end
   
   def activate
-          
+        Spree::Config.set(:default_locale => 'en-CA')
+        
         Product.class_eval do
           # a scope that finds all products having an option value specified by name, object or id
           Product.named_scope :with_option_value_regex, lambda {|option, value|
