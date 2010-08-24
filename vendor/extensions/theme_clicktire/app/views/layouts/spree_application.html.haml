@@ -7,7 +7,7 @@
     %link{:rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Inconsolata"}
     - hook :inside_head do
       = render :partial => 'shared/head'
-  %body.home
+  %body{:class => self.controller_name == 'products' ? 'home' : ""}
     #root
       %div{:class => "#{@content_for_sidebar.nil? ? 'one-col' : 'two-col'}"}
         #header
