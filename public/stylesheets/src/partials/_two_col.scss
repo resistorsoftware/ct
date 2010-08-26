@@ -35,18 +35,16 @@ body {
   background: url("../images/tile01.gif") repeat-x #fff;
 }
 #root {
-  background: url("../images/mainbackground.jpg") no-repeat center top ;
+  background: url("../images/header_background.jpg") no-repeat center top;
 }
 
 
 #header, #footer {
 	@include column($blueprint-grid-columns, true); }
-#header {
-	@include append-bottom(20px); }	
-	
+#header { @include append-bottom(20px);}
 #footer {
   @include container; 
-	display: block;
-	float: none;
-	@include prepend-top(20px);
+  display: block;
+  float: none;
+  @include prepend-top(20px);
 }

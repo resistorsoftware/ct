@@ -201,6 +201,30 @@ a img {
   float: right;
 }
 
+/* incase an inverted custom gradient isn't specified */
+/* line 167, src/partials/_fancy-buttons.sass */
+.fancy-button-reset-base-class, #psg_results .controls button.close, .modal button.close {
+  font-family: "Lucida Grande", Lucida, Arial, sans-serif;
+  background: url('../images/button_bg.png?1282848271') repeat-x bottom left;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold;
+}
+/* line 156, src/partials/_fancy-buttons.sass */
+.fancy-button-reset-base-class::-moz-focus-inner, #psg_results .controls button.close::-moz-focus-inner, .modal button.close::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/* line 159, src/partials/_fancy-buttons.sass */
+.fancy-button-reset-base-class:focus, #psg_results .controls button.close:focus, .modal button.close:focus {
+  outline: none;
+}
+
 /* line 24, src/partials/_two_col.scss */
 .two-col {
   width: 950px;
@@ -227,7 +251,7 @@ body {
 
 /* line 37, src/partials/_two_col.scss */
 #root {
-  background: url("../images/mainbackground.jpg") no-repeat center top;
+  background: url("../images/header_background.jpg") no-repeat center top;
 }
 
 /* line 42, src/partials/_two_col.scss */
@@ -247,7 +271,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* line 47, src/partials/_two_col.scss */
+/* line 45, src/partials/_two_col.scss */
 #footer {
   width: 950px;
   margin: 0 auto;
@@ -763,7 +787,7 @@ body {
   float: left;
   margin-right: 10px;
   width: 710px;
-  margin-top: 17px;
+  margin-top: 33px;
   color: white;
   font-size: 12px;
 }
@@ -846,7 +870,7 @@ body {
   margin-right: 0;
   width: 230px;
   position: relative;
-  margin-top: 17px;
+  margin-top: 33px;
 }
 /* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #search_box {
@@ -1059,16 +1083,16 @@ form.bp textarea {
   height: 250px;
 }
 
-/* line 3, src/partials/_home.scss */
+/* line 2, src/partials/_home.sass */
 .home #taxonomies {
   display: none;
 }
-/* line 6, src/partials/_home.scss */
+/* line 4, src/partials/_home.sass */
 .home #content {
   display: none;
 }
 
-/* line 10, src/partials/_home.scss */
+/* line 7, src/partials/_home.sass */
 #sidebar-l {
   font-size: 12px;
   display: inline;
@@ -1081,42 +1105,38 @@ form.bp textarea {
 * html #sidebar-l {
   overflow-x: hidden;
 }
-/* line 14, src/partials/_home.scss */
+/* line 11, src/partials/_home.sass */
 #sidebar-l .sb01, #sidebar-l .sb02, #sidebar-l .sb03 {
   color: white;
   font-size: 43px;
   width: 200px;
   text-shadow: black 2px 2px 2px;
 }
-/* line 20, src/partials/_home.scss */
+/* line 16, src/partials/_home.sass */
 #sidebar-l .sb01 {
   font-style: italic;
 }
-/* line 23, src/partials/_home.scss */
+/* line 18, src/partials/_home.sass */
 #sidebar-l .sb02 {
   font-style: italic;
   font-weight: bold;
   text-align: right;
 }
-/* line 28, src/partials/_home.scss */
+/* line 22, src/partials/_home.sass */
 #sidebar-l .sb03 {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 20px;
 }
-/* line 33, src/partials/_home.scss */
-#sidebar-l h3 {
-  font-size: 20px;
-}
-/* line 36, src/partials/_home.scss */
+/* line 27, src/partials/_home.sass */
 #sidebar-l .shipping {
   margin-top: 220px;
 }
-/* line 39, src/partials/_home.scss */
+/* line 29, src/partials/_home.sass */
 #sidebar-l .install {
   margin-top: 20px;
 }
-/* line 42, src/partials/_home.scss */
+/* line 31, src/partials/_home.sass */
 #sidebar-l .address {
   margin: 0;
   padding: 0;
@@ -1145,17 +1165,17 @@ form.bp textarea {
 #sidebar-l .address li:last-child, #sidebar-l .address li.last {
   padding-right: 0px;
 }
-/* line 45, src/partials/_home.scss */
-#sidebar-l .address img {
+/* line 34, src/partials/_home.sass */
+#sidebar-l img {
   border: #aebac3 2px solid;
 }
-/* line 48, src/partials/_home.scss */
-#sidebar-l .address p {
+/* line 36, src/partials/_home.sass */
+#sidebar-l p {
   font-size: 11px;
   padding-left: 10px;
 }
 
-/* line 55, src/partials/_home.scss */
+/* line 40, src/partials/_home.sass */
 #sidebar {
   display: inline;
   float: left;
@@ -1166,7 +1186,7 @@ form.bp textarea {
 * html #sidebar {
   overflow-x: hidden;
 }
-/* line 57, src/partials/_home.scss */
+/* line 42, src/partials/_home.sass */
 #sidebar .ct {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1175,40 +1195,40 @@ form.bp textarea {
   -khtml-border-radius: 5px;
   border-radius: 5px;
   border: #8da0af solid 1px;
-  background: white;
+  background-color: white;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #dcdcdc), color-stop(100%, #ffffff));
   background-image: -moz-linear-gradient(top, #dcdcdc 0%, #ffffff 63%);
   background-image: linear-gradient(top, #dcdcdc 0%, #ffffff 63%);
 }
-/* line 62, src/partials/_home.scss */
+/* line 47, src/partials/_home.sass */
 #sidebar .ct #tire_filter {
   margin: 20px 20px 60px 60px;
-  background: white;
+  background-color: white;
   padding: 20px 50px;
 }
-/* line 66, src/partials/_home.scss */
+/* line 51, src/partials/_home.sass */
 #sidebar .ct #tire_filter label {
   display: block;
   font-size: 13px;
   font-weight: bold;
   margin-top: 10px;
 }
-/* line 72, src/partials/_home.scss */
+/* line 56, src/partials/_home.sass */
 #sidebar .ct #tire_filter select {
   width: 100%;
 }
-/* line 75, src/partials/_home.scss */
+/* line 58, src/partials/_home.sass */
 #sidebar .ct #tire_filter .buttons {
   margin-top: 15px;
 }
-/* line 77, src/partials/_home.scss */
-#sidebar .ct #tire_filter .buttons input {
+/* line 60, src/partials/_home.sass */
+#sidebar .ct #tire_filter input {
   padding: 7px 17px;
   width: 100%;
   margin-top: 15px;
 }
 
-/* line 87, src/partials/_home.scss */
+/* line 65, src/partials/_home.sass */
 #sidebar-r {
   display: inline;
   float: left;
@@ -1221,22 +1241,261 @@ form.bp textarea {
 * html #sidebar-r {
   overflow-x: hidden;
 }
-/* line 91, src/partials/_home.scss */
+/* line 69, src/partials/_home.sass */
 #sidebar-r .c-leaf {
-  background: url("../images/sprite.png");
+  background-image: url("../images/sprite.png");
   text-indent: -999px;
   height: 50px;
   margin-top: 270px;
   width: 160px;
 }
-/* line 98, src/partials/_home.scss */
+/* line 75, src/partials/_home.sass */
 #sidebar-r ul {
   margin-top: 30px;
 }
-/* line 100, src/partials/_home.scss */
+/* line 77, src/partials/_home.sass */
 #sidebar-r ul li {
   margin-bottom: 10px;
   list-style-image: none;
   list-style-type: none;
   margin-left: 0px;
+}
+
+/* line 81, src/partials/_home.sass */
+#psg_results {
+  overflow: hidden;
+  *zoom: 1;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+  margin-top: 10px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  background-color: #dedede;
+  display: none;
+}
+/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #psg_results {
+  overflow-x: hidden;
+}
+/* line 88, src/partials/_home.sass */
+#psg_results .car-details {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 310px;
+}
+/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #psg_results .car-details {
+  overflow-x: hidden;
+}
+/* line 90, src/partials/_home.sass */
+#psg_results .car-details span {
+  padding: 3px;
+  font-size: 14px;
+}
+/* line 93, src/partials/_home.sass */
+#psg_results .wheel-details {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+  background-color: #ededed;
+}
+/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #psg_results .wheel-details {
+  overflow-x: hidden;
+}
+/* line 96, src/partials/_home.sass */
+#psg_results .wheel-details span {
+  padding: 3px;
+  font-size: 14px;
+}
+/* line 99, src/partials/_home.sass */
+#psg_results .tire-details {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 470px;
+  background-color: #ededed;
+}
+/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #psg_results .tire-details {
+  overflow-x: hidden;
+}
+/* line 102, src/partials/_home.sass */
+#psg_results .tire-details .tire {
+  float: left;
+  width: 60px;
+  padding: 3px;
+  font-size: 14px;
+  display: inline;
+}
+/* line 108, src/partials/_home.sass */
+#psg_results .controls {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 150px;
+  padding-left: 800px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #psg_results .controls {
+  overflow-x: hidden;
+}
+/* line 113, src/partials/_home.sass */
+#psg_results .controls button.close {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: #999999;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ededed), color-stop(10%, #bfbfbf), color-stop(50%, #919191), color-stop(50%, #8a8a8a), color-stop(100%, #a3a3a3));
+  background-image: -moz-linear-gradient(top, #ededed 0%, #bfbfbf 10%, #919191 50%, #8a8a8a 50%, #a3a3a3 100%);
+  background-image: linear-gradient(top, #ededed 0%, #bfbfbf 10%, #919191 50%, #8a8a8a 50%, #a3a3a3 100%);
+  border-color: #737373;
+  text-shadow: #595959 0px 1px 1px;
+}
+/* line 105, src/partials/_fancy-buttons.sass */
+#psg_results .controls button.close, #psg_results .controls button.close:visited {
+  color: white;
+}
+/* line 25, src/partials/_fancy-buttons.sass */
+#psg_results .controls button.close:hover, #psg_results .controls button.close:focus {
+  background-color: #919191;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e6e6e6), color-stop(10%, #b8b8b8), color-stop(50%, #8a8a8a), color-stop(50%, #828282), color-stop(100%, #9c9c9c));
+  background-image: -moz-linear-gradient(top, #e6e6e6 0%, #b8b8b8 10%, #8a8a8a 50%, #828282 50%, #9c9c9c 100%);
+  background-image: linear-gradient(top, #e6e6e6 0%, #b8b8b8 10%, #8a8a8a 50%, #828282 50%, #9c9c9c 100%);
+  border-color: #6b6b6b;
+  text-shadow: #525252 0px 1px 1px;
+}
+/* line 105, src/partials/_fancy-buttons.sass */
+#psg_results .controls button.close:hover, #psg_results .controls button.close:hover:visited, #psg_results .controls button.close:focus, #psg_results .controls button.close:focus:visited {
+  color: white;
+}
+/* line 30, src/partials/_fancy-buttons.sass */
+#psg_results .controls button.close:active {
+  background-color: #8a8a8a;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #8a8a8a), color-stop(30%, #8f8f8f), color-stop(50%, #858585), color-stop(50%, #7d7d7d), color-stop(100%, #9e9e9e));
+  background-image: -moz-linear-gradient(top, #8a8a8a 0%, #8f8f8f 30%, #858585 50%, #7d7d7d 50%, #9e9e9e 100%);
+  background-image: linear-gradient(top, #8a8a8a 0%, #8f8f8f 30%, #858585 50%, #7d7d7d 50%, #9e9e9e 100%);
+  border-color: #636363;
+  text-shadow: #4a4a4a 0px -1px -1px;
+}
+/* line 105, src/partials/_fancy-buttons.sass */
+#psg_results .controls button.close:active, #psg_results .controls button.close:active:visited {
+  color: white;
+}
+
+/* line 1, src/partials/_ui_utility.sass */
+.modal {
+  background-color: white;
+  display: none;
+  width: 350px;
+  padding: 15px;
+  text-align: left;
+  border: 2px solid #333333;
+  opacity: 0.8;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-box-shadow: 0 0 50px #cccccc;
+  -webkit-box-shadow: 0 0 50px #cccccc;
+}
+/* line 13, src/partials/_ui_utility.sass */
+.modal h2 {
+  background: url(../images/icons/car.png) 0 50% no-repeat;
+  margin: 0;
+  padding: 10px 0 10px 45px;
+  border-bottom: 1px solid #333333;
+  font-size: 20px;
+}
+/* line 19, src/partials/_ui_utility.sass */
+.modal .psg {
+  height: 30px;
+}
+/* line 21, src/partials/_ui_utility.sass */
+.modal .psg label {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 70px;
+}
+/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .modal .psg label {
+  overflow-x: hidden;
+}
+/* line 23, src/partials/_ui_utility.sass */
+.modal .psg select {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 150px;
+}
+/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .modal .psg select {
+  overflow-x: hidden;
+}
+/* line 25, src/partials/_ui_utility.sass */
+.modal button.close {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: white;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(10%, #ffffff), color-stop(50%, #d5d5d5), color-stop(50%, #cecece), color-stop(100%, #e7e7e7));
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #ffffff 10%, #d5d5d5 50%, #cecece 50%, #e7e7e7 100%);
+  background-image: linear-gradient(top, #ffffff 0%, #ffffff 10%, #d5d5d5 50%, #cecece 50%, #e7e7e7 100%);
+  border-color: #b7b7b7;
+  text-shadow: white 0px 1px 1px;
+}
+/* line 109, src/partials/_fancy-buttons.sass */
+.modal button.close, .modal button.close:visited {
+  color: #222222;
+}
+/* line 25, src/partials/_fancy-buttons.sass */
+.modal button.close:hover, .modal button.close:focus {
+  background-color: white;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(10%, #fcfcfc), color-stop(50%, #cecece), color-stop(50%, #c6c6c6), color-stop(100%, #e0e0e0));
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #fcfcfc 10%, #cecece 50%, #c6c6c6 50%, #e0e0e0 100%);
+  background-image: linear-gradient(top, #ffffff 0%, #fcfcfc 10%, #cecece 50%, #c6c6c6 50%, #e0e0e0 100%);
+  border-color: #afafaf;
+  text-shadow: white 0px 1px 1px;
+}
+/* line 109, src/partials/_fancy-buttons.sass */
+.modal button.close:hover, .modal button.close:hover:visited, .modal button.close:focus, .modal button.close:focus:visited {
+  color: #222222;
+}
+/* line 30, src/partials/_fancy-buttons.sass */
+.modal button.close:active {
+  background-color: white;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #cecece), color-stop(30%, #d3d3d3), color-stop(50%, #c9c9c9), color-stop(50%, #c1c1c1), color-stop(100%, #e2e2e2));
+  background-image: -moz-linear-gradient(top, #cecece 0%, #d3d3d3 30%, #c9c9c9 50%, #c1c1c1 50%, #e2e2e2 100%);
+  background-image: linear-gradient(top, #cecece 0%, #d3d3d3 30%, #c9c9c9 50%, #c1c1c1 50%, #e2e2e2 100%);
+  border-color: #a7a7a7;
+  text-shadow: white 0px -1px -1px;
+}
+/* line 109, src/partials/_fancy-buttons.sass */
+.modal button.close:active, .modal button.close:active:visited {
+  color: #222222;
 }

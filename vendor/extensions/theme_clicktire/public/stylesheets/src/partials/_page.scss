@@ -85,7 +85,7 @@ body {
 #menubar {
 	@include column(18);
 	ul{@include horizontal-list (0); }
-	@include prepend-top(17px);
+	@include prepend-top(33px);
 	@include whitelink;
   li{
 	  @include border-radius(5px);
@@ -106,7 +106,7 @@ body {
  //border: 1px solid;
  @include column(6, true);
  position: relative;
- @include prepend-top(17px);
+ @include prepend-top(33px);
  #taxon {  display: none; }
  #keywords { width: 220px;}
  button {

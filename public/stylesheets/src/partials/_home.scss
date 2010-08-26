@@ -103,3 +103,34 @@ ul{
 	}
 }
 }
+
+#psg_results {
+  @include clearfix;
+  @include column(24, true);
+  @include prepend-top(10px);
+  @include roundedbox(5px);
+  background-color: #dedede;
+  height: 30px;
+  display: none;
+  .car-details {
+    @include column(8);
+    background-color: #0f0;
+  }
+  .wheel-details {
+    @include column(8);
+    background-color: #f00;
+  }
+  .tire-details {
+    @include column(8, true);
+    background-color: #00f;
+  }
+  .controls {
+    @include column(2, true);
+    @include prepend(22);
+    button {
+      +fancy-button-structure;
+      +fancy-button-colors(#ddd);
+    }
+  }  
+}
+

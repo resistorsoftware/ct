@@ -1,0 +1,114 @@
+.home
+  #taxonomies
+    display: none
+  #content
+    display: none
+
+#sidebar-l
+  font-size: 12px
+  +column(8)
+  padding: 10px 0 0 30px
+  .sb01, .sb02, .sb03
+    color: white
+    font-size: 43px
+    width: 200px
+    +text-shadow(black, 2px, 2px, 2px)
+  .sb01
+    font-style: italic
+  .sb02
+    font-style: italic
+    font-weight: bold
+    text-align: right
+  .sb03
+    font-weight: bold
+    text-transform: uppercase
+    font-size: 20px
+
+  .shipping
+    +prepend-top(220px)
+  .install
+    +prepend-top(20px)
+  .address
+    +horizontal-list(0)
+    +prepend-top (10px)	
+  img
+    border : #aebac3 2px solid
+  p
+    font-size: 11px
+    padding-left: 10px
+
+#sidebar 
+  +column(9)
+  .ct
+    +border-radius(5px)
+    border: #8da0af solid 1px
+    background-color: white
+    +linear-gradient(color-stops(#dcdcdc, white 63%))
+    #tire_filter
+      margin: 20px 20px 60px 60px
+      background-color: white
+      padding: 20px 50px
+      label
+        display: block
+        font-size: 13px
+        font-weight: bold
+        +prepend-top(10px)
+      select
+        width: 100%
+      .buttons
+        +prepend-top(15px)
+      input
+        padding: 7px 17px
+        width: 100%
+        +prepend-top(15px)
+
+#sidebar-r
+  +column(5, true)
+  +prepend(1)
+  font-size: 12px
+  .c-leaf
+    background-image: url("../images/sprite.png")
+    text-indent: -999px
+    height: 50px
+    margin-top: 270px
+    width: 160px
+  ul
+    +prepend-top(30px)
+    li
+      +append-bottom(10px)
+      +no-bullet
+
+#psg_results 
+  +clearfix
+  +column(24, true)
+  +prepend-top(10px)
+  +roundedbox(5px)
+  background-color: #dedede
+  display: none
+  .car-details
+    +column(8)
+    span
+      padding: 3px
+      font-size: 14px
+  .wheel-details 
+    +column(4)
+    background-color: #ededed
+    span
+      padding: 3px
+      font-size: 14px
+  .tire-details
+    +column(12, true)
+    background-color: #ededed
+    .tire
+      float: left
+      width: 60px
+      padding: 3px
+      font-size: 14px
+      display: inline
+  .controls
+    +column(4, true)
+    +prepend(20)
+    +prepend-top(2px)
+    +append-bottom(2px)
+    button.close
+      +fancy-button(#999, 12px)

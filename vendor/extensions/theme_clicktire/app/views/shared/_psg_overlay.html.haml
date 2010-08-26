@@ -1,0 +1,15 @@
+#psg_overlay.modal
+  %h2 Plus Size Guide
+  %form{:name=>'plussizeguide'}
+    .psg
+      %label{:for => 'selectYear'} Year:
+      %select{:name => 'selectYear', :id => 'selectYear'}
+        %option{:value => 0} Select Year
+    .psg
+      %label{:for => 'selectMake'} Make:
+      %select{:name => 'selectMake', :id => 'selectMake'}
+    .psg
+      %label{:for => 'selectModel'} Model:
+      %select{:name => 'selectModel', :id => 'selectModel'}
+    %button.close Lock in your car
+    %button.close Forget it

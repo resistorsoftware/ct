@@ -11,8 +11,9 @@
     #root
       %div{:class => "#{@content_for_sidebar.nil? ? 'one-col' : 'two-col'}"}
         #header
-          .logo
-            %h1 Clicktire
+          %a{:href => "/"}
+            .logo
+              %h1 Clicktire
           .navigation  
             %ul#nav-bar
               = render 'shared/nav_bar'
@@ -25,12 +26,32 @@
                 %a{:href=>"/t/wheels"}= t('wheels')
               %li
                 %a{:href=>"/t/tires"}= t('tires')
+              %li
+                %a#psg_trigger{:href => "#", :rel => "#psg_overlay"}= t('plus_size_guide')
+          = render 'shared/psg_overlay'
           #search_box
             %ul
               %li
                 - form_tag products_url, :method => :get do
                   = text_field_tag :keywords, params[:keywords]
                   = tag("button", {:value => t(:search), :name => nil, :type=>'submit'}) 
+          #psg_results
+            .car-details
+            .wheel-details
+              %script{:type => "text/html", :id => "wheelTemplate"}
+                %span
+                  .bolt-pattern Bolt Pattern: <%=bolt_pattern%>
+                  .offset Offset: <%=offset%>
+                  .hub Hub <%=hub%>
+                  .lug Lug <%=lug%>
+            .tire-details
+              %script{:type => "text/html", :id => "tireTemplate"}
+                %div.tire
+                  .inches <%=inches%>
+                  .oe <%=oe %>
+                  .tiresize <%=tiresize%>
+            .controls
+              %button.close Reset and Close
         #sidebar-l
           %h2.sb01 Tires &
           %h2.sb02 wheels
