@@ -15,5 +15,5 @@
 // Combine the partials into a single screen stylesheet.
 @import "partials/two_col";
 @import "partials/page";
-@import "partials/form";
-@import "partials/home";
+//@import "partials/form";
+@import "partials/home.sass";

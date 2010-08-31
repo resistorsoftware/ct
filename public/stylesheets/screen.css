@@ -997,58 +997,55 @@ body {
   overflow-x: hidden;
 }
 
-@import url(partials/form.css);
 /* line 2, src/partials/_home.sass */
 .home #taxonomies {
   display: none;
 }
-
 /* line 5, src/partials/_home.sass */
-#sidebar {
+.home #sidebar {
   font-size: 12px;
   display: inline;
   float: left;
   margin-right: 10px;
   width: 310px;
-  padding: 10px 0 0 30px;
 }
 /* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #sidebar {
+* html .home #sidebar {
   overflow-x: hidden;
 }
-/* line 9, src/partials/_home.sass */
-#sidebar .sb01, #sidebar .sb02, #sidebar .sb03 {
+/* line 8, src/partials/_home.sass */
+.home #sidebar .sb01, .home #sidebar .sb02, .home #sidebar .sb03 {
   color: white;
   font-size: 43px;
   width: 200px;
   text-shadow: black 2px 2px 2px;
 }
-/* line 14, src/partials/_home.sass */
-#sidebar .sb01 {
+/* line 13, src/partials/_home.sass */
+.home #sidebar .sb01 {
   font-style: italic;
 }
-/* line 16, src/partials/_home.sass */
-#sidebar .sb02 {
+/* line 15, src/partials/_home.sass */
+.home #sidebar .sb02 {
   font-style: italic;
   font-weight: bold;
   text-align: right;
 }
-/* line 20, src/partials/_home.sass */
-#sidebar .sb03 {
+/* line 19, src/partials/_home.sass */
+.home #sidebar .sb03 {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 20px;
 }
-/* line 25, src/partials/_home.sass */
-#sidebar .shipping {
+/* line 24, src/partials/_home.sass */
+.home #sidebar .shipping {
   margin-top: 220px;
 }
-/* line 27, src/partials/_home.sass */
-#sidebar .install {
+/* line 26, src/partials/_home.sass */
+.home #sidebar .install {
   margin-top: 20px;
 }
-/* line 29, src/partials/_home.sass */
-#sidebar .address {
+/* line 28, src/partials/_home.sass */
+.home #sidebar .address {
   margin: 0;
   padding: 0;
   border: 0;
@@ -1058,7 +1055,7 @@ body {
   margin-top: 10px;
 }
 /* line 51, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
-#sidebar .address li {
+.home #sidebar .address li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0px;
@@ -1069,36 +1066,36 @@ body {
   padding-right: 0;
 }
 /* line 43, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
-#sidebar .address li:first-child, #sidebar .address li.first {
+.home #sidebar .address li:first-child, .home #sidebar .address li.first {
   padding-left: 0px;
 }
 /* line 44, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
-#sidebar .address li:last-child, #sidebar .address li.last {
+.home #sidebar .address li:last-child, .home #sidebar .address li.last {
   padding-right: 0px;
 }
-/* line 32, src/partials/_home.sass */
-#sidebar img {
+/* line 31, src/partials/_home.sass */
+.home #sidebar img {
   border: #aebac3 2px solid;
 }
-/* line 34, src/partials/_home.sass */
-#sidebar p {
+/* line 33, src/partials/_home.sass */
+.home #sidebar p {
   font-size: 11px;
   padding-left: 10px;
 }
-/* line 37, src/partials/_home.sass */
-#sidebar .c-leaf {
+/* line 36, src/partials/_home.sass */
+.home #sidebar .c-leaf {
   background-image: url("../images/sprite.png");
   text-indent: -999px;
   height: 50px;
   margin-top: 270px;
   width: 160px;
 }
-/* line 43, src/partials/_home.sass */
-#sidebar ul {
+/* line 42, src/partials/_home.sass */
+.home #sidebar ul {
   margin-top: 30px;
 }
-/* line 45, src/partials/_home.sass */
-#sidebar ul li {
+/* line 44, src/partials/_home.sass */
+.home #sidebar ul li {
   margin-bottom: 10px;
   list-style-image: none;
   list-style-type: none;

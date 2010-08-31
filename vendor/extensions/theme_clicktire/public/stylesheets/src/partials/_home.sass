@@ -1,48 +1,47 @@
 .home
   #taxonomies
     display: none
+    
+  #sidebar
+    font-size: 12px
+    +column(8)
+    .sb01, .sb02, .sb03
+      color: white
+      font-size: 43px
+      width: 200px
+      +text-shadow(black, 2px, 2px, 2px)
+    .sb01
+      font-style: italic
+    .sb02
+      font-style: italic
+      font-weight: bold
+      text-align: right
+    .sb03
+      font-weight: bold
+      text-transform: uppercase
+      font-size: 20px
 
-#sidebar
-  font-size: 12px
-  +column(8)
-  padding: 10px 0 0 30px
-  .sb01, .sb02, .sb03
-    color: white
-    font-size: 43px
-    width: 200px
-    +text-shadow(black, 2px, 2px, 2px)
-  .sb01
-    font-style: italic
-  .sb02
-    font-style: italic
-    font-weight: bold
-    text-align: right
-  .sb03
-    font-weight: bold
-    text-transform: uppercase
-    font-size: 20px
-
-  .shipping
-    +prepend-top(220px)
-  .install
-    +prepend-top(20px)
-  .address
-    +horizontal-list(0)
-    +prepend-top (10px)	
-  img
-    border : #aebac3 2px solid
-  p
-    font-size: 11px
-    padding-left: 10px
-  .c-leaf
-    background-image: url("../images/sprite.png")
-    text-indent: -999px
-    height: 50px
-    margin-top: 270px
-    width: 160px
-  ul
-    +prepend-top(30px)
-    li
-      +append-bottom(10px)
-      +no-bullet
+    .shipping
+      +prepend-top(220px)
+    .install
+      +prepend-top(20px)
+    .address
+      +horizontal-list(0)
+      +prepend-top (10px)	
+    img
+      border : #aebac3 2px solid
+    p
+      font-size: 11px
+      padding-left: 10px
+    .c-leaf
+      background-image: url("../images/sprite.png")
+      text-indent: -999px
+      height: 50px
+      margin-top: 270px
+      width: 160px
+    ul
+      +prepend-top(30px)
+      li
+        +append-bottom(10px)
+        +no-bullet
 
