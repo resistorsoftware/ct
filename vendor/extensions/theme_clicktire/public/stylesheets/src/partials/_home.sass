@@ -1,10 +1,8 @@
 .home
   #taxonomies
     display: none
-  #content
-    display: none
 
-#sidebar-l
+#sidebar
   font-size: 12px
   +column(8)
   padding: 10px 0 0 30px
@@ -36,36 +34,6 @@
   p
     font-size: 11px
     padding-left: 10px
-
-#sidebar 
-  +column(9)
-  .ct
-    +border-radius(5px)
-    border: #8da0af solid 1px
-    background-color: white
-    +linear-gradient(color-stops(#dcdcdc, white 63%))
-    #tire_filter
-      margin: 20px 20px 60px 60px
-      background-color: white
-      padding: 20px 50px
-      label
-        display: block
-        font-size: 13px
-        font-weight: bold
-        +prepend-top(10px)
-      select
-        width: 100%
-      .buttons
-        +prepend-top(15px)
-      input
-        padding: 7px 17px
-        width: 100%
-        +prepend-top(15px)
-
-#sidebar-r
-  +column(5, true)
-  +prepend(1)
-  font-size: 12px
   .c-leaf
     background-image: url("../images/sprite.png")
     text-indent: -999px

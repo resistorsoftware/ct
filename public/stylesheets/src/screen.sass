@@ -1,52 +1,20 @@
-@import "compass/reset"
-@import "partials/base"
-@import "blueprint"    
-@import "compass/layout/sticky-footer"
-@import "compass/utilities/text/replacement"
-@import "compass/utilities/lists"
+// This import applies a global reset to any page that imports this stylesheet.
+@import blueprint/reset
 
-// couple of partials to try and keep things clean for development
-@import "partials/clicktire_forms"
-@import "partials/clicktire"
-@import "partials/gritter"
+// To configure blueprint, edit the partials/base.sass file.
+@import partials/base
+@import partials/gritter
 
-+sticky-footer(30px, "#root", "#root_footer", "#footer")
+// Import all the default blueprint modules so that we can access their mixins.
+@import blueprint
 
-+blueprint-typography
+//benjamin
+@import compass/utilities/lists/horizontal-list
+@import compass/css3
+@import partials/fancy-buttons
 
-body
-  background-color: #fff
-.two-col
-  +container
-  #header
-    +column($blueprint_grid_columns)
-    h1
-      +replace-text("clicktire.png")
-      width: 150px
-      height: 116px
-  #sidebar
-    $sidebar_columns: floor($blueprint_grid_columns / 3)
-    +column($sidebar_columns)
-  #content 
-    $content_columns: ceil(2 * $blueprint_grid_columns / 3) 
-    +column($content_columns, true)
-
-.one-col
-  +container
-  #header
-    +column($blueprint_grid_columns)
-    h1
-      +replace-text("clicktire.png")
-      width: 150px
-      height: 116px
-  #content 
-    +column($blueprint_grid_columns, true)
-            
-#footer
-  +container
-  #language-bar
-    float: right
-    display: inline
-    ul
-      li
-        display: inline
+// Combine the partials into a single screen stylesheet.
+@import partials/two_col
+@import partials/page
+@import partials/home
+@import partials/ui_utility

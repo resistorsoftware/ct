@@ -212,13 +212,13 @@ $(function () {
   }
     
   if (yearData instanceof Object) {
-    ClickTire.utils.setYears(yearData.years);
+    ClickTire.utils.setYears(yearData.years); 
     $('#selectYear').addOptions({
       text: '',
       data: ClickTire.utils.getYears(),
       selected: yearData.selected
     });
-      
+    $("#psg_results .car-details").append('<span class="year">'+yearData.selected+'</span>');  
     // keep on trucking and try makes now too
     if(makeData instanceof Object) {
       ClickTire.utils.setMakes(makeData.makes);
@@ -227,16 +227,19 @@ $(function () {
         data: ClickTire.utils.getMakes(),
         selected: makeData.selected
       });
+      $("#psg_results .car-details").append('<span class="make">'+makeData.selected+'</span>');
     } 
     
     // finish with any models
     if(modelData instanceof Object) {
       ClickTire.utils.setModels(modelData.models);
+      
       var x = {
         text: (parseInt(modelData.selected,10))? '' : 'select model...',
         data: ClickTire.utils.getModels(),
         selected: modelData.selected
       }
+      $("#psg_results .car-details").append('<span class="model">'+modelData.selected+'</span>');
       $('#selectModel').addOptions(x);
       //var ct = document.getElementById("wheel-results");
       var ct = $("#psg_results .wheel-details")[0];
@@ -254,6 +257,7 @@ $(function () {
       //                     $.feedback("success","Search for "+$(this).find('.tiresize').text()+" tires");
       //                    });
     }
+    $("#psg_results").show();
   } else {
     // ask for some years via an ajax call
     $.ajax({

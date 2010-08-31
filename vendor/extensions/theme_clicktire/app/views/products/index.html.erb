@@ -1,4 +1,5 @@
-<% content_for :sidebar do %>
+<% content_for :sidebar do %> 
+<h1>Sidebar DAVE</h1>
   <% hook :homepage_sidebar_navigation do %>
     <% if "products" == @current_controller && @taxon %>
       <%= render "shared/filters" %>
@@ -10,7 +11,7 @@
 
 
 <% if params[:keywords] %>
-
+<h1>KEYWORDS DAVE _ SHOW RESULTS</h1>
   <h1><%= t(:search_results, :keywords => h(params[:keywords])) %></h1>
   <% hook :search_results do %>
     <% if @products.empty? %>
@@ -21,10 +22,10 @@
   <% end %>
 
 <% else %>
-
-  <% hook :homepage_products do %>
-    <%= render "shared/products", :products => @products, :taxon => @taxon %>
-  <% end %>
+  <h1>I am PLAIN NEW HOMEPAGE<h1>
+  <<% hook :homepage_product do %>
+     <%= render "shared/products", :products => @products, :taxon => @taxon %>
+   <% end %> 
 
 
 <% end %>
