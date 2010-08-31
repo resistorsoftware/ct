@@ -11,9 +11,8 @@
     #root
       %div{:class => "#{@content_for_sidebar.nil? ? 'one-col' : 'two-col'}"}
         #header
-          %a{:href => "/"}
-            .logo
-              %h1 Clicktire
+          .logo
+            %h1 Clicktire
           .navigation  
             %ul#nav-bar
               = render 'shared/nav_bar'
@@ -26,62 +25,17 @@
                 %a{:href=>"/t/wheels"}= t('wheels')
               %li
                 %a{:href=>"/t/tires"}= t('tires')
-              %li
-                %a#psg_trigger{:href => "#", :rel => "#psg_overlay"}= t('plus_size_guide')
-          = render 'shared/psg_overlay'
           #search_box
             %ul
               %li
                 - form_tag products_url, :method => :get do
                   = text_field_tag :keywords, params[:keywords]
                   = tag("button", {:value => t(:search), :name => nil, :type=>'submit'}) 
-          #psg_results
-            .car-details
-            .wheel-details
-              %script{:type => "text/html", :id => "wheelTemplate"}
-                %span
-                  .bolt-pattern Bolt Pattern: <%=bolt_pattern%>
-                  .offset Offset: <%=offset%>
-                  .hub Hub <%=hub%>
-                  .lug Lug <%=lug%>
-            .tire-details
-              %script{:type => "text/html", :id => "tireTemplate"}
-                %div.tire
-                  .inches <%=inches%>
-                  .oe <%=oe %>
-                  .tiresize <%=tiresize%>
-            .controls
-              %button.close Reset and Close
-          
+
         - if @content_for_sidebar
-          #sidebar
-            %h2.sb01 Tires &
-            %h2.sb02 wheels
-            %h2.sb03 across Canada
-            %h3.shipping Shipping across Canada
-            %h3.install We also install at our facility
-            %a{:href=>"rates"} Get installation rates
-            %ul.address
-              %li
-                %img{:src=>"/images/gmap"}
-              %li
-                %p 1320 Rue Gay Lussac #100
-                %p Boucherville
-                %p QC J4B 7G4
-            .c-leaf A Canadian company
-            %ul
-              %li
-                %a{:href => "service"} Service and Help
-              %li
-                %a{:href => "reviews"} Tire Reviews
-              %li
-                %a{:href => "learning"} Learning Centre
-              %li
-                %a{:href => "contact"} Contact Us    
-            .ct
-              - hook :sidebar do
-                = yield :sidebar
-                #content
+          - hook :sidebar do
+            = yield :sidebar
+        #content
           = breadcrumbs(@taxon) if @taxon
           - if flash[:notice]
             .flash.notice= flash[:notice]

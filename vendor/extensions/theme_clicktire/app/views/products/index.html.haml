@@ -1,0 +1,19 @@
+- content_for :sidebar do 
+  %h1 Sidebar DAVE
+  - hook :homepage_sidebar_navigation do 
+    - if "products" == @current_controller && @taxon
+      = render "shared/filters"
+    - else
+      = render "shared/taxonomies"
+
+- if params[:keywords]
+  %h1 KEYWORDS DAVE _ SHOW RESULTS
+  %h1= t(:search_results, :keywords => h(params[:keywords]))
+  - hook :search_results do
+    - if @products.empty?
+      = t(:no_products_found)
+    - else
+      = render "shared/products", :products => @products, :taxon => @taxon
+
+- else
+  = render 'shared/tire_filter'
