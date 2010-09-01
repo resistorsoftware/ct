@@ -49,6 +49,8 @@ body {
 //
 
 #header {
+	height: 108px;
+	position:relative;	
 	.logo{ background: url("../images/logo.png") no-repeat;
 		@include column(9);
 		height: 50px;
@@ -85,7 +87,8 @@ body {
 #menubar {
 	@include column(18);
 	ul{@include horizontal-list (0); }
-	@include prepend-top(17px);
+	//@include prepend-top(33px);
+	bottom:0; left:0; position: absolute;
 	@include whitelink;
   li{
 	  @include border-radius(5px);
@@ -103,10 +106,8 @@ body {
 	}
 }	
 #search_box { 
- //border: 1px solid;
+ bottom:2px; right:0; position: absolute;
  @include column(6, true);
- position: relative;
- @include prepend-top(17px);
  #taxon {  display: none; }
  #keywords { width: 220px;}
  button {
@@ -171,6 +172,51 @@ body {
 		}
 	}
 //
+#sidebar {
+  font-size: 12px;
+  @include column(5);
+	.sb01, .sb02, .sb03{
+		color: white;
+		font-size: 33px;
+	    width: 150px;
+		@include text-shadow(black, 2px, 2px, 2px);
+		padding-left: 10px;
+		line-height:30px;
+		
+	}
+	.sb01 {
+	  font-style: italic;
+	  @include prepend-top(10px);
+	}
+	.sb02{
+ 	  font-style: italic;
+		font-weight: bold;
+		text-align: right;
+	}
+	.sb03{
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 20px;
+		width: 172px;
+	}
+	h3{
+	  font-size: 20px;
+	}
+	.shipping{
+	  @include prepend-top (240px);
+	}
+	.install{
+	  @include prepend-top (20px);
+	}
+	.address {
+	  @include horizontal-list(0);
+	  @include prepend-top (10px);	
+	  font-size: 11px;
+		img{
+		  border : #aebac3 2px solid;
+		}	
+	}
+}
 #footer {
   font-size: 12px;
 	border-top: #ccc solid 1px;

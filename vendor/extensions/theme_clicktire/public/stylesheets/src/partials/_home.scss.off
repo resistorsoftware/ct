@@ -1,0 +1,105 @@
+// styles for home
+.home {
+	#taxonomies {
+	 display: none;
+	}
+	#content {
+		 display: none;
+	}
+}
+#sidebar-l {
+  font-size: 12px;
+  @include column(8);
+	padding: 10px 0 0 30px;
+	.sb01, .sb02, .sb03{
+		color: white;
+		font-size: 43px;
+	  width: 200px;
+		@include text-shadow(black, 2px, 2px, 2px);
+	}
+	.sb01 {
+	  font-style: italic;
+	}
+	.sb02{
+ 	  font-style: italic;
+		font-weight: bold;
+		text-align: right;
+	}
+	.sb03{
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 20px;
+	}
+	h3{
+	  font-size: 20px;
+	}
+	.shipping{
+	  @include prepend-top (220px);
+	}
+	.install{
+	  @include prepend-top (20px);
+	}
+	.address {
+	  @include horizontal-list(0);
+	  @include prepend-top (10px);	
+		img{
+		  border : #aebac3 2px solid;
+		}	
+		p{
+		  font-size: 11px;
+			padding-left:10px;
+		}
+	}
+
+}
+#sidebar {
+  @include column(9);
+	.ct{
+	  @include border-radius(5px);
+		border: #8da0af solid 1px;
+		background: white;
+		@include linear-gradient(color-stops(#dcdcdc, white 63%));
+		#tire_filter {
+		  margin: 20px 20px 60px 60px;
+			background: white;
+			padding: 20px 50px;
+			label {
+			  display: block;
+				font-size: 13px;
+				font-weight: bold;
+				@include prepend-top(10px);
+			}
+			select {
+			  width: 100%;
+			}
+			.buttons{
+  			@include prepend-top(15px);
+				input{
+			    padding:7px 17px;
+  				width: 100%;
+	  			@include prepend-top(15px);
+			}
+			}
+    
+		}
+	}
+}
+#sidebar-r {
+  @include column(5, true);
+	@include prepend(1);
+	font-size:12px;
+	.c-leaf{
+	  background: url("../images/sprite.png");
+		text-indent:-999px;
+		height:50px;
+		margin-top:270px;
+		width:160px;
+	}
+ul{
+  @include prepend-top(30px);
+  	li{
+			@include append-bottom(10px);
+			@include no-bullet;
+	}
+}
+}

@@ -29,7 +29,11 @@
     // With 24 cols, this is 16.
     $content-columns: ceil(2 * $blueprint-grid-columns / 3);
     // true means it's the last column in the row
-    @include column($content-columns, true); } }
+    @include column($content-columns, true); 
+	@include column(19, true); 
+
+  } 
+}
 
 body {
   background: url("../images/tile01.gif") repeat-x #fff;

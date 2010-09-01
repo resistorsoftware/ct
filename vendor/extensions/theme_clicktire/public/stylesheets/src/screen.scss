@@ -2,8 +2,7 @@
 @import "blueprint/reset";
 
 // To configure blueprint, edit the partials/base.sass file.
-@import "partials/base"; 
-@import "partials/gritter";
+@import "partials/base";
 
 // Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";
@@ -15,5 +14,6 @@
 // Combine the partials into a single screen stylesheet.
 @import "partials/two_col";
 @import "partials/page";
-//@import "partials/form";
-@import "partials/home.sass";
+@import "partials/form";
+@import "partials/home";
+@import "partials/detail";

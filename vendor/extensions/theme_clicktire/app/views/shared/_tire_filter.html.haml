@@ -1,31 +1,32 @@
 #tire_filter
-  %h2 Tire Filter
-  %form{:name=>'plussizeguide'}
-    .psg
-      %label{:for => 'selectYear'} Year:
-      %select{:name => 'selectYear', :id => 'selectYear'}
-        %option{:value => 0} Select Year
-    .psg
-      %label{:for => 'selectMake'} Make:
-      %select{:name => 'selectMake', :id => 'selectMake'}
-    .psg
-      %label{:for => 'selectModel'} Model:
-      %select{:name => 'selectModel', :id => 'selectModel'}
-  #wheel-results
-    %script{:type => "text/html", :id => "wheelTemplate"}
-      %div.wheel-data
-        .bolt-pattern Bolt Pattern: <%=bolt_pattern%>
-        .offset Offset: <%=offset%>
-        .hub Hub <%=hub%>
-        .lug Lug <%=lug%>
-  #tire-results
-    %script{:type => "text/html", :id => "tireTemplate"}
-      %div.tire-data
-        .inches <%=inches%>
-        .oe <%=oe %>
-        .tiresize <%=tiresize%>
-  .buttons    
-    %input{:type => 'submit', :class => "psg-save", :value => "Lock Vehicle"}
-    %input{:type=>"submit", :class => "psg-clear", :value => "Unlock and Reset"}
-         
+  .ct
+    %h2 Tire Filter
+    %form{:name=>'plussizeguide'}
+      .psg
+        %label{:for => 'selectYear'} Year:
+        %select{:name => 'selectYear', :id => 'selectYear'}
+          %option{:value => 0} Select Year
+      .psg
+        %label{:for => 'selectMake'} Make:
+        %select{:name => 'selectMake', :id => 'selectMake'}
+      .psg
+        %label{:for => 'selectModel'} Model:
+        %select{:name => 'selectModel', :id => 'selectModel'}
+    #wheel-results
+      %script{:type => "text/html", :id => "wheelTemplate"}
+        %div.wheel-data
+          .bolt-pattern Bolt Pattern: <%=bolt_pattern%>
+          .offset Offset: <%=offset%>
+          .hub Hub <%=hub%>
+          .lug Lug <%=lug%>
+    #tire-results
+      %script{:type => "text/html", :id => "tireTemplate"}
+        %div.tire-data
+          .inches <%=inches%>
+          .oe <%=oe %>
+          .tiresize <%=tiresize%>
+    .buttons    
+      %input{:type => 'submit', :class => "psg-save", :value => "Lock Vehicle"}
+      %input{:type=>"submit", :class => "psg-clear", :value => "Unlock and Reset"}
+       
     
