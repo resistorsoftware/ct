@@ -202,19 +202,19 @@ $(function () {
           selected: modelData.selected
         }
         $('#selectModel').addOptions(x);
-        var ct = document.getElementById("wheel-results");
-        ct.innerHTML = tmpl("wheelTemplate",JSON.parse($.cookie("psg-wheel")));
-        var ct = document.getElementById("tire-results");
-        var tireData = "";
-        tires = JSON.parse($.cookie("psg-tires"));
-        for (var i = 0, len = tires.length; i < len; i++) {
-          tireData += tmpl("tireTemplate",tires[i]);
-        }
-        ct.innerHTML = tireData;
-        $('.tire-data').hover(function () {$(this).addClass('tire-data-on')}, function () {$(this).removeClass('tire-data-on')});
-        $('.tire-data').click(function () {
-          $.feedback("success","Search for "+$(this).find('.tiresize').text()+" tires");
-        });
+//        var ct = document.getElementById("wheel-results");
+//        ct.innerHTML = tmpl("wheelTemplate",JSON.parse($.cookie("psg-wheel")));
+//        var ct = document.getElementById("tire-results");
+//        var tireData = "";
+//        tires = JSON.parse($.cookie("psg-tires"));
+//        for (var i = 0, len = tires.length; i < len; i++) {
+//          tireData += tmpl("tireTemplate",tires[i]);
+//        }
+//        ct.innerHTML = tireData;
+//        $('.tire-data').hover(function () {$(this).addClass('tire-data-on')}, function () {$(this).removeClass('tire-data-on')});
+//        $('.tire-data').click(function () {
+//          $.feedback("success","Search for "+$(this).find('.tiresize').text()+" tires");
+//        });
       }
     } else {
       // ask for some years via an ajax call
@@ -241,7 +241,7 @@ $(function () {
          $('#selectMake').clearOptions();
       }  
     }); 
-    
+}    
     // setup some listeners for the drop downs.
     $("#selectYear").change(function () {
        var year = $(this).val();
@@ -288,42 +288,42 @@ $(function () {
          success: function(res) {
            if(res.wheel) {
              // save these structures as a cookie as well as rendering them 
-             var ct = document.getElementById("wheel-results");
-             ct.innerHTML = tmpl("wheelTemplate",res.wheel);
-             $.cookie("psg-wheel", JSON.stringify(res.wheel), {expires: 7, path: '/'});
-             var ct = document.getElementById("tire-results");
-             var tireData = "";
-             for (var i = 0, len = res.tires.length; i < len; i++) {
-               tireData += tmpl("tireTemplate",res.tires[i]);
-             }
-             ct.innerHTML = tireData;
+//             var ct = document.getElementById("wheel-results");
+//             ct.innerHTML = tmpl("wheelTemplate",res.wheel);
+//             $.cookie("psg-wheel", JSON.stringify(res.wheel), {expires: 7, path: '/'});
+//             var ct = document.getElementById("tire-results");
+//             var tireData = "";
+//             for (var i = 0, len = res.tires.length; i < len; i++) {
+//               tireData += tmpl("tireTemplate",res.tires[i]);
+//             }
+//             ct.innerHTML = tireData;
              $.cookie("psg-tires", JSON.stringify(res.tires), {expires: 7, path: '/'}); 
            }
            $.feedback('success', 'Received Tires and Wheels for ' + year + ' ' + make + ' ' + model);
-           $('.tire-data').hover(function () {
-               $(this).addClass('tire-data-on')},
-             function () {$(this).removeClass('tire-data-on')}
-           ).click(function () {
-                $.feedback("success","Search for "+$(this).find('.tiresize').text()+" tires");
-                $.ajax({
-                  type: 'get',
-                  url: "/collections",
-                  dataType: "html",
-                  data: {taxon: 'Tires', option: "size", criteria: $(this).find('.tiresize').text()},
-                  success: function(res) {
-                    $("#content").html(res);
-                  }
-                })
-              });
-           $('.wheel-data').hover(function () {$(this).addClass('wheel-data-on')}, function () {$(this).removeClass('wheel-data-on')}).click(function () {
-             $.feedback("success","Search for "+$(this).find('.bolt-pattern').text()+" wheels");
-           });
+//           $('.tire-data').hover(function () {
+//               $(this).addClass('tire-data-on')},
+//             function () {$(this).removeClass('tire-data-on')}
+//           ).click(function () {
+//                $.feedback("success","Search for "+$(this).find('.tiresize').text()+" tires");
+//                $.ajax({
+//                  type: 'get',
+//                  url: "/collections",
+//                  dataType: "html",
+//                  data: {taxon: 'Tires', option: "size", criteria: $(this).find('.tiresize').text()},
+//                  success: function(res) {
+//                    $("#content").html(res);
+//                  }
+//                })
+//              });
+//           $('.wheel-data').hover(function () {$(this).addClass('wheel-data-on')}, function () {$(this).removeClass('wheel-data-on')}).click(function () {
+//             $.feedback("success","Search for "+$(this).find('.bolt-pattern').text()+" wheels");
+//           });
          }  
        });
     });
     
     // save the year, make and model values to their respective cookies.
-    $(".psg-save").click(function () {
+    $(".psg-search").click(function () {
       // first the years
       var years = $("#selectYear").find('option');
       if(years.length > 1) {
@@ -369,7 +369,12 @@ $(function () {
         }
         $.cookie("psg_models", JSON.stringify(data), {expires: 7, path: '/'});
       }
-      
+      if ($(this).hasClass('wheel')) {
+        var href = '/t/wheels';
+      } else {
+        var href = '/t/tires';
+      }
+      document.location.href = href;
     });
     
     $(".psg-clear").click(function () {
@@ -387,5 +392,4 @@ $(function () {
       $.feedback("success","Reset the Search settings") 
     });
     
-  }
 });

@@ -1,6 +1,6 @@
 #tire_filter
   .ct
-    %h2 Tire Filter
+    %h2= t('vehicle_search')
     %form{:name=>'plussizeguide'}
       .psg
         %label{:for => 'selectYear'} Year:
@@ -26,7 +26,19 @@
           .oe <%=oe %>
           .tiresize <%=tiresize%>
     .buttons    
-      %input{:type => 'submit', :class => "psg-save", :value => "Lock Vehicle"}
-      %input{:type=>"submit", :class => "psg-clear", :value => "Unlock and Reset"}
+      %input{:type => 'submit', :class => "psg-search wheel", :value => "Search Wheels"}
+      %input{:type=>"submit", :class => "psg-search tire", :value => "Search Tires"}
+      
+#somelinks
+  .c-leaf A Canadian company
+  %ul.somelinks
+    %li
+      %a{:href=>"#"} Service &amp; Help 
+    %li
+      %a{:href=>"#"} Tire Reviews
+    %li
+      %a{:href=>"#"} Learning Center
+    %li
+      %a{:href=>"#"} Contact Us
        
     
