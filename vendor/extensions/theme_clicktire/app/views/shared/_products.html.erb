@@ -8,23 +8,44 @@
 <% end %>
  
 <% if products.any? %>
-<div class="product-listing">
-  <% products.each do |product| %>                     
-  
-  <% if products.index(product) > 0 and products.index(product) % 3 == 0 %>
-  <%   klass = 'product last'%>
-  <% else%>
-  <%   klass = 'product'%>
+<div id="results_sheet">
+<form class="results">
+  <% products.each do |product| %>   
+         <div id="product_<%= product.id%>" class="item">
+            <div class="thumb"> </div>
+            <div class="description">
+              <ul>
+                <li>
+                  <h2><strong><%= product.name %></strong></h2>
+                </li>
+                <li>
+                  <strong>Size:</strong>
+                </li>
+                <li>
+                  <strong>Serv. Desc.</strong>
+                </li>
+                <li>
+                  <strong>Speed Rating</strong>
+                </li>
+                <li>
+                  <strong>Performance</strong>
+                </li>
+              </ul>
+              <ul class="price">
+                <li>
+                  <h3>
+                    <strong>$999.99</strong> each
+                  </h3>
+                </li>
+              </ul>
+            </div>
+         
+         </div>           
+        
   <% end %>
-  
-    <% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
-      <div id="product_<%= product.id %>" class="<%= klass%>">
-        <%= link_to small_image(product), product %><br/>
-        <%= link_to product.name + "<span class='price selling'>&nbsp;#{product_price(product)}</span>", product, :class => 'info' %>
-      </div>
-    <% end %>
-  <% end %>
+  </form>
 </div>
+
 <% end %>
 
 <div style="clear:both">&nbsp;</div> 

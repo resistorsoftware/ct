@@ -146,7 +146,7 @@ body {
   margin-top: 20px;
 }
 
-/* line 23, src/partials/_page.scss */
+/* line 24, src/partials/_page.scss */
 body.bp {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -506,12 +506,12 @@ body.bp form.inline p {
   margin-bottom: 0;
 }
 
-/* line 33, src/partials/_page.scss */
+/* line 34, src/partials/_page.scss */
 body {
   font-family: “helvetica neue”, helvetica, arial, sans-serif;
 }
 
-/* line 36, src/partials/_page.scss */
+/* line 37, src/partials/_page.scss */
 .buttons input {
   background: #235cba;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #519bf7), color-stop(100%, #2068e3));
@@ -534,12 +534,12 @@ body {
   color: white;
 }
 
-/* line 51, src/partials/_page.scss */
+/* line 52, src/partials/_page.scss */
 #header {
   height: 108px;
   position: relative;
 }
-/* line 54, src/partials/_page.scss */
+/* line 55, src/partials/_page.scss */
 #header .logo {
   background: url("../images/logo.png") no-repeat;
   display: inline;
@@ -552,11 +552,11 @@ body {
 * html #header .logo {
   overflow-x: hidden;
 }
-/* line 57, src/partials/_page.scss */
+/* line 58, src/partials/_page.scss */
 #header .logo h1 {
   text-indent: -9999px;
 }
-/* line 59, src/partials/_page.scss */
+/* line 60, src/partials/_page.scss */
 #header .navigation {
   color: white;
   font-size: 12px;
@@ -566,11 +566,11 @@ body {
   width: 590px;
   margin-top: 10px;
 }
-/* line 15, src/partials/_page.scss */
+/* line 16, src/partials/_page.scss */
 #header .navigation a {
   color: white;
 }
-/* line 16, src/partials/_page.scss */
+/* line 17, src/partials/_page.scss */
 #header .navigation a:hover {
   color: #f6ac1c;
   text-decoration: underline;
@@ -579,7 +579,7 @@ body {
 * html #header .navigation {
   overflow-x: hidden;
 }
-/* line 63, src/partials/_page.scss */
+/* line 64, src/partials/_page.scss */
 #header .navigation #nav-bar {
   margin: 0;
   padding: 0;
@@ -615,30 +615,30 @@ body {
 * html #header .navigation #nav-bar {
   overflow-x: hidden;
 }
-/* line 66, src/partials/_page.scss */
+/* line 67, src/partials/_page.scss */
 #header .navigation #nav-bar .contactus {
   width: 310px;
   text-align: right;
 }
-/* line 69, src/partials/_page.scss */
+/* line 70, src/partials/_page.scss */
 #header .navigation #nav-bar .contactus p {
   margin-right: 20px;
 }
-/* line 71, src/partials/_page.scss */
+/* line 72, src/partials/_page.scss */
 #header .navigation #nav-bar .contactus h2 {
   margin-right: 20px;
   font-size: 24px;
   font-weight: bold;
 }
-/* line 75, src/partials/_page.scss */
+/* line 76, src/partials/_page.scss */
 #header .navigation #nav-bar .contactus h2 span {
   color: #c9c9c9;
 }
-/* line 78, src/partials/_page.scss */
+/* line 79, src/partials/_page.scss */
 #header .navigation #nav-bar li {
   width: 70px;
 }
-/* line 82, src/partials/_page.scss */
+/* line 83, src/partials/_page.scss */
 #header .navigation #language-bar {
   display: inline;
   float: left;
@@ -650,7 +650,7 @@ body {
   overflow-x: hidden;
 }
 
-/* line 87, src/partials/_page.scss */
+/* line 88, src/partials/_page.scss */
 #menubar {
   display: inline;
   float: left;
@@ -666,7 +666,7 @@ body {
 * html #menubar {
   overflow-x: hidden;
 }
-/* line 89, src/partials/_page.scss */
+/* line 90, src/partials/_page.scss */
 #menubar ul {
   margin: 0;
   padding: 0;
@@ -694,16 +694,16 @@ body {
 #menubar ul li:last-child, #menubar ul li.last {
   padding-right: 0px;
 }
-/* line 15, src/partials/_page.scss */
+/* line 16, src/partials/_page.scss */
 #menubar a {
   color: white;
 }
-/* line 16, src/partials/_page.scss */
+/* line 17, src/partials/_page.scss */
 #menubar a:hover {
   color: #f6ac1c;
   text-decoration: underline;
 }
-/* line 93, src/partials/_page.scss */
+/* line 94, src/partials/_page.scss */
 #menubar li {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -713,15 +713,15 @@ body {
   border-radius: 5px;
   margin-right: 4px;
 }
-/* line 95, src/partials/_page.scss */
+/* line 96, src/partials/_page.scss */
 #menubar li.current {
   background: #840707;
 }
-/* line 96, src/partials/_page.scss */
+/* line 97, src/partials/_page.scss */
 #menubar li:hover {
   background: #b91416;
 }
-/* line 98, src/partials/_page.scss */
+/* line 99, src/partials/_page.scss */
 #menubar li a {
   padding: 6px 13px 4px;
   display: inline-block;
@@ -729,12 +729,12 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 104, src/partials/_page.scss */
+/* line 105, src/partials/_page.scss */
 #menubar li a:hover {
   color: white;
 }
 
-/* line 108, src/partials/_page.scss */
+/* line 109, src/partials/_page.scss */
 #search_box {
   bottom: 2px;
   right: 0;
@@ -748,15 +748,15 @@ body {
 * html #search_box {
   overflow-x: hidden;
 }
-/* line 111, src/partials/_page.scss */
+/* line 112, src/partials/_page.scss */
 #search_box #taxon {
   display: none;
 }
-/* line 112, src/partials/_page.scss */
+/* line 113, src/partials/_page.scss */
 #search_box #keywords {
   width: 220px;
 }
-/* line 113, src/partials/_page.scss */
+/* line 114, src/partials/_page.scss */
 #search_box button {
   background: url("../images/sprite.png") no-repeat scroll 0 -48px transparent;
   border: 0 none;
@@ -771,7 +771,7 @@ body {
   width: 22px;
   z-index: 2;
 }
-/* line 127, src/partials/_page.scss */
+/* line 128, src/partials/_page.scss */
 #search_box ul {
   list-style: none;
 }
@@ -782,7 +782,7 @@ body {
   margin-left: 0px;
 }
 
-/* line 132, src/partials/_page.scss */
+/* line 133, src/partials/_page.scss */
 .dropdown {
   list-style-image: none;
   list-style-type: none;
@@ -793,7 +793,7 @@ body {
   width: 84px;
   position: relative;
 }
-/* line 140, src/partials/_page.scss */
+/* line 141, src/partials/_page.scss */
 .dropdown ul {
   display: none;
   background: #000;
@@ -805,35 +805,35 @@ body {
   padding: 0;
   list-style: none;
 }
-/* line 152, src/partials/_page.scss */
+/* line 153, src/partials/_page.scss */
 .dropdown ul li {
   background: none;
   padding: 10px 10px 5px;
 }
-/* line 156, src/partials/_page.scss */
+/* line 157, src/partials/_page.scss */
 .dropdown ul li img {
   margin-right: 10px;
 }
-/* line 157, src/partials/_page.scss */
+/* line 158, src/partials/_page.scss */
 .dropdown ul li a {
   color: #636363;
   text-decoration: none;
 }
-/* line 163, src/partials/_page.scss */
+/* line 164, src/partials/_page.scss */
 .dropdown li:hover {
   background: url(/images/sprite.png) 0 -60px no-repeat;
   color: #ffffff;
 }
-/* line 166, src/partials/_page.scss */
+/* line 167, src/partials/_page.scss */
 .dropdown li:hover ul {
   display: block;
 }
-/* line 168, src/partials/_page.scss */
+/* line 169, src/partials/_page.scss */
 .dropdown li:hover ul li:hover {
   background: #171717;
 }
 
-/* line 175, src/partials/_page.scss */
+/* line 176, src/partials/_page.scss */
 #sidebar {
   font-size: 12px;
   display: inline;
@@ -845,7 +845,7 @@ body {
 * html #sidebar {
   overflow-x: hidden;
 }
-/* line 178, src/partials/_page.scss */
+/* line 179, src/partials/_page.scss */
 #sidebar .sb01, #sidebar .sb02, #sidebar .sb03 {
   color: white;
   font-size: 33px;
@@ -854,37 +854,37 @@ body {
   padding-left: 10px;
   line-height: 30px;
 }
-/* line 187, src/partials/_page.scss */
+/* line 188, src/partials/_page.scss */
 #sidebar .sb01 {
   font-style: italic;
   margin-top: 10px;
 }
-/* line 191, src/partials/_page.scss */
+/* line 192, src/partials/_page.scss */
 #sidebar .sb02 {
   font-style: italic;
   font-weight: bold;
   text-align: right;
 }
-/* line 196, src/partials/_page.scss */
+/* line 197, src/partials/_page.scss */
 #sidebar .sb03 {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 20px;
   width: 172px;
 }
-/* line 202, src/partials/_page.scss */
+/* line 203, src/partials/_page.scss */
 #sidebar h3 {
   font-size: 20px;
 }
-/* line 205, src/partials/_page.scss */
+/* line 206, src/partials/_page.scss */
 #sidebar .shipping {
   margin-top: 240px;
 }
-/* line 208, src/partials/_page.scss */
+/* line 209, src/partials/_page.scss */
 #sidebar .install {
   margin-top: 20px;
 }
-/* line 211, src/partials/_page.scss */
+/* line 212, src/partials/_page.scss */
 #sidebar .address {
   margin: 0;
   padding: 0;
@@ -914,18 +914,18 @@ body {
 #sidebar .address li:last-child, #sidebar .address li.last {
   padding-right: 0px;
 }
-/* line 215, src/partials/_page.scss */
+/* line 216, src/partials/_page.scss */
 #sidebar .address img {
   border: #aebac3 2px solid;
 }
 
-/* line 220, src/partials/_page.scss */
+/* line 221, src/partials/_page.scss */
 #footer {
   font-size: 12px;
   border-top: #ccc solid 1px;
   padding-top: 10px;
 }
-/* line 224, src/partials/_page.scss */
+/* line 225, src/partials/_page.scss */
 #footer .bottombar {
   margin: 0;
   padding: 0;
@@ -962,11 +962,11 @@ body {
 * html #footer .bottombar {
   overflow-x: hidden;
 }
-/* line 228, src/partials/_page.scss */
+/* line 229, src/partials/_page.scss */
 #footer .bottombar a {
   padding: 0 4px 0 5px;
 }
-/* line 232, src/partials/_page.scss */
+/* line 233, src/partials/_page.scss */
 #footer .bottomlogo {
   display: inline;
   float: left;
@@ -1084,42 +1084,43 @@ form.bp textarea {
   float: left;
   margin-right: 10px;
   width: 310px;
+  padding: 10px 0 0 30px;
 }
 /* line 138, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .home #sidebar {
   overflow-x: hidden;
 }
-/* line 14, src/partials/_home.scss */
+/* line 15, src/partials/_home.scss */
 .home #sidebar .sb01, .home #sidebar .sb02, .home #sidebar .sb03 {
   padding: 0;
   font-size: 47px;
   line-height: 35px;
   width: 280px;
 }
-/* line 20, src/partials/_home.scss */
+/* line 21, src/partials/_home.scss */
 .home #sidebar .sb01 {
   font-style: italic;
   margin-top: 10px;
 }
-/* line 24, src/partials/_home.scss */
+/* line 25, src/partials/_home.scss */
 .home #sidebar .sb02 {
   font-style: italic;
   font-weight: bold;
   text-align: right;
 }
-/* line 29, src/partials/_home.scss */
+/* line 30, src/partials/_home.scss */
 .home #sidebar .sb03 {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 28px;
   text-align: center;
 }
-/* line 36, src/partials/_home.scss */
+/* line 37, src/partials/_home.scss */
 .home .address p {
   padding-left: 10px;
 }
 
-/* line 41, src/partials/_home.scss */
+/* line 42, src/partials/_home.scss */
 #tire_filter {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1134,18 +1135,18 @@ form.bp textarea {
   background-image: linear-gradient(top, #dcdcdc 0%, #ffffff 63%);
   background: white;
 }
-/* line 47, src/partials/_home.scss */
+/* line 48, src/partials/_home.scss */
 #tire_filter .ct {
   margin: 21px 60px 60px 60px;
 }
-/* line 51, src/partials/_home.scss */
+/* line 52, src/partials/_home.scss */
 #tire_filter label {
   display: block;
   font-size: 13px;
   font-weight: bold;
   margin-top: 10px;
 }
-/* line 57, src/partials/_home.scss */
+/* line 58, src/partials/_home.scss */
 #tire_filter select {
   width: 100%;
   border-color: #B7B7B7 #E8E8E8 #E8E8E8 #B7B7B7;
@@ -1158,28 +1159,28 @@ form.bp textarea {
   border: 1px solid #BBBBBB;
   background-color: white;
 }
-/* line 69, src/partials/_home.scss */
+/* line 70, src/partials/_home.scss */
 #tire_filter .psg-links {
   display: none;
 }
-/* line 72, src/partials/_home.scss */
+/* line 73, src/partials/_home.scss */
 #tire_filter .buttons {
   margin-top: 15px;
 }
-/* line 74, src/partials/_home.scss */
+/* line 75, src/partials/_home.scss */
 #tire_filter .buttons input {
   padding: 7px 17px;
   width: 100%;
   margin-top: 15px;
 }
 
-/* line 82, src/partials/_home.scss */
+/* line 83, src/partials/_home.scss */
 #somelinks {
   display: none;
   padding-left: 40px;
   font-size: 12px;
 }
-/* line 86, src/partials/_home.scss */
+/* line 87, src/partials/_home.scss */
 #somelinks .c-leaf {
   background: url("../images/sprite.png");
   text-indent: -999px;
@@ -1187,16 +1188,16 @@ form.bp textarea {
   margin-top: 270px;
   width: 160px;
 }
-/* line 93, src/partials/_home.scss */
+/* line 94, src/partials/_home.scss */
 #somelinks ul {
   margin-top: 30px;
 }
 
-/* line 98, src/partials/_home.scss */
+/* line 99, src/partials/_home.scss */
 .somelinks {
   margin-top: 20px;
 }
-/* line 101, src/partials/_home.scss */
+/* line 102, src/partials/_home.scss */
 .somelinks li {
   margin-bottom: 10px;
   list-style-image: none;
@@ -1262,7 +1263,7 @@ form.bp textarea {
   margin: 0 20px 20px 300px;
 }
 /* line 24, src/partials/_detail.scss */
-#content #detailbox {
+#content #detailbox, #content #results_sheet {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -1274,36 +1275,36 @@ form.bp textarea {
   margin-top: 10px;
   display: inline-block;
 }
-/* line 31, src/partials/_detail.scss */
-#content #detailbox .header-detail {
+/* line 30, src/partials/_detail.scss */
+#content #detailbox .header-detail, #content #results_sheet .header-detail {
   display: inline-block;
   margin-top: 20px;
 }
-/* line 34, src/partials/_detail.scss */
-#content #detailbox .header-detail h1 {
+/* line 33, src/partials/_detail.scss */
+#content #detailbox .header-detail h1, #content #results_sheet .header-detail h1 {
   font-size: 24px;
 }
-/* line 37, src/partials/_detail.scss */
-#content #detailbox .header-detail h3 {
+/* line 36, src/partials/_detail.scss */
+#content #detailbox .header-detail h3, #content #results_sheet .header-detail h3 {
   color: #cc0000;
   font-weight: bold;
   font-size: 24px;
 }
-/* line 42, src/partials/_detail.scss */
-#content #detailbox .header-detail .rating {
+/* line 41, src/partials/_detail.scss */
+#content #detailbox .header-detail .rating, #content #results_sheet .header-detail .rating {
   display: inline-block;
   height: 12px;
   width: 55px;
   background: url("../images/sprite.png") -22px -68px;
   margin-right: 5px;
 }
-/* line 49, src/partials/_detail.scss */
-#content #detailbox .header-detail p {
+/* line 48, src/partials/_detail.scss */
+#content #detailbox .header-detail p, #content #results_sheet .header-detail p {
   color: #888e94;
   font-size: 12px;
 }
-/* line 53, src/partials/_detail.scss */
-#content #detailbox .header-detail ul {
+/* line 52, src/partials/_detail.scss */
+#content #detailbox .header-detail ul, #content #results_sheet .header-detail ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -1313,7 +1314,7 @@ form.bp textarea {
   font-size: 12px;
 }
 /* line 51, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
-#content #detailbox .header-detail ul li {
+#content #detailbox .header-detail ul li, #content #results_sheet .header-detail ul li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0px;
@@ -1324,15 +1325,15 @@ form.bp textarea {
   padding-right: 5px;
 }
 /* line 43, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
-#content #detailbox .header-detail ul li:first-child, #content #detailbox .header-detail ul li.first {
+#content #detailbox .header-detail ul li:first-child, #content #detailbox .header-detail ul li.first, #content #results_sheet .header-detail ul li:first-child, #content #results_sheet .header-detail ul li.first {
   padding-left: 0px;
 }
 /* line 44, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
-#content #detailbox .header-detail ul li:last-child, #content #detailbox .header-detail ul li.last {
+#content #detailbox .header-detail ul li:last-child, #content #detailbox .header-detail ul li.last, #content #results_sheet .header-detail ul li:last-child, #content #results_sheet .header-detail ul li.last {
   padding-right: 0px;
 }
-/* line 57, src/partials/_detail.scss */
-#content #detailbox .header-detail #shoppingbox {
+/* line 56, src/partials/_detail.scss */
+#content #detailbox .header-detail #shoppingbox, #content #results_sheet .header-detail #shoppingbox {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -1343,16 +1344,16 @@ form.bp textarea {
   background: #f5f5f5;
   width: 200px;
 }
-/* line 62, src/partials/_detail.scss */
-#content #detailbox .header-detail #shoppingbox form {
+/* line 61, src/partials/_detail.scss */
+#content #detailbox .header-detail #shoppingbox form, #content #results_sheet .header-detail #shoppingbox form {
   margin: 20px;
 }
-/* line 65, src/partials/_detail.scss */
-#content #detailbox .header-detail #shoppingbox #zipcode {
+/* line 64, src/partials/_detail.scss */
+#content #detailbox .header-detail #shoppingbox #zipcode, #content #results_sheet .header-detail #shoppingbox #zipcode {
   width: 40px;
 }
 
-/* line 73, src/partials/_detail.scss */
+/* line 72, src/partials/_detail.scss */
 #richContentWidget {
   display: inline;
   float: left;
@@ -1363,11 +1364,11 @@ form.bp textarea {
 * html #richContentWidget {
   overflow-x: hidden;
 }
-/* line 75, src/partials/_detail.scss */
+/* line 74, src/partials/_detail.scss */
 #richContentWidget .richContent {
   margin: 10px 0 0 10px;
 }
-/* line 79, src/partials/_detail.scss */
+/* line 78, src/partials/_detail.scss */
 #richContentWidget .carouselThumbnails ul {
   margin: 0;
   padding: 0;
@@ -1396,7 +1397,7 @@ form.bp textarea {
   padding-right: 0px;
 }
 
-/* line 84, src/partials/_detail.scss */
+/* line 83, src/partials/_detail.scss */
 .shortdescription {
   display: inline;
   float: left;
@@ -1409,7 +1410,7 @@ form.bp textarea {
 }
 
 /* line 87, src/partials/_detail.scss */
-.description {
+.product-details .description {
   display: inline-block;
   border: #8da0af solid 1px;
   padding: 20px;
@@ -1422,7 +1423,7 @@ form.bp textarea {
   margin: 20px;
 }
 /* line 93, src/partials/_detail.scss */
-.description h2 {
+.product-details .description h2 {
   display: inline;
   float: left;
   margin-right: 10px;
@@ -1430,11 +1431,11 @@ form.bp textarea {
   font-size: 18px;
 }
 /* line 138, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .description h2 {
+* html .product-details .description h2 {
   overflow-x: hidden;
 }
 /* line 97, src/partials/_detail.scss */
-.description .texts {
+.product-details .description .texts {
   display: inline;
   float: left;
   margin-right: 0;
@@ -1444,12 +1445,116 @@ form.bp textarea {
   font-size: 12px;
 }
 /* line 138, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .description .texts {
+* html .product-details .description .texts {
   overflow-x: hidden;
 }
 /* line 102, src/partials/_detail.scss */
-.description .texts p {
+.product-details .description .texts p {
   margin-bottom: 10px;
+}
+
+/* line 4, src/partials/_results.scss */
+.tire.result #results_sheet .orderfilters {
+  color: #c00003;
+  font-size: 12px;
+  text-align: right;
+  margin: 20px;
+}
+/* line 10, src/partials/_results.scss */
+.tire.result #results_sheet .results {
+  padding-left: 40px;
+}
+/* line 13, src/partials/_results.scss */
+.tire.result #results_sheet .item {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 310px;
+  min-height: 160px;
+}
+/* line 138, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tire.result #results_sheet .item {
+  overflow-x: hidden;
+}
+/* line 16, src/partials/_results.scss */
+.tire.result #results_sheet .item .thumb {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+  width: 121px;
+}
+/* line 138, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tire.result #results_sheet .item .thumb {
+  overflow-x: hidden;
+}
+/* line 20, src/partials/_results.scss */
+.tire.result #results_sheet .item .description {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 150px;
+  font-size: 12px;
+}
+/* line 21, src/partials/_results.scss */
+.tire.result #results_sheet .item .description h2 {
+  color: #c00003;
+  border-bottom: 1px solid #dcdcdc;
+}
+/* line 138, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tire.result #results_sheet .item .description {
+  overflow-x: hidden;
+}
+/* line 28, src/partials/_results.scss */
+.tire.result #results_sheet .item .description li {
+  margin-bottom: 4px;
+}
+/* line 33, src/partials/_results.scss */
+.tire.result #results_sheet .item ul {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+}
+/* line 36, src/partials/_results.scss */
+.tire.result #results_sheet .item .price {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 10px;
+}
+/* line 51, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+.tire.result #results_sheet .item .price li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+/* line 43, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+.tire.result #results_sheet .item .price li:first-child, .tire.result #results_sheet .item .price li.first {
+  padding-left: 0px;
+}
+/* line 44, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+.tire.result #results_sheet .item .price li:last-child, .tire.result #results_sheet .item .price li.last {
+  padding-right: 0px;
+}
+/* line 39, src/partials/_results.scss */
+.tire.result #results_sheet .item .price h3 {
+  font-size: 11px;
+}
+/* line 41, src/partials/_results.scss */
+.tire.result #results_sheet .item .price h3 strong {
+  font-size: 16px;
+}
+/* line 45, src/partials/_results.scss */
+.tire.result #results_sheet .item .price .rating {
+  display: none;
 }
 
 /* line 2, src/partials/_gritter.sass */

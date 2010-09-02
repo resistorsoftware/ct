@@ -11,6 +11,7 @@
 	
 	#sidebar {
 		@include column(8);
+		padding: 10px 0 0 30px;	
 		.sb01, .sb02, .sb03{
 			padding:0;
 			font-size:47px;

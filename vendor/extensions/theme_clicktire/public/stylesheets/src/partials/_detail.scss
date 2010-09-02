@@ -21,9 +21,8 @@
 			margin:0 20px 20px 300px;
 		}
 	}
-	#detailbox{
+	#detailbox, #results_sheet{
 		@include border-radius(5px);
-		//border: #8da0af solid 1px;
 		background: white;
 		width: 730px;
 		@include prepend-top(10px);
@@ -84,23 +83,25 @@
 .shortdescription {
 	@include column(9, true);
 } 
-.description{
-	display: inline-block;
-	border: #8da0af solid 1px;
-	padding:20px;
-	@include border-radius(5px);
-	margin:20px;
-	h2 {
-		@include column(5);
-		font-size:18px;
-	}
-	.texts {
-		@include column(11, true);
+.product-details{
+	.description{
 		display: inline-block;
-		color: #646464;
-		font-size: 12px;
-		p{
-			margin-bottom: 10px;
+		border: #8da0af solid 1px;
+		padding:20px;
+		@include border-radius(5px);
+		margin:20px;
+		h2 {
+			@include column(5);
+			font-size:18px;
+		}
+		.texts {
+			@include column(11, true);
+			display: inline-block;
+			color: #646464;
+			font-size: 12px;
+			p{
+				margin-bottom: 10px;
+			}
 		}
 	}
 }

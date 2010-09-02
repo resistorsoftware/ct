@@ -1,13 +1,13 @@
 !!! Strict
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
   %head
-    %title ClickTire :: Urban Auto Online Discount Tires, Wheels and Accessories
+    %title=  t('site_tagline')
     %meta{'http-equiv' => 'Content-Type', 'content' => "text/html;charset=UTF-8"}
     %link{:rel => 'shortcut icon', :href => 'images/favicon.ico', :type => 'image/x-icon'}
     %link{:rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Inconsolata"}
     - hook :inside_head do
       = render :partial => 'shared/head'
-  %body{:class => self.controller_name == 'products' ? 'home' : ""}
+  %body{:class => "#{@body_id}"}
     #root
       %div{:class => "#{@content_for_sidebar.nil? ? 'one-col' : 'two-col'}"}
         #header

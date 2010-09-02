@@ -1,0 +1,50 @@
+// styles for results
+.tire.result {
+	#results_sheet{
+		.orderfilters{
+			color: $redtitle;
+			font-size: 12px;
+			text-align: right;
+			margin: 20px;
+		}
+		.results{
+			@include prepend(1);
+		}
+		.item{
+			@include column(8);
+			min-height:160px;
+			.thumb{
+				@include column(4);
+				width: 121px;
+			}
+			.description{
+				h2{
+					color: $redtitle;
+					//font-weight: bold;
+					border-bottom: 1px solid #dcdcdc;
+				}
+				@include column(4, true);
+				font-size: 12px;
+				li{
+					@include append-bottom(4px);
+				}
+			}
+			
+			ul{
+				@include no-bullet;
+			}
+			.price{
+				@include horizontal-list(2px);
+				@include prepend-top (10px);
+				h3 {
+					font-size: 11px;
+					strong{
+						font-size: 16px;
+					}
+				}
+				.rating{ display: none;}
+			}
+		}
+	}
+}
+

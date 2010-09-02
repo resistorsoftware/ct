@@ -15,5 +15,6 @@
       = render "shared/products", :products => @products, :taxon => @taxon
 
 - else
+  - @body_id = 'home'
   = render 'shared/tire_filter'
 
