@@ -1,0 +1,40 @@
+- paginated_products = Spree::Config.searcher.products if params.key?(:keywords) 
+- paginated_products ||= products
+- if products.empty?
+  = t(:no_products_found)
+ 
+- if products.any?
+  #results_sheet
+    %form{:name => "product_form"}
+    - products.each do |product|   
+      %div{:id => "product_#{product.id}", :class => "item"}
+        .thumb
+          .description
+            %ul
+              %li
+                %h2
+                  %strong= product.name
+              %li
+                %strong Size:
+              %li
+                %strong Serv. Desc.
+              %li
+                %strong> Speed Rating
+              %li
+                %strong Performance
+            %ul.price
+              %li
+                %h3
+                  %strong $999.99
+                each
+        
+.clearfix &nbsp; 
+
+%hr.space
+ 
+- if paginated_products.respond_to?(:total_pages)
+  - params.delete(:search)
+  - params.delete(:taxon)
+  = will_paginate(paginated_products, :previous_label => "&#171; #{t('previous')}",:next_label => "#{t('next')} &#187;")
+ 
+%hr.space"
