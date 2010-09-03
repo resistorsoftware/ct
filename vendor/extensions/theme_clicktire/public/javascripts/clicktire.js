@@ -217,7 +217,7 @@ $(function () {
 //        });
       }
     } else {
-      // ask for some years via an ajax call
+      //ask for some years via an ajax call
       $.ajax({
         url: "/plussizeguide",
         dataType: "json",
@@ -227,20 +227,8 @@ $(function () {
            $('#selectModel').clearOptions();
            $('#selectMake').clearOptions();
         }  
-      }); 
+      });   
     }
-  } else {
-    // ask for some years via an ajax call
-    $.ajax({
-      url: "/plussizeguide",
-      dataType: "json",
-      success: function(res) {
-         ClickTire.utils.setYears(res.year);
-         $('#selectYear').addOptions({text: '', data: ClickTire.utils.getYears(), selected: null});
-         $('#selectModel').clearOptions();
-         $('#selectMake').clearOptions();
-      }  
-    }); 
 }    
     // setup some listeners for the drop downs.
     $("#selectYear").change(function () {

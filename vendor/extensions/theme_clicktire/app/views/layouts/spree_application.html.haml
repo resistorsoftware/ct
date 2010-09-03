@@ -3,7 +3,6 @@
   %head
     %title=  t('site_tagline')
     %meta{'http-equiv' => 'Content-Type', 'content' => "text/html;charset=UTF-8"}
-    %link{:rel => 'shortcut icon', :href => 'images/favicon.ico', :type => 'image/x-icon'}
     %link{:rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Inconsolata"}
     - hook :inside_head do
       = render :partial => 'shared/head'
@@ -52,7 +51,7 @@
               %p QC J4B 7G4- if @content_for_sidebar
           
         #content
-          = breadcrumbs(@taxon) if @taxon
+          -#= breadcrumbs(@taxon) if @taxon
           - if flash[:notice]
             .flash.notice= flash[:notice]
           - if flash[:error]

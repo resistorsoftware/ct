@@ -6,9 +6,11 @@
 - if products.any?
   #results_sheet
     %form{:name => "product_form"}
-    - products.each do |product|   
-      %div{:id => "product_#{product.id}", :class => "item"}
-        .thumb
+      .results
+      - products.each do |product|   
+        %div{:id => "product_#{product.id}", :class => "item"}
+          .thumb
+            = small_image(product) 
           .description
             %ul
               %li
@@ -25,8 +27,8 @@
             %ul.price
               %li
                 %h3
-                  %strong $999.99
-                each
+                  %strong #{product_price(product)}
+                  each
         
 .clearfix &nbsp; 
 
@@ -37,4 +39,4 @@
   - params.delete(:taxon)
   = will_paginate(paginated_products, :previous_label => "&#171; #{t('previous')}",:next_label => "#{t('next')} &#187;")
  
-%hr.space"
+%hr.space

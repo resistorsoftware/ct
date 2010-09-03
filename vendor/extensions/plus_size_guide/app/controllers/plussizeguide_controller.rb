@@ -13,7 +13,7 @@ class PlussizeguideController < ApplicationController
     p = params.merge!(CREDENTIALS)
     @res = Net::HTTP.post_form(URI.parse('http://www.plussizingguide.com/xml/plusguidexml.php'), p)
     doc = Nokogiri::XML(@res.body)
-    puts "result is #{doc}\n"
+    #puts "result is #{doc}\n"
     @year = doc.xpath('//year')
     @make = doc.xpath('//make')
     @model = doc.xpath('//model')
