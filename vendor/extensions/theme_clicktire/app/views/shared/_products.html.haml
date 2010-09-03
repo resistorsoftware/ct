@@ -10,7 +10,7 @@
       - products.each do |product|   
         %div{:id => "product_#{product.id}", :class => "item"}
           .thumb
-            = small_image(product) 
+            = link_to small_image(product), product 
           .description
             %ul
               %li
