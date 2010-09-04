@@ -1557,6 +1557,36 @@ form.bp textarea {
   display: none;
 }
 
+/* line 51, src/partials/_results.scss */
+.pagination {
+  color: #a1a1a1;
+  font-size: 12px;
+}
+/* line 54, src/partials/_results.scss */
+.pagination span, .pagination a {
+  border: 1px solid #a1a1a1;
+  display: inline-block;
+  padding: 3px 6px;
+}
+/* line 59, src/partials/_results.scss */
+.pagination .current {
+  background: #3d67b1;
+  color: white;
+  font-weight: bold;
+  border-color: #3d67b1;
+}
+/* line 65, src/partials/_results.scss */
+.pagination a {
+  text-decoration: none;
+  border-color: #3d67b1;
+}
+/* line 68, src/partials/_results.scss */
+.pagination a:hover {
+  color: black;
+  border-color: #9eb3d8;
+  background: #9eb3d8;
+}
+
 /* line 2, src/partials/_gritter.sass */
 * html #gritter-notice-wrapper {
   position: absolute;
