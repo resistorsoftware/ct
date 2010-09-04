@@ -15,15 +15,7 @@ class SolrSearchExtension < Spree::Extension
   def activate
     require 'acts_as_solr'
     require 'solr_pagination'
-    
-    Spree::BaseController.class_eval do 
-      before_filter :set_searcher 
-      private 
-      def set_searcher 
-        Spree::Config.searcher = Spree::Search::Solr.new 
-      end 
-    end 
-
+   
     Spree::Config.set(:product_price_ranges => 
                       ["Under $25", "$25 to $50", "$50 to $100", "$100 to $200", "$200 and above"])
     
@@ -95,7 +87,13 @@ class SolrSearchExtension < Spree::Extension
     end
     
     Spree::BaseController.class_eval do
-      helper :solr
+      helper :solr 
+      before_filter :set_searcher
+
+           private
+           def set_searcher
+             Spree::Config.searcher = Spree::Search::Solr.new
+           end
     end
     
     Spree::Config.searcher = Spree::Search::Solr.new
