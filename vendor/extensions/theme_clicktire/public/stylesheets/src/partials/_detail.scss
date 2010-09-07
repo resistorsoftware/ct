@@ -1,11 +1,11 @@
-	
-  #content {
-	#filter-box{
+	  
+	#filter-box, #checkout_sheet {
+		@include column(18, true);
 		@include border-radius(5px);
 		border: #8da0af solid 1px;
 		background: white;
 		@include linear-gradient(color-stops(#dcdcdc, white 20%));
-		margin-right: 20px;
+		width: 730px;
 		h2 {
 			font-weight : bold;
 			font-size: 14px;
@@ -22,11 +22,11 @@
 		}
 	}
 	#detailbox, #results_sheet{
+		@include column(18, true);
 		@include border-radius(5px);
 		background: white;
 		width: 730px;
 		@include prepend-top(10px);
-		display: inline-block;
 		.header-detail {
 			display: inline-block;
 			@include prepend-top (20px);
@@ -62,12 +62,21 @@
 					margin: 20px;
 				}
 				#zipcode{
-					width: 40px;
+					width: 35px;
+					border: 1px solid $grayborder;
+				}
+				.graybutton{
+					margin-left: 10px;
+				}
+				p{ 
+					color: black;
+					margin-top: 10px;
+					text-align: right;
 				}
 			}
 		}
 	}
-  }
+  
 
 #richContentWidget { 
 	@include column(9);
@@ -104,4 +113,13 @@
 			}
 		}
 	}
+}
+#shoppingbox{
+	.redbutton{
+		width:160px;
+		font-size: 14px;
+		padding:3px;
+		margin:10px 0;
+	}
+	
 }

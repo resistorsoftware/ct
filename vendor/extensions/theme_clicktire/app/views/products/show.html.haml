@@ -1,0 +1,75 @@
+- @body_id = 'product-details'
+- content_for :sidebar do
+  %p &nbsp;
+  
+#filter-box
+  %ul.titles
+    %li
+      %h2 TIRES
+      %br Search Results for:
+    %li
+      %strong Your Vehicle:
+      %br ACURA INTEGRA 2001
+    %li
+      %strong OEM Tire Sizes:
+      %br 195/60-14,195/55-15
+    %li
+      %strong Plus Tire Sizes:
+      %br 205/45-16, 215/40-17, 215/35-18</li>
+  
+  %form{:id => "dropdowns", :method => "post", :action =>""}
+    %ul.dropdowns
+      %li             
+        %select{:name => "tires-sizes", :id => "tires-sizes"}
+          %option{:value => "All Tire Sizes"} All Tire Sizes
+      %li
+        %select{:name => "tires-sizes", :id => "brands"}
+          %option{:value => "All Tire Sizes"} All Brands
+      %li
+        %select{:name => "tires-sizes", :id => "tires-types"}
+          %option{:value => "All Tire Sizes"} All tires Types
+
+<!--filter-box-->
+
+.header-detail
+  #richContentWidget
+    .richContent.hotWidget  
+      #richContentImages.richContentTab.activeContent{:style => "display: block;"}
+        = render 'image'
+        .richContentCarousel
+        .carouselThumbnails
+          %ul
+            %li
+              %a{:target => "imageViewer", :href => "http://ecx.images-amazon.com/images/I/31MAEvxkjSL._AA260_.jpg", :id => "product_image_MAIN", :class=>""}
+                %img{:height=>"60", :border=>"0",:width=>"60", :alt=>"Product Image", :src=>"/images/th01.jpg"}
+            %li
+              %a{:target=>"imageViewer",:href=>"http://ecx.images-amazon.com/images/I/510TlxiXtzL._AA260_.jpg",:id=>"product_image_PT01",:class=>"active"}
+                %img{:height=>"60",:border=>"0",:width=>"60", :alt=>"Product Image",:src=>"/images/th02.jpg"}
+            %li    
+              %a{:target=>"imageViewer",:href=>"http://ecx.images-amazon.com/images/I/51tdHOcieJL._AA260_.jpg",:id=>"product_image_PT02",:class=>""}
+                %img{:height=>"60",:border=>"0",:width=>"60", :alt=>"Product Image",:src=>"/images/th03.jpg"}
+            %li
+              %a{:target=>"imageViewer",:href=>"http://ecx.images-amazon.com/images/I/51tdHOcieJL._AA260_.jpg",:id=>"product_image_PT02",:class=>""}
+                %img{:height=>"60",:border=>"0",:width=>"60", :alt=>"Product Image",:src=>"/images/th04.jpg"}
+            %li
+              %a{:target=>"imageViewer",:href=>"http://ecx.images-amazon.com/images/I/51tdHOcieJL._AA260_.jpg",:id=>"product_image_PT02",:class=>""}
+                %img{:height=>"60",:border=>"0",:width=>"60", :alt=>"Product Image",:src=>"/images/th05.jpg"}
+      %span.nextLink{:style=>"display: none;"}
+      %span.prevLink{:style=>"display: none;"}
+
+.shortdescription
+  %h1= @product.name
+  - hook :product_properties do
+    = render 'properties'
+    
+
+#product-description
+  - hook :product_description do
+    = product_description(@product) rescue t("product_has_no_description")
+  
+
+- hook :cart_form do
+  #cart-form
+    = render 'cart_form'
+
+= render 'taxons'

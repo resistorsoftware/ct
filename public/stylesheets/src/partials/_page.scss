@@ -6,21 +6,6 @@
 // This makes it easier to have pages without blueprint styles
 // when you're using a single/combined stylesheet.
 
-$whitelink: white;
-$whitelinkhover: #f6ac1c;
-$redtitle: #c00003;
-
-@mixin whitelink{
- color: $whitelink;
- font-size: 12px;
- a { color: $whitelink;
-	 &:hover {
-		 color: $whitelinkhover;
-		 text-decoration: underline; 
-	 }
- }
-}
-
 body.bp {
   @include blueprint-typography(true);
   @include blueprint-utilities;
@@ -37,7 +22,7 @@ body {
 .buttons input {
   background: #235cba ; 
 	@include linear-gradient(color-stops(#519bf7, #2068e3));
-  @include border-radius(5px);
+	@include border-radius(5px);
 	border: #7a8da7 1px solid;
 	@include text-shadow(black, 1px, 1px, 1px);
 	@include box-shadow(#ccc, 0, 3px, 2px);
@@ -46,9 +31,7 @@ body {
 	color: $whitelink;
 }
 
-
 //
-
 #header {
 	height: 108px;
 	position:relative;	
