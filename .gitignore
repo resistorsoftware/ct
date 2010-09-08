@@ -2,7 +2,8 @@
 log/**/*
 tmp/**/
 log/
-public/**/*
 vendor/extensions/theme_clicktire/public/stylesheets/.sass-cache/**/*
+public/**/*
+public/
 tmp/
 vendor/extensions/theme_clicktire/public/stylesheets/stylesheets/

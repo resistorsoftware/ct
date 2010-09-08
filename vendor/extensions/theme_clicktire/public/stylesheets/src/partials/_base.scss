@@ -14,17 +14,17 @@ $whitelinkhover: #f6ac1c;
 $redtitle: #c00003;
 $grayborder: #DCDCDC;
 $darkgray: #676767;
-$normallink: #0050f4;
+$normallink: #2254c1;
+$hoverlink: #0090f4;
 
-@mixin border-radius($radius) {
-  -moz-border-radius-topright: $radius;
-  -webkit-border-top-right-radius: $radius;
-  -moz-border-radius-bottomright: $radius;
-  -webkit-border-bottom-right-radius: $radius;
-  -moz-border-radius-topleft: $radius;
-  -webkit-border-top-left-radius: $radius;
-  -moz-border-radius-bottomleft: $radius;
-  -webkit-border-bottom-left-radius: $radius;
+a{ color: $normallink;
+	&:hover{ color:$hoverlink;
+	}
+}
+#content {
+	hr, .clearfix {
+		display:none;
+	}
 }
 
 @mixin whitelink{
@@ -53,6 +53,9 @@ $normallink: #0050f4;
 	margin:0;
 	padding:3px;
 }
+input{
+	cursor:pointer;
+}
 .redbutton {
 	@include abutton;
 	background: #aa0000 ; 
@@ -76,12 +79,10 @@ $normallink: #0050f4;
 		//@include linear-gradient(color-stops(#d3d3d3 49%, #9f9f9f 51%, #bdbdbd));
 	}
 }
-
 .alertbox{
 	background: #fff1e5;
 	border: #ff7608 1px solid;
 	color: $darkgray;
 	padding: 15px;
 	font-size: 12px;
-
 }

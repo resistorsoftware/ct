@@ -1,18 +1,36 @@
 // styles for results
+
+.taxon {
+	@include column(18, true);
+	@include border-radius(5px);
+	background: white;
+	width: 730px;
+	
+	.breadcrumbs{
+			text-decoration: none;
+			margin: 20px 0 0 40px;
+			font-size: 20px;
+			display: inline-block;
+	}
+}
 .tire.result {
 	#results_sheet{
+		min-height:400px;
+		@include prepend-top(0);
 		.orderfilters{
 			color: $redtitle;
 			font-size: 12px;
 			text-align: right;
 			margin: 20px;
 		}
-		.results{
+		form{
 			@include prepend(1);
+			padding-top: 20px;
 		}
 		.item{
 			@include column(8);
 			min-height:160px;
+
 			.thumb{
 				@include column(4);
 				width: 121px;
@@ -47,10 +65,11 @@
 		}
 	}
 }
- 
+
 .pagination {
 	color: #a1a1a1;
 	font-size: 12px;
+	padding-left:40px;
 	span, a{
 		border: 1px solid #a1a1a1;
 		display: inline-block;

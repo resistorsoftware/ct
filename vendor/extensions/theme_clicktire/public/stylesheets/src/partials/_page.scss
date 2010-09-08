@@ -20,7 +20,7 @@ body {
  font-family: “helvetica neue”, helvetica, arial, sans-serif;
 }
 .buttons input {
-  background: #235cba ; 
+	background: #235cba ; 
 	@include linear-gradient(color-stops(#519bf7, #2068e3));
 	@include border-radius(5px);
 	border: #7a8da7 1px solid;
@@ -29,6 +29,10 @@ body {
 	font-size: 16px;
 	font-weight: bold;
 	color: $whitelink;
+	&:hover{
+		background: #57b2e5 ; 
+		@include linear-gradient(color-stops(#7ec5f2, #54ade5, #1f64db));
+	}
 }
 
 //
