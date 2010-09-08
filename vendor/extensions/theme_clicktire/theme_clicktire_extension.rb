@@ -14,6 +14,8 @@ class ThemeClicktireExtension < Spree::Extension
   
   def activate
         Spree::Config.set(:default_locale => 'en-CA')
+        Spree::Config.set(:allow_ssl_in_production => 'false')
+        Spree::Config.set(:allow_anonymous_checkout => 'true')
         
         Product.class_eval do
           # a scope that finds all products having an option value specified by name, object or id
