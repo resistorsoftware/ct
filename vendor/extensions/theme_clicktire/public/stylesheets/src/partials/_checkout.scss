@@ -1,0 +1,198 @@
+// styles for results
+body.checkout {
+	#sidebar{
+		display:none;
+	}
+	#content{ 
+		@include column(24, true);
+		#checkout_sheet{
+			margin: 0 20px;
+			@include column(23, true);
+		}
+	}
+	#checkout_sheet{
+		h1{
+			font-size: 20px;
+			color: #646464;
+			margin: 20px;
+			strong {
+				font-weight: normal;
+				color: $redtitle;
+			}
+		}
+		.ct{
+			border: 1px solid $grayborder;
+			@include column(22, true);
+			margin-left: 20px;
+			@include append-bottom(20px);
+				.items{
+					border-right: 1px solid $grayborder;
+					@include column(16);
+					margin:0;
+					padding-bottom:30px;
+				}
+				.checkoutbox{
+					@include column(6,true);
+					background: #eeeeee url("../images/sprite.png") 190px -150px no-repeat;
+					border-bottom: 1px solid $grayborder;
+					width:239px;
+					@include append-bottom(10px);
+					.head-checkout{
+						margin-top: 60px;
+					}
+					p{ 
+						font-size: 11px; 
+						text-align: right;
+						margin:10px 20px;}
+					strong{font-size: 18px;}
+					.includingshipping{
+						color: $redtitle;
+						font-weight: bold;
+						font-size: 12px;
+						margin: 0 20px;
+					}
+					em{
+						display: block;
+						color: $darkgray;
+						font-size: 11px;
+						margin:  10px 20px;
+					}
+				}
+				.redbutton, .graybutton{
+					margin-left:25px;
+					width:185px;
+					font-size: 14px;
+					padding:5px 15px;
+				}
+				.graybutton{
+					margin-top: 15px;
+				}
+				.redbutton{
+					margin:10px 25px;
+				}
+				
+			}
+		.item{
+			@include column(15, true);
+			min-height:140px;
+			margin: 20px 0 0 15px;
+			border-bottom: 1px solid $grayborder;
+			
+			&:last-child, &.last {
+				border: none;
+			}
+			ul{ 
+				@include horizontal-list()
+			}
+			.thumb{
+				@include column(4);
+				width: 121px;
+			}
+			.description{
+				h2{
+					color: $redtitle;
+				}
+				@include column(4, true);
+				font-size: 12px;
+				li{
+					@include append-bottom(4px);
+					padding: 0;
+					float: none;
+					display: block;
+				}
+			}
+			ul{
+				@include no-bullet;
+			}
+			.price{
+				color: $darkgray;
+				@include column(3);
+				font-size: 12px;
+				h2 {
+					font-size: 16px;
+					color: $redtitle;
+					font-weight: normal;
+				}
+				.rating{ display: none;}
+			}
+			.quantitydelete{
+				color: $darkgray;
+				font-size:12px;
+				label{ display:block;}
+				a{font-size:11px}
+			}
+		}
+	}
+	.steps {
+		float:right;
+	}
+}
+///step01
+.items{
+	h2{
+		margin-left: 20px;
+	}
+	label,p{ 
+		display: block;
+		font-size: 12px;
+		@include prepend-top(15px);
+		color: $darkgray;
+	}
+	input {
+		@include biginput;
+		//width: 95%;
+		@include prepend-top(4px);
+	}
+	
+	.emailbox, .shippingmethod{	
+		margin: 20px;
+		border-bottom: 1px solid $grayborder;
+		padding-bottom:20px;
+		input{ width: 99%;}
+	}
+	.billingaddress{
+		@include column(8)
+	}
+	.shippingaddress{
+		@include column(8, true);
+		.personalinfo{display: none;}
+	}
+	.billingaddress, .shippingaddress{
+		input{ width: 80%;}
+		.personalinfo{
+			@include no-bullets();
+			margin-left: 20px;
+		}
+	}
+	ul.cityzip, ul.statecountry{
+			margin-left: 0;
+			input{ width: 105px;}
+			@include horizontal-list();
+			li, label {width: 118px;}
+	}
+	.sameaddress {
+		margin: 10px 0;
+		input, label { 
+			display: inline;
+		}
+		input { width: 20px;}
+	}
+	.alertbox{
+		margin: 15px 20px;
+	}
+}
+///step02
+.shippingmethod{
+	h2{
+		margin: 20px 0 10px;
+	}
+}
+.creditcardinfo{
+	p{
+		margin: 20px;
+	}
+	.creditcarddetail{
+		@include no-bullets();
+		margin-left: 20px;
+	}
+}
