@@ -6,7 +6,7 @@
       = form.input :password, :label => t("password"), :required => true
 
   - if Spree::Config[:allow_openid]
-    #openid-credentials
+    #openid-credentials{:style => "display:none;"}
       - form.inputs do
         = form.input :openid_identifier, :label => t('OpenID', :default => 'OpenID'), :input_html => {:class => 'openid_url', :size => 28}, :required => true
   

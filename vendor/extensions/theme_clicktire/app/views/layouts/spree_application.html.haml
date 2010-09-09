@@ -8,7 +8,7 @@
       = render :partial => 'shared/head'
   %body{:class => "#{@body_id}"}
     #root
-      %div{:class => "#{@content_for_sidebar.nil? ? 'one-col' : 'two-col'}"}
+      %div{:class => "#{@content_for_sidebar.nil? ? 'two-col' : 'two-col'}"}
         #header
           %a{:href => '/'}
             .logo
