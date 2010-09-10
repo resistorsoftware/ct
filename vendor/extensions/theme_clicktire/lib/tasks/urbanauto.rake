@@ -13,6 +13,12 @@ namespace :clicktire do
   task :tirerack_option_values => :environment do
      UrbanAutosport::Administration.parse_tire_option_values
   end
+  
+  desc "Plus Size Guide XML parser"
+  task :psg_parse => :environment do
+    UrbanAutosport::Administration.parse_psg_results
+  end
+   
 end
 
 # simple alias so clicktire becomes ct
@@ -22,7 +28,9 @@ namespace :ct do
   desc "Read TireRack manufacturer files, and create Tires!"
   task :create_tires => "clicktire:create_tires"
   desc "Read TireRack manufacturer files, and create Option Values"
-  task :tov => "clicktire:tirerack_option_values" 
+  task :tov => "clicktire:tirerack_option_values"
+  desc "Plus Size Guide XML parser"
+  task :psg => "clicktire:psg_parse"
 end
 
 module UrbanAutosport
@@ -31,6 +39,7 @@ module UrbanAutosport
     THEME_PATH = "#{RAILS_ROOT}/vendor/extensions/theme_clicktire"
     APP_DATA = "#{RAILS_ROOT}/config/application.yml"
     SPREE_DATA_PATH = "#{SPREE_ROOT}/db"
+    PSG_RESULTS = "#{RAILS_ROOT}/tmp/sample_plussizeguide.xml"
     @@config = nil
     
     # load in the administration YAML
@@ -301,6 +310,33 @@ module UrbanAutosport
     def self.get_manufacturer_list
       ENV['MFG'].nil? ? @@config[:tirerack_mfg] : [ENV['MFG']]
     end
+    
+    def self.parse_psg_results
+      require 'fileutils'
+      if (!FileTest.exist?(PSG_RESULTS))
+        raise StandardError.new("Sample PSG Results file '#{PSG_RESULTS}' was not found!\n")
+      end
+      xml = File.read(PSG_RESULTS)
+      doc = Nokogiri::XML(xml)
+      puts "result is #{doc}\n"
+      
+      # separate the tires into these bins
+      original_equipment = []
+      plus_size = []
+      
+      doc.search("tire").each do |tire|
+        plus = tire.search("plus").first.content
+        if /OE*/.match(plus)
+          original_equipment << tire.search("size").first.content
+        else   
+          plus_size << tire.search("size").first.content
+        end
+      end 
+      puts "OE #{original_equipment.inspect}\n"
+      puts "Plus #{plus_size.inspect}\n"
+      puts "XML Parse ended...\n"
+    end
+    
      
   end
 end        

@@ -1370,8 +1370,12 @@ form.bp textarea {
 #filter-box .dropdowns, #checkout_sheet .dropdowns {
   margin: 0 20px 20px 100px;
 }
+/* line 24, src/partials/_detail.scss */
+#filter-box .psg-tire-on, #checkout_sheet .psg-tire-on {
+  background-color: #ed2124;
+}
 
-/* line 25, src/partials/_detail.scss */
+/* line 28, src/partials/_detail.scss */
 #detailbox, #results_sheet {
   display: inline;
   float: left;
@@ -1391,22 +1395,22 @@ form.bp textarea {
 * html #detailbox, * html #results_sheet {
   overflow-x: hidden;
 }
-/* line 31, src/partials/_detail.scss */
+/* line 34, src/partials/_detail.scss */
 #detailbox .header-detail, #results_sheet .header-detail {
   display: inline-block;
   margin-top: 20px;
 }
-/* line 34, src/partials/_detail.scss */
+/* line 37, src/partials/_detail.scss */
 #detailbox .header-detail h1, #results_sheet .header-detail h1 {
   font-size: 24px;
 }
-/* line 37, src/partials/_detail.scss */
+/* line 40, src/partials/_detail.scss */
 #detailbox .header-detail h3, #results_sheet .header-detail h3 {
   color: #cc0000;
   font-weight: bold;
   font-size: 24px;
 }
-/* line 42, src/partials/_detail.scss */
+/* line 45, src/partials/_detail.scss */
 #detailbox .header-detail .rating, #results_sheet .header-detail .rating {
   display: inline-block;
   height: 12px;
@@ -1414,12 +1418,12 @@ form.bp textarea {
   background: url("../images/sprite.png") -22px -68px;
   margin-right: 5px;
 }
-/* line 49, src/partials/_detail.scss */
+/* line 52, src/partials/_detail.scss */
 #detailbox .header-detail p, #results_sheet .header-detail p {
   color: #888e94;
   font-size: 12px;
 }
-/* line 53, src/partials/_detail.scss */
+/* line 56, src/partials/_detail.scss */
 #detailbox .header-detail ul, #results_sheet .header-detail ul {
   margin: 0;
   padding: 0;
@@ -1448,7 +1452,7 @@ form.bp textarea {
 #detailbox .header-detail ul li:last-child, #detailbox .header-detail ul li.last, #results_sheet .header-detail ul li:last-child, #results_sheet .header-detail ul li.last {
   padding-right: 0px;
 }
-/* line 57, src/partials/_detail.scss */
+/* line 60, src/partials/_detail.scss */
 #detailbox .header-detail #shoppingbox, #results_sheet .header-detail #shoppingbox {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1460,27 +1464,27 @@ form.bp textarea {
   background: #f5f5f5;
   width: 200px;
 }
-/* line 62, src/partials/_detail.scss */
+/* line 65, src/partials/_detail.scss */
 #detailbox .header-detail #shoppingbox form, #results_sheet .header-detail #shoppingbox form {
   margin: 20px;
 }
-/* line 65, src/partials/_detail.scss */
+/* line 68, src/partials/_detail.scss */
 #detailbox .header-detail #shoppingbox #zipcode, #results_sheet .header-detail #shoppingbox #zipcode {
   width: 35px;
   border: 1px solid #dcdcdc;
 }
-/* line 69, src/partials/_detail.scss */
+/* line 72, src/partials/_detail.scss */
 #detailbox .header-detail #shoppingbox .graybutton, #results_sheet .header-detail #shoppingbox .graybutton {
   margin-left: 10px;
 }
-/* line 72, src/partials/_detail.scss */
+/* line 75, src/partials/_detail.scss */
 #detailbox .header-detail #shoppingbox p, #results_sheet .header-detail #shoppingbox p {
   color: black;
   margin-top: 10px;
   text-align: right;
 }
 
-/* line 82, src/partials/_detail.scss */
+/* line 85, src/partials/_detail.scss */
 #richContentWidget {
   display: inline;
   float: left;
@@ -1491,11 +1495,11 @@ form.bp textarea {
 * html #richContentWidget {
   overflow-x: hidden;
 }
-/* line 84, src/partials/_detail.scss */
+/* line 87, src/partials/_detail.scss */
 #richContentWidget .richContent {
   margin: 10px 0 0 10px;
 }
-/* line 88, src/partials/_detail.scss */
+/* line 91, src/partials/_detail.scss */
 #richContentWidget .carouselThumbnails ul {
   margin: 0;
   padding: 0;
@@ -1524,7 +1528,7 @@ form.bp textarea {
   padding-right: 0px;
 }
 
-/* line 93, src/partials/_detail.scss */
+/* line 96, src/partials/_detail.scss */
 .shortdescription {
   display: inline;
   float: left;
@@ -1536,7 +1540,7 @@ form.bp textarea {
   overflow-x: hidden;
 }
 
-/* line 97, src/partials/_detail.scss */
+/* line 100, src/partials/_detail.scss */
 .product-details .description {
   display: inline-block;
   border: #8da0af solid 1px;
@@ -1549,7 +1553,7 @@ form.bp textarea {
   border-radius: 5px;
   margin: 20px;
 }
-/* line 103, src/partials/_detail.scss */
+/* line 106, src/partials/_detail.scss */
 .product-details .description h2 {
   display: inline;
   float: left;
@@ -1561,7 +1565,7 @@ form.bp textarea {
 * html .product-details .description h2 {
   overflow-x: hidden;
 }
-/* line 107, src/partials/_detail.scss */
+/* line 110, src/partials/_detail.scss */
 .product-details .description .texts {
   display: inline;
   float: left;
@@ -1575,12 +1579,12 @@ form.bp textarea {
 * html .product-details .description .texts {
   overflow-x: hidden;
 }
-/* line 112, src/partials/_detail.scss */
+/* line 115, src/partials/_detail.scss */
 .product-details .description .texts p {
   margin-bottom: 10px;
 }
 
-/* line 119, src/partials/_detail.scss */
+/* line 122, src/partials/_detail.scss */
 #shoppingbox .redbutton {
   width: 160px;
   font-size: 14px;

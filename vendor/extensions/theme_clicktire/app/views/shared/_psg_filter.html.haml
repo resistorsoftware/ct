@@ -17,9 +17,11 @@
           %div.wheel-data
             .bolt-pattern Bolt Pattern: <%=bolt_pattern%>
             .offset Offset: <%=offset%>
-            .hub Hub <%=hub%>
-            .lug Lug <%=lug%>
-    - if current_taxon == 'Tires'    
+            .hub Hub: <%=hub%>
+            .lug Lug: <%=lug%>
+    - if current_taxon == 'Tires'
+      %script{:type => "text/html", :id => "tireTemplate"}
+        .psg-tire <%=size%>
       %li
         %strong OEM Tire Sizes:
         %br

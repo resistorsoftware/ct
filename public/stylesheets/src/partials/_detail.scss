@@ -21,6 +21,9 @@
 		.dropdowns {
 			margin:0 20px 20px 100px;
 		}
+		.psg-tire-on {
+		  background-color: #ed2124;
+		}
 	}
 	#detailbox, #results_sheet{
 		@include column(18, true);

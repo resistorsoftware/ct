@@ -211,20 +211,32 @@ $(function () {
         if($(".psg-wheel").length) {
           $(".psg-wheel").html(tmpl("wheelTemplate",JSON.parse($.cookie("psg-wheel"))));
         }
+        var tires = JSON.parse($.cookie("psg-tires"));
+        // show off the OE tires for this vehicle
+        if(typeof $(".oem-sizes")[0] != 'undefined') {
+          var oeTire = ""
+          if(tires.oe.length) {
+            for(var i = 0, len = tires.oe.length; i < len; i++) {
+              oeTire += tmpl("tireTemplate", tires.oe[i]);
+            }
+            $(".oem-sizes").html(oeTire);
+          }
+        }
         
-//        var ct = document.getElementById("wheel-results");
-//        ct.innerHTML = tmpl("wheelTemplate",JSON.parse($.cookie("psg-wheel")));
-//        var ct = document.getElementById("tire-results");
-//        var tireData = "";
-//        tires = JSON.parse($.cookie("psg-tires"));
-//        for (var i = 0, len = tires.length; i < len; i++) {
-//          tireData += tmpl("tireTemplate",tires[i]);
-//        }
-//        ct.innerHTML = tireData;
-//        $('.tire-data').hover(function () {$(this).addClass('tire-data-on')}, function () {$(this).removeClass('tire-data-on')});
-//        $('.tire-data').click(function () {
-//          $.feedback("success","Search for "+$(this).find('.tiresize').text()+" tires");
-//        });
+        // show off the Plus Size tires for this vehicle
+        if(typeof $(".plus-sizes")[0] != 'undefined') {
+          var plusTire = ""
+          if(tires.ps.length) {
+            for(var i = 0, len = tires.ps.length; i < len; i++) {
+              plusTire += tmpl("tireTemplate", tires.ps[i]);
+            }
+            $(".plus-sizes").html(plusTire);
+          }
+        }
+        $('.psg-tire').hover(function () {$(this).addClass('psg-tire-on')}, function () {$(this).removeClass('psg-tire-on')});
+        $('.psg-tire').click(function () {
+          $.feedback("success","Search for "+$(this).text()+" tires");
+        });
       }
     } else {
       //ask for some years via an ajax call
