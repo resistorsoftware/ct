@@ -1,0 +1,9 @@
+%fieldset.order_details
+  .clear
+  %legend= t("confirm")
+    = render :partial => 'shared/order_details', :locals => {:order => @order}
+
+%hr
+
+.form-buttons
+  %input{:type => "submit", :class => "continue button primary", :value =>"#{t('save_and_continue')}"}
