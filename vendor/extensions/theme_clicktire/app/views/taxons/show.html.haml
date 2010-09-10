@@ -2,6 +2,8 @@
 - @body_id = "#{taxon} result"
 %h1= @taxon.name
 
+= render :partial => 'shared/psg_filter', :locals => {:current_taxon => @taxon.parent.nil? ? @taxon.name : @taxon.parent.name}
+
 - if @taxon.children.empty? || !params[:keywords].blank?
   -# We are at the end of the line, show whatever products belong to this taxon or category... could be Goodyear or Drag Wheels for example
   -hook :taxon_products do

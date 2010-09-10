@@ -1,0 +1,28 @@
+#filter-box
+  %ul.titles
+    %li
+      %h2= current_taxon
+      %br Search Results for:
+    %li
+      %strong Your Vehicle:
+      %br ACURA INTEGRA 2001
+    %li
+      %strong OEM Tire Sizes:
+      %br 195/60-14,195/55-15
+    %li
+      %strong Plus Tire Sizes:
+      %br 205/45-16, 215/40-17, 215/35-18</li>
+  
+  %form{:id => "dropdowns", :method => "post", :action =>""}
+    %ul.dropdowns
+      %li             
+        %select{:name => "tires-sizes", :id => "tires-sizes"}
+          %option{:value => "All Tire Sizes"} All Tire Sizes
+      %li
+        %select{:name => "tires-sizes", :id => "brands"}
+          %option{:value => "All Tire Sizes"} All Brands
+      %li
+        %select{:name => "tires-sizes", :id => "tires-types"}
+          %option{:value => "All Tire Sizes"} All tires Types
+
+<!--filter-box-->
