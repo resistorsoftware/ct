@@ -12,16 +12,22 @@
       %li
         %strong Wheel Info:
         %br
-        %span.psg-wheel my wheel
+        %span.psg-wheel
+        %script{:type => "text/html", :id => "wheelTemplate"}
+          %div.wheel-data
+            .bolt-pattern Bolt Pattern: <%=bolt_pattern%>
+            .offset Offset: <%=offset%>
+            .hub Hub <%=hub%>
+            .lug Lug <%=lug%>
     - if current_taxon == 'Tires'    
       %li
         %strong OEM Tire Sizes:
         %br
-        %span.oem-sizes oem sizes ...
+        %span.oem-sizes
       %li
         %strong Plus Tire Sizes:
         %br
-        %span.plus-sizes plus sizes ...
+        %span.plus-sizes
   
   %form{:id => "dropdowns", :method => "post", :action =>""}
     %ul.dropdowns

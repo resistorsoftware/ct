@@ -207,6 +207,10 @@ $(function () {
         $('#selectModel').addOptions(x);
         $(".your-vehicle").append(" "+modelData.selected);
         // now update the results... 
+        // containers are oem-sizes, plus-sizes, and psg-wheel
+        if($(".psg-wheel").length) {
+          $(".psg-wheel").html(tmpl("wheelTemplate",JSON.parse($.cookie("psg-wheel"))));
+        }
         
 //        var ct = document.getElementById("wheel-results");
 //        ct.innerHTML = tmpl("wheelTemplate",JSON.parse($.cookie("psg-wheel")));
@@ -375,7 +379,7 @@ $(function () {
              // save these structures as a cookie as well as rendering them 
 //             var ct = document.getElementById("wheel-results");
 //             ct.innerHTML = tmpl("wheelTemplate",res.wheel);
-//             $.cookie("psg-wheel", JSON.stringify(res.wheel), {expires: 7, path: '/'});
+             $.cookie("psg-wheel", JSON.stringify(res.wheel), {expires: 7, path: '/'});
 //             var ct = document.getElementById("tire-results");
 //             var tireData = "";
 //             for (var i = 0, len = res.tires.length; i < len; i++) {
