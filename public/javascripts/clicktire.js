@@ -141,6 +141,90 @@ str.replace(/[\r\t\n]/g, " ")
       sticky: type === 'sticky',
       time: (type === 'error')? 5000 : 3000
     });
+  }; 
+  
+  $.clearFilterBoxResults = function () {
+    if(typeof $(".psg-wheel")[0] != "undefined") {
+      $(".psg-wheel").html("");
+    }
+    if(typeof $(".oem-sizes")[0] != "undefined") {
+      $(".oem-sizes").html("");
+    }
+    if(typeof $(".plus-sizes")[0] != "undefined") {
+      $(".plus-sizes").html("");
+    }
+  };
+  
+  // user changed a drop down on the filter box, we should clean things up... depending on which dd changed
+  $.resetFilterBox = function(type) {
+     $.clearFilterBoxResults();
+     $.cookie('psg_wheel', null, {expires: 7, path: '/'});
+     $.cookie('psg_tires', null, {expires: 7, path: '/'});
+      
+    if(type === 'year') {
+      $.cookie('psg_makes', null, {expires: 7, path: '/'});
+      $.cookie('psg_models', null, {expires: 7, path: '/'});
+      $('#selectModel').clearOptions();
+      $('#selectMake').clearOptions();
+      $(".vehicle-model").html("");
+      $(".vehicle-make").html("");
+    } else if(type === 'make') {
+      $.clearFilterBoxResults();
+      $.cookie('psg_models', null, {expires: 7, path: '/'});
+      $('#selectModel').clearOptions();
+      $(".vehicle-model").html("");
+    }
+  };
+  
+  $.setYearCookie = function () {
+    var years = $("#selectYear").find('option');
+    if(years.length > 1) {
+      var y = [];
+      years.each(function(idx, val) {
+        if(idx > 0) {
+          y.push($(this).text());
+        }
+      })
+      var data = {
+        selectedYear: $("#selectYear").val(),
+        years: y
+      }
+      $.cookie("psg_years", JSON.stringify(data), {expires: 7, path: '/'});
+    }
+  };
+  
+  $.setMakeCookie = function () {
+    var makes = $("#selectMake").find('option');
+    if(makes.length > 1) {
+      var m = [];
+      makes.each(function(idx, val) {
+        if(idx > 0) {
+          m.push($(this).text());
+        }
+      })
+      var data = {
+        selectedMake: $("#selectMake").val(),
+        makes: m
+      }
+      $.cookie("psg_makes", JSON.stringify(data), {expires: 7, path: '/'});
+    }
+  };
+  
+  $.setModelCookie = function () {
+    var models = $("#selectModel").find('option');
+    if(models.length > 1) {
+      var m = [];
+      models.each(function(idx, val) {
+        if(idx > 0) {
+          m.push($(this).text());
+        }
+      })
+      var data = {
+        selectedModel: $("#selectModel").val(),
+        models: m
+      }
+      $.cookie("psg_models", JSON.stringify(data), {expires: 7, path: '/'});
+    }
   };
   
 })(jQuery);
@@ -185,8 +269,10 @@ $(function () {
         data: ClickTire.utils.getYears(),
         selected: yearData.selected
       });
-      $(".your-vehicle").append(yearData.selected);
-
+      if(yearData.selected != 0) {
+        $(".vehicle-year").text(yearData.selected);
+      }
+      
       if(makeData instanceof Object) {
         ClickTire.utils.setMakes(makeData.makes);
         $('#selectMake').addOptions({
@@ -194,7 +280,9 @@ $(function () {
           data: ClickTire.utils.getMakes(),
           selected: makeData.selected
         });
-        $(".your-vehicle").append(" "+makeData.selected);
+        if(makeData.selected !=0) {
+          $(".vehicle-make").text(makeData.selected);
+        }
       }
        
       if(modelData instanceof Object) {
@@ -205,17 +293,22 @@ $(function () {
           selected: modelData.selected
         }
         $('#selectModel').addOptions(x);
-        $(".your-vehicle").append(" "+modelData.selected);
+        if(modelData.selected != 0) {
+          $(".vehicle-model").text(modelData.selected);
+        }
+        
         // now update the results... 
         // containers are oem-sizes, plus-sizes, and psg-wheel
-        if($(".psg-wheel").length) {
-          $(".psg-wheel").html(tmpl("wheelTemplate",JSON.parse($.cookie("psg-wheel"))));
+        var wheel = JSON.parse($.cookie("psg_wheel"));
+        if($(".psg-wheel").length && typeof wheel != 'undefined') {
+          $(".psg-wheel").html(tmpl("wheelTemplate",wheel));
         }
-        var tires = JSON.parse($.cookie("psg-tires"));
+        var tires = JSON.parse($.cookie("psg_tires"));
+        console.log("Tires ", tires);
         // show off the OE tires for this vehicle
-        if(typeof $(".oem-sizes")[0] != 'undefined') {
+        if(tires && typeof $(".oem-sizes")[0] != 'undefined') {
           var oeTire = ""
-          if(tires.oe.length) {
+          if(tires.oe && tires.oe.length) {
             for(var i = 0, len = tires.oe.length; i < len; i++) {
               oeTire += tmpl("tireTemplate", tires.oe[i]);
             }
@@ -224,9 +317,9 @@ $(function () {
         }
         
         // show off the Plus Size tires for this vehicle
-        if(typeof $(".plus-sizes")[0] != 'undefined') {
+        if(tires && typeof $(".plus-sizes")[0] != 'undefined') {
           var plusTire = ""
-          if(tires.ps.length) {
+          if(typeof tires.ps != 'undefined' && tires.ps.length) {
             for(var i = 0, len = tires.ps.length; i < len; i++) {
               plusTire += tmpl("tireTemplate", tires.ps[i]);
             }
@@ -248,15 +341,13 @@ $(function () {
            $('#selectYear').addOptions({text: '', data: ClickTire.utils.getYears(), selected: null});
            $('#selectModel').clearOptions();
            $('#selectMake').clearOptions();
+           $.setYearCookie();
         }  
       });   
     }
     
     
   } 
-  
-  
-  
   
   
   if($('#tire_filter').length) {
@@ -339,6 +430,7 @@ $(function () {
            $('#selectYear').addOptions({text: '', data: ClickTire.utils.getYears(), selected: null});
            $('#selectModel').clearOptions();
            $('#selectMake').clearOptions();
+           $.setYearCookie();
         }  
       });   
     }
@@ -353,10 +445,16 @@ $(function () {
          dataType: "json",
          data: {selectYear: year},
          success: function(res) {
+            $.resetFilterBox('year');
             ClickTire.utils.setMakes(res.make);
             $('#selectMake').clearOptions().addOptions({text: 'select make...', data: ClickTire.utils.getMakes(), selected: 'select make...'});
             $('#selectModel').clearOptions();
+            if(typeof $(".vehicle-make")[0] != 'undefined') {
+              $(".vehicle-year").text(year);
+            }
             $.feedback('success', 'Loaded all Makes for the year '+year);
+            $.setYearCookie();
+            $.setMakeCookie();
          }  
        });
     });
@@ -364,6 +462,7 @@ $(function () {
     $("#selectMake").change(function () {
        var make = $(this).val();
        var year = $('#selectYear').val();
+       $.resetFilterBox('make');
        // send this along to the PSG service to get new values for Make drop downs
        $.ajax({
          url: "/plussizeguide",
@@ -372,6 +471,11 @@ $(function () {
          success: function(res) {
             ClickTire.utils.setModels(res.model);
             $('#selectModel').clearOptions().addOptions({text: 'select model...', data: ClickTire.utils.getModels(), selected: 'select model...'});
+            if(typeof $(".vehicle-make")[0] != 'undefined') {
+              $(".vehicle-make").text(make);
+            }
+            $.setMakeCookie();
+            $.setModelCookie();
             $.feedback('success', 'Loaded all Models for ' + make + ' from ' + year);
          }  
        });
@@ -381,26 +485,59 @@ $(function () {
        var make = $("#selectMake").val();
        var year = $('#selectYear').val();
        var model = $(this).val();
+       $.resetFilterBox('model');
        // send this along to the PSG service to get new values for Make drop downs
        $.ajax({
          url: "/plussizeguide",
          dataType: "json",
          data: {selectYear: year, selectMake: make, selectModel: model},
          success: function(res) {
-           if(res.wheel) {
-             // save these structures as a cookie as well as rendering them 
-//             var ct = document.getElementById("wheel-results");
-//             ct.innerHTML = tmpl("wheelTemplate",res.wheel);
-             $.cookie("psg-wheel", JSON.stringify(res.wheel), {expires: 7, path: '/'});
-//             var ct = document.getElementById("tire-results");
-//             var tireData = "";
-//             for (var i = 0, len = res.tires.length; i < len; i++) {
-//               tireData += tmpl("tireTemplate",res.tires[i]);
-//             }
-//             ct.innerHTML = tireData;
-             $.cookie("psg-tires", JSON.stringify(res.tires), {expires: 7, path: '/'}); 
+          
+           if(typeof $(".vehicle-make")[0] != 'undefined') {
+             $(".vehicle-model").text(model);
            }
+           if(res.wheel) {
+             $.cookie("psg_wheel", JSON.stringify(res.wheel), {expires: 7, path: '/'});
+             $.cookie("psg_tires", JSON.stringify(res.tires), {expires: 7, path: '/'}); 
+           }
+           $.setModelCookie();
            $.feedback('success', 'Received Tires and Wheels for ' + year + ' ' + make + ' ' + model);
+           
+           // now update the results... 
+           // containers are oem-sizes, plus-sizes, and psg-wheel
+           if(typeof $(".psg-wheel")[0] != 'undefined') {
+             $(".psg-wheel").html(tmpl("wheelTemplate",res.wheel));
+           }
+           // show off the OE tires for this vehicle
+           if(typeof $(".oem-sizes")[0] != 'undefined') {
+             var oeTire = ""
+             if(res.tires.oe.length) {
+               for(var i = 0, len = res.tires.oe.length; i < len; i++) {
+                 oeTire += tmpl("tireTemplate", res.tires.oe[i]);
+               }
+               $(".oem-sizes").html(oeTire);
+             }
+           }
+
+           // show off the Plus Size tires for this vehicle
+           if(typeof $(".plus-sizes")[0] != 'undefined') {
+             var plusTire = ""
+             if(res.tires.ps.length) {
+               for(var i = 0, len = res.tires.ps.length; i < len; i++) {
+                 plusTire += tmpl("tireTemplate", res.tires.ps[i]);
+               }
+               $(".plus-sizes").html(plusTire);
+             }
+           }
+           $('.psg-tire').hover(function () {$(this).addClass('psg-tire-on')}, function () {$(this).removeClass('psg-tire-on')});
+           $('.psg-tire').click(function () {
+             $.feedback("success","Search for "+$(this).text()+" tires");
+           });
+           
+           
+           
+           
+           
 //           $('.tire-data').hover(function () {
 //               $(this).addClass('tire-data-on')},
 //             function () {$(this).removeClass('tire-data-on')}
@@ -425,51 +562,6 @@ $(function () {
     
     // save the year, make and model values to their respective cookies.
     $(".psg-search").click(function () {
-      // first the years
-      var years = $("#selectYear").find('option');
-      if(years.length > 1) {
-        var y = [];
-        years.each(function(idx, val) {
-          if(idx > 0) {
-            y.push($(this).text());
-          }
-        })
-        var data = {
-          selectedYear: $("#selectYear").val(),
-          years: y
-        }
-        $.cookie("psg_years", JSON.stringify(data), {expires: 7, path: '/'});
-      }
-      // now the makes
-      var makes = $("#selectMake").find('option');
-      if(makes.length > 1) {
-        var m = [];
-        makes.each(function(idx, val) {
-          if(idx > 0) {
-            m.push($(this).text());
-          }
-        })
-        var data = {
-          selectedMake: $("#selectMake").val(),
-          makes: m
-        }
-        $.cookie("psg_makes", JSON.stringify(data), {expires: 7, path: '/'});
-      }
-      // finally, the models
-      var models = $("#selectModel").find('option');
-      if(models.length > 1) {
-        var m = [];
-        models.each(function(idx, val) {
-          if(idx > 0) {
-            m.push($(this).text());
-          }
-        })
-        var data = {
-          selectedModel: $("#selectModel").val(),
-          models: m
-        }
-        $.cookie("psg_models", JSON.stringify(data), {expires: 7, path: '/'});
-      }
       if ($(this).hasClass('wheel')) {
         var href = '/t/wheels';
       } else {
@@ -492,5 +584,9 @@ $(function () {
       $("#wheel-results").html('');
       $.feedback("success","Reset the Search settings") 
     });
+    
+    
+    
+    
     
 });

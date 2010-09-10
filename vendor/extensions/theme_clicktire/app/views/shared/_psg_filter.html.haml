@@ -2,11 +2,15 @@
   %ul.titles
     %li
       %h2= current_taxon
-      %br Search Results for:
+      %br
+      %span Search Results for:
     %li
       %strong Your Vehicle:
       %br
-      %span.your-vehicle
+      %span.vehicle-year
+      %span.vehicle-make
+      %span.vehicle-model
+      
     -# Are we on Wheel or Tires... can make a difference what we show... 
     - if current_taxon == 'Wheels'
       %li

@@ -30,7 +30,7 @@
               %li
                 - form_tag products_url, :method => :get do
                   = text_field_tag :keywords, params[:keywords]
-                  = tag("button", {:value => t(:search), :name => nil, :type=>'submit'}) 
+                  %button{:value => t(:search), :type=>'submit'} 
 
         #sidebar
           - if @content_for_sidebar
