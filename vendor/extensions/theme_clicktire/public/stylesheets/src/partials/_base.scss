@@ -25,8 +25,20 @@ a{ color: $normallink;
 	hr, .clearfix {
 		display:none;
 	}
+	h1{
+		@include text-shadow(black, -1px, -1px, 2px);
+		position: relative;
+		bottom:-9px;
+		color:white;
+		font-size:35px;
+	}
 }
-
+@mixin reglabel{
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	@include prepend-top(10px);
+}
 @mixin whitelink{
  color: $whitelink;
  font-size: 12px;

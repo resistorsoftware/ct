@@ -8,7 +8,6 @@
 	#content{
 		@include column(15, true);
 	}
-	
 	#sidebar {
 		@include column(8);
 		padding: 10px 0 0 30px;	
@@ -43,17 +42,13 @@
 	  @include border-radius(5px);
 		border: #8da0af solid 1px;
 		background: white;
-		@include linear-gradient(color-stops(#dcdcdc, white 63%));
-		background: white;
+		@include linear-gradient(color-stops(#eee, white 30%));
 		.ct{
 			margin: 21px 60px 60px 60px;
 			//padding: 20px 50px;
 		}
 		label {
-			display: block;
-			font-size: 13px;
-			font-weight: bold;
-			@include prepend-top(10px);
+			@include reglabel;
 		}
 		select {
 			width: 100%;
