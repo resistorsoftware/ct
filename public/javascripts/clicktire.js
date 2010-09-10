@@ -185,7 +185,7 @@ $(function () {
         data: ClickTire.utils.getYears(),
         selected: yearData.selected
       });
-      
+      $(".your-vehicle").append(yearData.selected);
       // keep on trucking and try makes now too
       if(makeData instanceof Object) {
         ClickTire.utils.setMakes(makeData.makes);
@@ -194,6 +194,7 @@ $(function () {
           data: ClickTire.utils.getMakes(),
           selected: makeData.selected
         });
+        $(".your-vehicle").append(" "+makeData.selected);
       } 
       // finish with any models
       if(modelData instanceof Object) {
@@ -204,6 +205,7 @@ $(function () {
           selected: modelData.selected
         }
         $('#selectModel').addOptions(x);
+        $(".your-vehicle").append(" "+modelData.selected);
 //        var ct = document.getElementById("wheel-results");
 //        ct.innerHTML = tmpl("wheelTemplate",JSON.parse($.cookie("psg-wheel")));
 //        var ct = document.getElementById("tire-results");
