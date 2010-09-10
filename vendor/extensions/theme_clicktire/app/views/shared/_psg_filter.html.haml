@@ -16,13 +16,12 @@
   %form{:id => "dropdowns", :method => "post", :action =>""}
     %ul.dropdowns
       %li             
-        %select{:name => "tires-sizes", :id => "tires-sizes"}
-          %option{:value => "All Tire Sizes"} All Tire Sizes
+        %label{:for => 'selectYear'} Year:
+        %select{:name => 'selectYear', :id => 'selectYear'}
+          %option{:value => 0} Select Year
       %li
-        %select{:name => "tires-sizes", :id => "brands"}
-          %option{:value => "All Tire Sizes"} All Brands
+        %label{:for => 'selectMake'} Make:
+        %select{:name => 'selectMake', :id => 'selectMake'}
       %li
-        %select{:name => "tires-sizes", :id => "tires-types"}
-          %option{:value => "All Tire Sizes"} All tires Types
-
-<!--filter-box-->
+        %label{:for => 'selectModel'} Model:
+        %select{:name => 'selectModel', :id => 'selectModel'}

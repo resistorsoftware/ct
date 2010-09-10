@@ -146,6 +146,99 @@ str.replace(/[\r\t\n]/g, " ")
 })(jQuery);
 
 $(function () {
+  
+  // if the filter box is in the DOM, we need to deal with it, like the one on the front page...
+  if($("#filter-box").length) {
+    
+    var yearCookie = $.cookie("psg_years");
+    if(yearCookie) {
+      var data = JSON.parse(yearCookie);
+      var yearData = {
+        selected: data.selectedYear,
+        years: data.years
+      }
+    }
+    
+    var makeCookie = $.cookie("psg_makes");
+    if(makeCookie) {
+      var data = JSON.parse(makeCookie);
+      var makeData = {
+        selected: data.selectedMake,
+        makes: data.makes
+      }
+    }
+    
+    var modelCookie = $.cookie("psg_models");
+    if(modelCookie) {
+      var data = JSON.parse(modelCookie);
+      var modelData = {
+        selected: data.selectedModel,
+        models: data.models
+      }
+    }
+    
+    // if we found prevous setting, we can instantiate the controls as appropriate
+    if (yearData instanceof Object) {
+      ClickTire.utils.setYears(yearData.years);
+      $('#selectYear').addOptions({
+        text: '',
+        data: ClickTire.utils.getYears(),
+        selected: yearData.selected
+      });
+      
+      // keep on trucking and try makes now too
+      if(makeData instanceof Object) {
+        ClickTire.utils.setMakes(makeData.makes);
+        $('#selectMake').addOptions({
+          text: (parseInt(makeData.selected,10))? '' : 'select make...',
+          data: ClickTire.utils.getMakes(),
+          selected: makeData.selected
+        });
+      } 
+      // finish with any models
+      if(modelData instanceof Object) {
+        ClickTire.utils.setModels(modelData.models);
+        var x = {
+          text: (parseInt(modelData.selected,10))? '' : 'select model...',
+          data: ClickTire.utils.getModels(),
+          selected: modelData.selected
+        }
+        $('#selectModel').addOptions(x);
+//        var ct = document.getElementById("wheel-results");
+//        ct.innerHTML = tmpl("wheelTemplate",JSON.parse($.cookie("psg-wheel")));
+//        var ct = document.getElementById("tire-results");
+//        var tireData = "";
+//        tires = JSON.parse($.cookie("psg-tires"));
+//        for (var i = 0, len = tires.length; i < len; i++) {
+//          tireData += tmpl("tireTemplate",tires[i]);
+//        }
+//        ct.innerHTML = tireData;
+//        $('.tire-data').hover(function () {$(this).addClass('tire-data-on')}, function () {$(this).removeClass('tire-data-on')});
+//        $('.tire-data').click(function () {
+//          $.feedback("success","Search for "+$(this).find('.tiresize').text()+" tires");
+//        });
+      }
+    } else {
+      //ask for some years via an ajax call
+      $.ajax({
+        url: "/plussizeguide",
+        dataType: "json",
+        success: function(res) {
+           ClickTire.utils.setYears(res.year);
+           $('#selectYear').addOptions({text: '', data: ClickTire.utils.getYears(), selected: null});
+           $('#selectModel').clearOptions();
+           $('#selectMake').clearOptions();
+        }  
+      });   
+    }
+    
+    
+  } 
+  
+  
+  
+  
+  
   if($('#tire_filter').length) {
     // Years can either come from Ajax or a cookie
     var yearCookie = $.cookie("psg_years");

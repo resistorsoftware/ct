@@ -6,6 +6,7 @@
 		background: white;
 		@include linear-gradient(color-stops(#dcdcdc, white 20%));
 		width: 730px;
+		margin-bottom: 10px;
 		h2 {
 			font-weight : bold;
 			font-size: 14px;
@@ -18,7 +19,7 @@
 			font-size: 13px;
 		}
 		.dropdowns {
-			margin:0 20px 20px 300px;
+			margin:0 20px 20px 100px;
 		}
 	}
 	#detailbox, #results_sheet{
