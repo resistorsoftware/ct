@@ -96,6 +96,6 @@ class SolrSearchExtension < Spree::Extension
            end
     end
     
-    Spree::Config.searcher = Spree::Search::Solr.new
+    #Spree::Config.searcher = Spree::Search::Solr.new
   end
 end

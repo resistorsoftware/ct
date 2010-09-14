@@ -1,5 +1,5 @@
-%p Results of Search
-%ul
-  %li One
-  %li Two
-  %li Three
+- variants.each do |result|
+  .taxon #{result.options_text} #{result.price}
+
+- if products.respond_to?(:total_pages)  
+  = will_paginate products, :class => 'pagination ajax'  

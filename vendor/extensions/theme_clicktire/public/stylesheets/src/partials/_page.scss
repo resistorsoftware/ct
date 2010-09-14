@@ -17,8 +17,18 @@ body.bp {
 @include blueprint-scaffolding("body.bp");
 
 body {
- font-family: “helvetica neue”, helvetica, arial, sans-serif;
+  background: url("../images/tile01.gif") repeat-x #fff;
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
+#root {
+  background: url("../images/mainbackground.jpg") no-repeat center top ;
+  @include min-height(500px);
+}
+
+
+#header, #footer {
+	@include column($blueprint-grid-columns, true); }
+	
 .buttons input {
 	background: #235cba ; 
 	@include linear-gradient(color-stops(#519bf7, #2068e3));
@@ -37,6 +47,7 @@ body {
 
 //
 #header {
+  @include append-bottom(20px); 
 	height: 108px;
 	position:relative;	
 	.logo{ background: url("../images/logo.png") no-repeat;
@@ -49,22 +60,22 @@ body {
 	  @include column(15, true);
 		@include prepend-top(10px);
 	  #nav-bar { 
-		  @include horizontal-list;
+		  @include horizontal-list(10px);
 		  @include column(12);
 				.contactus {
-				  width: 310px;
+				  width: 270px;
 					text-align: right;
 					p { 
-					  margin-right: 20px;}
+					  margin-right: 5px;}
 					h2{ 
-					  margin-right: 20px;
+					  margin-right: 5px;
 						font-size: 24px;
 						font-weight: bold;
 						span {color: #c9c9c9;}
 					}
 				}
 				li {
-					width: 70px;
+					
 				}
 		}
 		#language-bar { 
@@ -209,6 +220,10 @@ body {
   font-size: 12px;
 	border-top: #ccc solid 1px;
 	padding-top: 10px;
+  @include container; 
+	display: block;
+	float: none;
+	@include prepend-top(20px);
   .bottombar{
 	  @include horizontal-list(0);
 	  @include column(16);

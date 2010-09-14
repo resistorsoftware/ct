@@ -39,6 +39,6 @@ class ThemeClicktireHooks < Spree::ThemeSupport::HookListener
   #     tab(:taxonomies)
   #   end
   #
-     insert_before :signup, :text => "<h1>Clicktire Welcomes you!!</h1>"
+     insert_before :signup, :text => "<h1>Clicktire Account</h1>"
      #insert_before :homepage_sidebar_navigation, 'shared/tire_filter'
 end

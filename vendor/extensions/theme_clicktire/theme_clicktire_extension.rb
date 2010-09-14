@@ -29,26 +29,32 @@ class ThemeClicktireExtension < Spree::Extension
               option.to_i
             end
             
-            conditions = [
-                "option_values.name ILIKE ? AND option_values.option_type_id = ?",
-                "%#{value}%", option_type_id
-              ]
+            conditions = ["option_values.name ~*  ? AND option_values.option_type_id = ?","#{value}", option_type_id ]
             {
               :joins => {:variants => :option_values},
               :conditions => conditions
             }
           }
-          
-          Variant.class_eval do
-            def to_hash
-              
-            end
+        
+          def self.find_all_variants_by_option_value(option_type, value)
+           "Here is a list of variants"
           end
-          # make your helper avaliable in all views
-          # Spree::BaseController.class_eval do
-          #   helper YourHelper
-          # end
-        end                    
-  
-      end
+        end
+         
+        Variant.class_eval do
+          def find_by_option_type(option_type)
+            result = ''
+            self.option_values.each do |ov| 
+              result = ov.presentation if ov.option_type.id == 8
+            end
+            return result
+          end
+        end
+          
+        # make your helper avaliable in all views
+        #Spree::BaseController.class_eval do
+        #  helper :clicktire
+        # end
+        #end                    
+  end
 end

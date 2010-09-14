@@ -304,7 +304,6 @@ $(function () {
           $(".psg-wheel").html(tmpl("wheelTemplate",wheel));
         }
         var tires = JSON.parse($.cookie("psg_tires"));
-        console.log("Tires ", tires);
         // show off the OE tires for this vehicle
         if(tires && typeof $(".oem-sizes")[0] != 'undefined') {
           var oeTire = ""
@@ -329,6 +328,15 @@ $(function () {
         $('.psg-tire').hover(function () {$(this).addClass('psg-tire-on')}, function () {$(this).removeClass('psg-tire-on')});
         $('.psg-tire').click(function () {
           $.feedback("success","Search for "+$(this).text()+" tires");
+          $.ajax({
+             type: 'get',
+             url: "/collections",
+             dataType: "script",
+             data: {t: 'Tires', option: 'size', criteria: $(this).text()},
+             success: function(res) {
+               console.log(res);
+             }
+           })
         });
       }
     } else {
@@ -406,19 +414,6 @@ $(function () {
           selected: modelData.selected
         }
         $('#selectModel').addOptions(x);
-//        var ct = document.getElementById("wheel-results");
-//        ct.innerHTML = tmpl("wheelTemplate",JSON.parse($.cookie("psg-wheel")));
-//        var ct = document.getElementById("tire-results");
-//        var tireData = "";
-//        tires = JSON.parse($.cookie("psg-tires"));
-//        for (var i = 0, len = tires.length; i < len; i++) {
-//          tireData += tmpl("tireTemplate",tires[i]);
-//        }
-//        ct.innerHTML = tireData;
-//        $('.tire-data').hover(function () {$(this).addClass('tire-data-on')}, function () {$(this).removeClass('tire-data-on')});
-//        $('.tire-data').click(function () {
-//          $.feedback("success","Search for "+$(this).find('.tiresize').text()+" tires");
-//        });
       }
     } else {
       //ask for some years via an ajax call
@@ -532,30 +527,16 @@ $(function () {
            $('.psg-tire').hover(function () {$(this).addClass('psg-tire-on')}, function () {$(this).removeClass('psg-tire-on')});
            $('.psg-tire').click(function () {
              $.feedback("success","Search for "+$(this).text()+" tires");
+             $.ajax({
+               type: 'get',
+               url: "/collections",
+               dataType: "html",
+               data: {t: 'tires', option: 'size', criteria: $(this).text()},
+               success: function(res) {
+                 $("#content").html(res);
+               }
+             })
            });
-           
-           
-           
-           
-           
-//           $('.tire-data').hover(function () {
-//               $(this).addClass('tire-data-on')},
-//             function () {$(this).removeClass('tire-data-on')}
-//           ).click(function () {
-//                $.feedback("success","Search for "+$(this).find('.tiresize').text()+" tires");
-//                $.ajax({
-//                  type: 'get',
-//                  url: "/collections",
-//                  dataType: "html",
-//                  data: {taxon: 'Tires', option: "size", criteria: $(this).find('.tiresize').text()},
-//                  success: function(res) {
-//                    $("#content").html(res);
-//                  }
-//                })
-//              });
-//           $('.wheel-data').hover(function () {$(this).addClass('wheel-data-on')}, function () {$(this).removeClass('wheel-data-on')}).click(function () {
-//             $.feedback("success","Search for "+$(this).find('.bolt-pattern').text()+" wheels");
-//           });
          }  
        });
     });
@@ -569,24 +550,5 @@ $(function () {
       }
       document.location.href = href;
     });
-    
-    $(".psg-clear").click(function () {
-      $.cookie('psg_years', null, {expires: 7, path: '/'});
-      $.cookie('psg_makes', null, {expires: 7, path: '/'});
-      $.cookie('psg_models', null, {expires: 7, path: '/'});
-      $.cookie('psg_wheel', null, {expires: 7, path: '/'});
-      $.cookie('psg_tires', null, {expires: 7, path: '/'});
-      // reset the drop-down back to the basics...
-      $('#selectModel').clearOptions();
-      $('#selectMake').clearOptions();
-      $('#selectYear').val(0);
-      $("#tire-results").html('');
-      $("#wheel-results").html('');
-      $.feedback("success","Reset the Search settings") 
-    });
-    
-    
-    
-    
     
 });

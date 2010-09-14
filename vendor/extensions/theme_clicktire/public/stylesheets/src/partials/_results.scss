@@ -1,5 +1,7 @@
 // styles for results
-
+#filter-box{
+	@include append-bottom (10px);
+}	
 .taxon {
 	@include column(18, true);
 	@include border-radius(5px);
@@ -35,6 +37,8 @@ body.result {
 			.thumb{
 				@include column(4);
 				width: 121px;
+				height:100px;
+				overflow:hidden;
 			}
 			.description{
 				h2{

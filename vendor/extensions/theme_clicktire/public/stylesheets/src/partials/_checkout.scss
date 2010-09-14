@@ -1,23 +1,79 @@
 // styles for results
-body.checkout {
+body.cart, body.checkout {
 	#sidebar{
 		display:none;
 	}
 	#content{ 
-		@include column(24, true);
-		#checkout_sheet{
-			margin: 0 20px;
-			@include column(23, true);
+    margin: 0 20px;
+    @include column(23, true);
+    padding: 20px;
+    width:870px;
+    @include border-radius(5px);
+    border: #8da0af solid 1px;
+    background: white;
+    @include linear-gradient(color-stops(#dcdcdc, white 20%));
+		h1{
+			font-size: 20px;
+			color: #646464;
+			margin: 0 0 20px;
+      @include text-shadow(none);
+			strong {
+				font-weight: normal;
+				color: $redtitle;
+        display: inline;
+			}
 		}
-	}
+    table{ 
+      font-size: 13px;
+      h4, th{
+        font-weight: bold;
+        font-size: 14px;
+      }
+      h4{ margin-bottom: 5px;}
+    }
+    th, td{ padding:10px 0 0 10px;}
+    #subtotal{
+      margin: 20px 0;
+      text-align: right;
+      h3{
+        font-size: 20px;
+        margin:20px 0;
+      }
+      .button.checkout.primary{
+        @include abutton;
+        background: #aa0000 ; 
+        @include linear-gradient(color-stops(#ce3d3d, #c23d3d 49%, #aa0000 51%, #bf1718));
+        padding:7px 10px;
+        text-decoration: none;
+        img{
+          margin:0 6px 0 0;
+          position:relative;
+          top:5px;
+        }
+        &:hover{
+          background: #ff5050 ; 
+          @include linear-gradient(color-stops(#ffafaf 5%, #ff5050 11%, #ff5050 49%, #ff0000 51%, #f31516));
+        }
+      }
+    }
+    p{
+      font-size:14px;
+      margin-top:5px;
+      text-align:right;
+    }
+  } //content
+  
+  
 	#checkout_sheet{
 		h1{
 			font-size: 20px;
 			color: #646464;
 			margin: 20px;
+      @include text-shadow(none);
 			strong {
 				font-weight: normal;
 				color: $redtitle;
+        display: inline;
 			}
 		}
 		.ct{
