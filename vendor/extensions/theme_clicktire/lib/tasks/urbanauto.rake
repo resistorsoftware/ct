@@ -18,6 +18,11 @@ namespace :clicktire do
   task :psg_parse => :environment do
     UrbanAutosport::Administration.parse_psg_results
   end
+  
+  desc "Clean up Product Names"
+  task :clean_titles => :environment do
+    UrbanAutosport::Administration.clean_product_names
+  end
    
 end
 
@@ -31,6 +36,8 @@ namespace :ct do
   task :tov => "clicktire:tirerack_option_values"
   desc "Plus Size Guide XML parser"
   task :psg => "clicktire:psg_parse"
+  desc "Clean up Product Names"
+  task :clean => "clicktire:clean_titles"
 end
 
 module UrbanAutosport
@@ -336,7 +343,13 @@ module UrbanAutosport
       puts "Plus #{plus_size.inspect}\n"
       puts "XML Parse ended...\n"
     end
-    
+   
+   def self.clean_product_names
+     Product.all.each do |tire|
+       tire.name = tire.name.gsub(/\+/," ").gsub(/\%2F/,'/').gsub(/\%28|\%29|\%26|\%231/,"").gsub(/\%3A/,":").gsub(/\%2B/,"+")
+       tire.save
+     end
+   end 
      
   end
 end        
