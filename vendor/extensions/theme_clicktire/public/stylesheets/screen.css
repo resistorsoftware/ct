@@ -81,20 +81,20 @@ a img {
   border: none;
 }
 
-/* line 20, src/partials/_base.scss */
+/* line 21, src/partials/_base.scss */
 a {
   color: #2254c1;
 }
-/* line 21, src/partials/_base.scss */
+/* line 22, src/partials/_base.scss */
 a:hover {
   color: #0090f4;
 }
 
-/* line 25, src/partials/_base.scss */
+/* line 34, src/partials/_base.scss */
 #content hr, #content .clearfix {
   display: none;
 }
-/* line 28, src/partials/_base.scss */
+/* line 37, src/partials/_base.scss */
 #content h1 {
   text-shadow: black -1px -1px 2px;
   position: relative;
@@ -103,12 +103,12 @@ a:hover {
   font-size: 35px;
 }
 
-/* line 68, src/partials/_base.scss */
+/* line 77, src/partials/_base.scss */
 input {
   cursor: pointer;
 }
 
-/* line 71, src/partials/_base.scss */
+/* line 80, src/partials/_base.scss */
 .redbutton {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -129,7 +129,7 @@ input {
   background-image: -moz-linear-gradient(top, #ce3d3d 0%, #c23d3d 49%, #aa0000 51%, #bf1718 100%);
   background-image: linear-gradient(top, #ce3d3d 0%, #c23d3d 49%, #aa0000 51%, #bf1718 100%);
 }
-/* line 75, src/partials/_base.scss */
+/* line 84, src/partials/_base.scss */
 .redbutton:hover {
   background: #ff5050;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(5%, #ffafaf), color-stop(11%, #ff5050), color-stop(49%, #ff5050), color-stop(51%, #ff0000), color-stop(100%, #f31516));
@@ -137,7 +137,7 @@ input {
   background-image: linear-gradient(top, #ffafaf 5%, #ff5050 11%, #ff5050 49%, #ff0000 51%, #f31516 100%);
 }
 
-/* line 80, src/partials/_base.scss */
+/* line 89, src/partials/_base.scss */
 .graybutton {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -163,12 +163,12 @@ input {
   text-decoration: underline;
   text-shadow: white 1px 1px 1px;
 }
-/* line 89, src/partials/_base.scss */
+/* line 98, src/partials/_base.scss */
 .graybutton:hover {
   background: white;
 }
 
-/* line 94, src/partials/_base.scss */
+/* line 103, src/partials/_base.scss */
 .alertbox {
   background: #fff1e5;
   border: #ff7608 1px solid;
@@ -653,11 +653,11 @@ body {
   width: 590px;
   margin-top: 10px;
 }
-/* line 45, src/partials/_base.scss */
+/* line 54, src/partials/_base.scss */
 #header .navigation a {
   color: white;
 }
-/* line 46, src/partials/_base.scss */
+/* line 55, src/partials/_base.scss */
 #header .navigation a:hover {
   color: #f6ac1c;
   text-decoration: underline;
@@ -777,11 +777,11 @@ body {
 #menubar ul li:last-child, #menubar ul li.last {
   padding-right: 0px;
 }
-/* line 45, src/partials/_base.scss */
+/* line 54, src/partials/_base.scss */
 #menubar a {
   color: white;
 }
-/* line 46, src/partials/_base.scss */
+/* line 55, src/partials/_base.scss */
 #menubar a:hover {
   color: #f6ac1c;
   text-decoration: underline;
@@ -1291,81 +1291,7 @@ form.bp textarea {
   margin-left: 0px;
 }
 
-/* line 2, src/partials/_detail.scss */
-#filter-box, #checkout_sheet {
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 710px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
-  border: #8da0af solid 1px;
-  background: white;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #dcdcdc), color-stop(100%, #ffffff));
-  background-image: -moz-linear-gradient(top, #dcdcdc 0%, #ffffff 20%);
-  background-image: linear-gradient(top, #dcdcdc 0%, #ffffff 20%);
-  width: 730px;
-}
-/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #filter-box, * html #checkout_sheet {
-  overflow-x: hidden;
-}
-/* line 9, src/partials/_detail.scss */
-#filter-box h2, #checkout_sheet h2 {
-  font-weight: bold;
-  font-size: 14px;
-}
-/* line 13, src/partials/_detail.scss */
-#filter-box br, #checkout_sheet br {
-  display: none;
-}
-/* line 14, src/partials/_detail.scss */
-#filter-box strong, #checkout_sheet strong {
-  display: block;
-}
-/* line 15, src/partials/_detail.scss */
-#filter-box .titles, #filter-box .dropdowns, #checkout_sheet .titles, #checkout_sheet .dropdowns {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 51, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
-#filter-box .titles li, #filter-box .dropdowns li, #checkout_sheet .titles li, #checkout_sheet .dropdowns li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0px;
-  white-space: nowrap;
-  display: inline;
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-/* line 43, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
-#filter-box .titles li:first-child, #filter-box .titles li.first, #filter-box .dropdowns li:first-child, #filter-box .dropdowns li.first, #checkout_sheet .titles li:first-child, #checkout_sheet .titles li.first, #checkout_sheet .dropdowns li:first-child, #checkout_sheet .dropdowns li.first {
-  padding-left: 0px;
-}
-/* line 44, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
-#filter-box .titles li:last-child, #filter-box .titles li.last, #filter-box .dropdowns li:last-child, #filter-box .dropdowns li.last, #checkout_sheet .titles li:last-child, #checkout_sheet .titles li.last, #checkout_sheet .dropdowns li:last-child, #checkout_sheet .dropdowns li.last {
-  padding-right: 0px;
-}
-/* line 18, src/partials/_detail.scss */
-#filter-box .titles, #checkout_sheet .titles {
-  margin: 20px;
-  font-size: 13px;
-}
-/* line 22, src/partials/_detail.scss */
-#filter-box .dropdowns, #checkout_sheet .dropdowns {
-  margin: 0 0 20px 20px;
-}
-
-/* line 26, src/partials/_detail.scss */
+/* line 1, src/partials/_detail.scss */
 #detailbox, #results_sheet {
   display: inline;
   float: left;
@@ -1385,22 +1311,22 @@ form.bp textarea {
 * html #detailbox, * html #results_sheet {
   overflow-x: hidden;
 }
-/* line 32, src/partials/_detail.scss */
+/* line 7, src/partials/_detail.scss */
 #detailbox .header-detail, #results_sheet .header-detail {
   display: inline-block;
   margin-top: 20px;
 }
-/* line 35, src/partials/_detail.scss */
+/* line 10, src/partials/_detail.scss */
 #detailbox .header-detail h1, #results_sheet .header-detail h1 {
   font-size: 24px;
 }
-/* line 38, src/partials/_detail.scss */
+/* line 13, src/partials/_detail.scss */
 #detailbox .header-detail h3, #results_sheet .header-detail h3 {
   color: #cc0000;
   font-weight: bold;
   font-size: 24px;
 }
-/* line 43, src/partials/_detail.scss */
+/* line 18, src/partials/_detail.scss */
 #detailbox .header-detail .rating, #results_sheet .header-detail .rating {
   display: inline-block;
   height: 12px;
@@ -1408,12 +1334,12 @@ form.bp textarea {
   background: url("../images/sprite.png") -22px -68px;
   margin-right: 5px;
 }
-/* line 50, src/partials/_detail.scss */
+/* line 25, src/partials/_detail.scss */
 #detailbox .header-detail p, #results_sheet .header-detail p {
   color: #888e94;
   font-size: 12px;
 }
-/* line 54, src/partials/_detail.scss */
+/* line 29, src/partials/_detail.scss */
 #detailbox .header-detail ul, #results_sheet .header-detail ul {
   margin: 0;
   padding: 0;
@@ -1442,7 +1368,7 @@ form.bp textarea {
 #detailbox .header-detail ul li:last-child, #detailbox .header-detail ul li.last, #results_sheet .header-detail ul li:last-child, #results_sheet .header-detail ul li.last {
   padding-right: 0px;
 }
-/* line 58, src/partials/_detail.scss */
+/* line 33, src/partials/_detail.scss */
 #detailbox .header-detail #shoppingbox, #results_sheet .header-detail #shoppingbox {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1454,27 +1380,27 @@ form.bp textarea {
   background: #f5f5f5;
   width: 200px;
 }
-/* line 63, src/partials/_detail.scss */
+/* line 38, src/partials/_detail.scss */
 #detailbox .header-detail #shoppingbox form, #results_sheet .header-detail #shoppingbox form {
   margin: 20px;
 }
-/* line 66, src/partials/_detail.scss */
+/* line 41, src/partials/_detail.scss */
 #detailbox .header-detail #shoppingbox #zipcode, #results_sheet .header-detail #shoppingbox #zipcode {
   width: 35px;
   border: 1px solid #dcdcdc;
 }
-/* line 70, src/partials/_detail.scss */
+/* line 45, src/partials/_detail.scss */
 #detailbox .header-detail #shoppingbox .graybutton, #results_sheet .header-detail #shoppingbox .graybutton {
   margin-left: 10px;
 }
-/* line 73, src/partials/_detail.scss */
+/* line 48, src/partials/_detail.scss */
 #detailbox .header-detail #shoppingbox p, #results_sheet .header-detail #shoppingbox p {
   color: black;
   margin-top: 10px;
   text-align: right;
 }
 
-/* line 82, src/partials/_detail.scss */
+/* line 57, src/partials/_detail.scss */
 #richContentWidget {
   display: inline;
   float: left;
@@ -1485,11 +1411,11 @@ form.bp textarea {
 * html #richContentWidget {
   overflow-x: hidden;
 }
-/* line 84, src/partials/_detail.scss */
+/* line 59, src/partials/_detail.scss */
 #richContentWidget .richContent {
   margin: 10px 0 0 10px;
 }
-/* line 88, src/partials/_detail.scss */
+/* line 63, src/partials/_detail.scss */
 #richContentWidget .carouselThumbnails ul {
   margin: 0;
   padding: 0;
@@ -1518,7 +1444,7 @@ form.bp textarea {
   padding-right: 0px;
 }
 
-/* line 93, src/partials/_detail.scss */
+/* line 68, src/partials/_detail.scss */
 .shortdescription {
   display: inline;
   float: left;
@@ -1530,7 +1456,7 @@ form.bp textarea {
   overflow-x: hidden;
 }
 
-/* line 97, src/partials/_detail.scss */
+/* line 72, src/partials/_detail.scss */
 .product-details .description {
   display: inline-block;
   border: #8da0af solid 1px;
@@ -1543,7 +1469,7 @@ form.bp textarea {
   border-radius: 5px;
   margin: 20px;
 }
-/* line 103, src/partials/_detail.scss */
+/* line 78, src/partials/_detail.scss */
 .product-details .description h2 {
   display: inline;
   float: left;
@@ -1555,7 +1481,7 @@ form.bp textarea {
 * html .product-details .description h2 {
   overflow-x: hidden;
 }
-/* line 107, src/partials/_detail.scss */
+/* line 82, src/partials/_detail.scss */
 .product-details .description .texts {
   display: inline;
   float: left;
@@ -1569,12 +1495,12 @@ form.bp textarea {
 * html .product-details .description .texts {
   overflow-x: hidden;
 }
-/* line 112, src/partials/_detail.scss */
+/* line 87, src/partials/_detail.scss */
 .product-details .description .texts p {
   margin-bottom: 10px;
 }
 
-/* line 119, src/partials/_detail.scss */
+/* line 94, src/partials/_detail.scss */
 #shoppingbox .redbutton {
   width: 160px;
   font-size: 14px;
@@ -1586,8 +1512,105 @@ form.bp textarea {
 #filter-box {
   margin-bottom: 10px;
 }
+/* line 4, src/partials/_results.scss */
+#filter-box .psg-tire {
+  font-size: 12px;
+  display: block;
+  color: #2254c1;
+  cursor: pointer;
+  padding: 2px 0;
+}
+/* line 28, src/partials/_base.scss */
+#filter-box .psg-tire:hover {
+  color: #0090f4;
+  text-decoration: underline;
+}
+/* line 9, src/partials/_results.scss */
+#filter-box .psg-tire:hover {
+  background: #d3d3d3;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
 
-/* line 5, src/partials/_results.scss */
+/* line 15, src/partials/_results.scss */
+#filter-box, #checkout_sheet {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 710px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border: #8da0af solid 1px;
+  background: white;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #dcdcdc), color-stop(100%, #ffffff));
+  background-image: -moz-linear-gradient(top, #dcdcdc 0%, #ffffff 20%);
+  background-image: linear-gradient(top, #dcdcdc 0%, #ffffff 20%);
+  width: 730px;
+}
+/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #filter-box, * html #checkout_sheet {
+  overflow-x: hidden;
+}
+/* line 22, src/partials/_results.scss */
+#filter-box h2, #checkout_sheet h2 {
+  font-weight: bold;
+  font-size: 14px;
+}
+/* line 26, src/partials/_results.scss */
+#filter-box br, #checkout_sheet br {
+  display: none;
+}
+/* line 27, src/partials/_results.scss */
+#filter-box strong, #checkout_sheet strong {
+  display: block;
+}
+/* line 28, src/partials/_results.scss */
+#filter-box .titles, #filter-box .dropdowns, #checkout_sheet .titles, #checkout_sheet .dropdowns {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 51, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+#filter-box .titles li, #filter-box .dropdowns li, #checkout_sheet .titles li, #checkout_sheet .dropdowns li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* line 43, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+#filter-box .titles li:first-child, #filter-box .titles li.first, #filter-box .dropdowns li:first-child, #filter-box .dropdowns li.first, #checkout_sheet .titles li:first-child, #checkout_sheet .titles li.first, #checkout_sheet .dropdowns li:first-child, #checkout_sheet .dropdowns li.first {
+  padding-left: 0px;
+}
+/* line 44, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+#filter-box .titles li:last-child, #filter-box .titles li.last, #filter-box .dropdowns li:last-child, #filter-box .dropdowns li.last, #checkout_sheet .titles li:last-child, #checkout_sheet .titles li.last, #checkout_sheet .dropdowns li:last-child, #checkout_sheet .dropdowns li.last {
+  padding-right: 0px;
+}
+/* line 31, src/partials/_results.scss */
+#filter-box .titles, #checkout_sheet .titles {
+  margin: 20px;
+  font-size: 13px;
+}
+/* line 35, src/partials/_results.scss */
+#filter-box .dropdowns, #checkout_sheet .dropdowns {
+  margin: 0 0 20px 20px;
+}
+
+/* line 39, src/partials/_results.scss */
 .taxon {
   display: inline;
   float: left;
@@ -1606,7 +1629,7 @@ form.bp textarea {
 * html .taxon {
   overflow-x: hidden;
 }
-/* line 11, src/partials/_results.scss */
+/* line 45, src/partials/_results.scss */
 .taxon .breadcrumbs {
   text-decoration: none;
   margin: 20px 0 0 40px;
@@ -1614,24 +1637,24 @@ form.bp textarea {
   display: inline-block;
 }
 
-/* line 20, src/partials/_results.scss */
+/* line 54, src/partials/_results.scss */
 body.result #results_sheet {
   min-height: 400px;
   margin-top: 0;
 }
-/* line 23, src/partials/_results.scss */
+/* line 57, src/partials/_results.scss */
 body.result #results_sheet .orderfilters {
   color: #c00003;
   font-size: 12px;
   text-align: right;
   margin: 20px;
 }
-/* line 29, src/partials/_results.scss */
+/* line 63, src/partials/_results.scss */
 body.result #results_sheet form {
   padding-left: 40px;
   padding-top: 20px;
 }
-/* line 33, src/partials/_results.scss */
+/* line 67, src/partials/_results.scss */
 body.result #results_sheet .item {
   display: inline;
   float: left;
@@ -1643,7 +1666,7 @@ body.result #results_sheet .item {
 * html body.result #results_sheet .item {
   overflow-x: hidden;
 }
-/* line 37, src/partials/_results.scss */
+/* line 71, src/partials/_results.scss */
 body.result #results_sheet .item .thumb {
   display: inline;
   float: left;
@@ -1657,7 +1680,7 @@ body.result #results_sheet .item .thumb {
 * html body.result #results_sheet .item .thumb {
   overflow-x: hidden;
 }
-/* line 43, src/partials/_results.scss */
+/* line 77, src/partials/_results.scss */
 body.result #results_sheet .item .description {
   display: inline;
   float: left;
@@ -1665,7 +1688,7 @@ body.result #results_sheet .item .description {
   width: 150px;
   font-size: 12px;
 }
-/* line 44, src/partials/_results.scss */
+/* line 78, src/partials/_results.scss */
 body.result #results_sheet .item .description h2 {
   color: #c00003;
   border-bottom: 1px solid #dcdcdc;
@@ -1674,17 +1697,17 @@ body.result #results_sheet .item .description h2 {
 * html body.result #results_sheet .item .description {
   overflow-x: hidden;
 }
-/* line 50, src/partials/_results.scss */
+/* line 84, src/partials/_results.scss */
 body.result #results_sheet .item .description li {
   margin-bottom: 4px;
 }
-/* line 55, src/partials/_results.scss */
+/* line 89, src/partials/_results.scss */
 body.result #results_sheet .item ul {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 58, src/partials/_results.scss */
+/* line 92, src/partials/_results.scss */
 body.result #results_sheet .item .price {
   margin: 0;
   padding: 0;
@@ -1713,24 +1736,24 @@ body.result #results_sheet .item .price li:first-child, body.result #results_she
 body.result #results_sheet .item .price li:last-child, body.result #results_sheet .item .price li.last {
   padding-right: 0px;
 }
-/* line 61, src/partials/_results.scss */
+/* line 95, src/partials/_results.scss */
 body.result #results_sheet .item .price h3 {
   font-size: 11px;
 }
-/* line 63, src/partials/_results.scss */
+/* line 97, src/partials/_results.scss */
 body.result #results_sheet .item .price h3 strong {
   font-size: 16px;
 }
-/* line 67, src/partials/_results.scss */
+/* line 101, src/partials/_results.scss */
 body.result #results_sheet .item .price .rating {
   display: none;
 }
 
-/* line 72, src/partials/_results.scss */
+/* line 106, src/partials/_results.scss */
 body.wheel.result #results_sheet {
   min-height: 200px;
 }
-/* line 75, src/partials/_results.scss */
+/* line 109, src/partials/_results.scss */
 body.wheel.result #results_sheet .item {
   display: inline;
   float: left;
@@ -1742,61 +1765,61 @@ body.wheel.result #results_sheet .item {
 * html body.wheel.result #results_sheet .item {
   overflow-x: hidden;
 }
-/* line 78, src/partials/_results.scss */
+/* line 112, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .price {
   margin: 3px 0 0;
 }
-/* line 81, src/partials/_results.scss */
+/* line 115, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .description {
   font-size: 11px;
 }
-/* line 83, src/partials/_results.scss */
+/* line 117, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .description li {
   margin-bottom: 0px;
 }
-/* line 85, src/partials/_results.scss */
+/* line 119, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .description li strong {
   font-weight: normal;
 }
-/* line 87, src/partials/_results.scss */
+/* line 121, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .description h2 {
   border: none;
 }
-/* line 89, src/partials/_results.scss */
+/* line 123, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .description h2 strong {
   font-weight: bold;
 }
-/* line 91, src/partials/_results.scss */
+/* line 125, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .description h3 strong {
   font-size: 13px;
   font-weight: bold;
 }
 
-/* line 100, src/partials/_results.scss */
+/* line 134, src/partials/_results.scss */
 .pagination {
   color: #a1a1a1;
   font-size: 12px;
   padding-left: 40px;
 }
-/* line 104, src/partials/_results.scss */
+/* line 138, src/partials/_results.scss */
 .pagination span, .pagination a {
   border: 1px solid #a1a1a1;
   display: inline-block;
   padding: 3px 6px;
 }
-/* line 109, src/partials/_results.scss */
+/* line 143, src/partials/_results.scss */
 .pagination .current {
   background: #3d67b1;
   color: white;
   font-weight: bold;
   border-color: #3d67b1;
 }
-/* line 115, src/partials/_results.scss */
+/* line 149, src/partials/_results.scss */
 .pagination a {
   text-decoration: none;
   border-color: #3d67b1;
 }
-/* line 118, src/partials/_results.scss */
+/* line 152, src/partials/_results.scss */
 .pagination a:hover {
   color: black;
   border-color: #9eb3d8;

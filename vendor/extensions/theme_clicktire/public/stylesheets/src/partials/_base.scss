@@ -16,11 +16,20 @@ $grayborder: #DCDCDC;
 $darkgray: #676767;
 $normallink: #2254c1;
 $hoverlink: #0090f4;
+$lightgray: #d3d3d3;
 
 a{ color: $normallink;
 	&:hover{ color:$hoverlink;
 	}
 }
+@mixin fakelink{
+  color: $normallink;
+  cursor:pointer;
+	&:hover{ color:$hoverlink;
+    text-decoration: underline;
+  }
+}
+
 #content {
 	hr, .clearfix {
 		display:none;

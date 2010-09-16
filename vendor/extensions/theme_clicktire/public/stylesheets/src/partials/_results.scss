@@ -1,7 +1,41 @@
 // styles for results
 #filter-box{
 	@include append-bottom (10px);
+  .psg-tire{
+    font-size:12px;
+    display: block;
+    @include fakelink;
+    padding:2px 0;
+    &:hover{
+      background: $lightgray;
+      @include border-radius(3px);
+    }
+  }
 }	
+#filter-box, #checkout_sheet {
+	@include column(18, true);
+	@include border-radius(5px);
+	border: #8da0af solid 1px;
+	background: white;
+	@include linear-gradient(color-stops(#dcdcdc, white 20%));
+	width: 730px;
+	h2 {
+		font-weight : bold;
+		font-size: 14px;
+	}
+  br{ display:none;}
+  strong{ display: block;}
+	.titles, .dropdowns {
+		@include horizontal-list(10px);
+	}
+	.titles{
+		margin: 20px;
+		font-size: 13px;
+	}
+	.dropdowns {
+		margin: 0 0 20px 20px;
+	}
+}
 .taxon {
 	@include column(18, true);
 	@include border-radius(5px);
