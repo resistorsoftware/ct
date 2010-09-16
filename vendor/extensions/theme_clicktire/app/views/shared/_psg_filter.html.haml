@@ -1,7 +1,7 @@
 #filter-box
   %ul.titles
     %li
-      %h2= current_taxon
+      %h2= current_taxon unless current_taxon.nil?
       %br
       %span Search Results for:
     %li
