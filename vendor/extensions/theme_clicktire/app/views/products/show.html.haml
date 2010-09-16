@@ -2,7 +2,7 @@
 - content_for :sidebar do
   %p &nbsp;
 -   
-= render :partial => 'shared/psg_filter', :locals => {:current_taxon => ""}
+= render :partial => 'shared/psg_filter', :locals => {:current_taxon => @product.main_taxon}
 
 #detailbox
   .header-detail
