@@ -1641,6 +1641,8 @@ form.bp textarea {
 body.result #results_sheet {
   min-height: 400px;
   margin-top: 0;
+  padding-left: 40px;
+  padding-top: 20px;
 }
 /* line 57, src/partials/_results.scss */
 body.result #results_sheet .orderfilters {
@@ -1649,12 +1651,12 @@ body.result #results_sheet .orderfilters {
   text-align: right;
   margin: 20px;
 }
-/* line 63, src/partials/_results.scss */
+/* line 65, src/partials/_results.scss */
 body.result #results_sheet form {
   padding-left: 40px;
   padding-top: 20px;
 }
-/* line 67, src/partials/_results.scss */
+/* line 69, src/partials/_results.scss */
 body.result #results_sheet .item {
   display: inline;
   float: left;
@@ -1666,7 +1668,7 @@ body.result #results_sheet .item {
 * html body.result #results_sheet .item {
   overflow-x: hidden;
 }
-/* line 71, src/partials/_results.scss */
+/* line 73, src/partials/_results.scss */
 body.result #results_sheet .item .thumb {
   display: inline;
   float: left;
@@ -1680,7 +1682,7 @@ body.result #results_sheet .item .thumb {
 * html body.result #results_sheet .item .thumb {
   overflow-x: hidden;
 }
-/* line 77, src/partials/_results.scss */
+/* line 79, src/partials/_results.scss */
 body.result #results_sheet .item .description {
   display: inline;
   float: left;
@@ -1688,7 +1690,7 @@ body.result #results_sheet .item .description {
   width: 150px;
   font-size: 12px;
 }
-/* line 78, src/partials/_results.scss */
+/* line 80, src/partials/_results.scss */
 body.result #results_sheet .item .description h2 {
   color: #c00003;
   border-bottom: 1px solid #dcdcdc;
@@ -1697,17 +1699,17 @@ body.result #results_sheet .item .description h2 {
 * html body.result #results_sheet .item .description {
   overflow-x: hidden;
 }
-/* line 84, src/partials/_results.scss */
+/* line 86, src/partials/_results.scss */
 body.result #results_sheet .item .description li {
   margin-bottom: 4px;
 }
-/* line 89, src/partials/_results.scss */
+/* line 91, src/partials/_results.scss */
 body.result #results_sheet .item ul {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 92, src/partials/_results.scss */
+/* line 94, src/partials/_results.scss */
 body.result #results_sheet .item .price {
   margin: 0;
   padding: 0;
@@ -1736,24 +1738,24 @@ body.result #results_sheet .item .price li:first-child, body.result #results_she
 body.result #results_sheet .item .price li:last-child, body.result #results_sheet .item .price li.last {
   padding-right: 0px;
 }
-/* line 95, src/partials/_results.scss */
+/* line 97, src/partials/_results.scss */
 body.result #results_sheet .item .price h3 {
   font-size: 11px;
 }
-/* line 97, src/partials/_results.scss */
+/* line 99, src/partials/_results.scss */
 body.result #results_sheet .item .price h3 strong {
   font-size: 16px;
 }
-/* line 101, src/partials/_results.scss */
+/* line 103, src/partials/_results.scss */
 body.result #results_sheet .item .price .rating {
   display: none;
 }
 
-/* line 106, src/partials/_results.scss */
+/* line 108, src/partials/_results.scss */
 body.wheel.result #results_sheet {
   min-height: 200px;
 }
-/* line 109, src/partials/_results.scss */
+/* line 111, src/partials/_results.scss */
 body.wheel.result #results_sheet .item {
   display: inline;
   float: left;
@@ -1765,61 +1767,61 @@ body.wheel.result #results_sheet .item {
 * html body.wheel.result #results_sheet .item {
   overflow-x: hidden;
 }
-/* line 112, src/partials/_results.scss */
+/* line 114, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .price {
   margin: 3px 0 0;
 }
-/* line 115, src/partials/_results.scss */
+/* line 117, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .description {
   font-size: 11px;
 }
-/* line 117, src/partials/_results.scss */
+/* line 119, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .description li {
   margin-bottom: 0px;
 }
-/* line 119, src/partials/_results.scss */
+/* line 121, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .description li strong {
   font-weight: normal;
 }
-/* line 121, src/partials/_results.scss */
+/* line 123, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .description h2 {
   border: none;
 }
-/* line 123, src/partials/_results.scss */
+/* line 125, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .description h2 strong {
   font-weight: bold;
 }
-/* line 125, src/partials/_results.scss */
+/* line 127, src/partials/_results.scss */
 body.wheel.result #results_sheet .item .description h3 strong {
   font-size: 13px;
   font-weight: bold;
 }
 
-/* line 134, src/partials/_results.scss */
+/* line 136, src/partials/_results.scss */
 .pagination {
   color: #a1a1a1;
   font-size: 12px;
   padding-left: 40px;
 }
-/* line 138, src/partials/_results.scss */
+/* line 140, src/partials/_results.scss */
 .pagination span, .pagination a {
   border: 1px solid #a1a1a1;
   display: inline-block;
   padding: 3px 6px;
 }
-/* line 143, src/partials/_results.scss */
+/* line 145, src/partials/_results.scss */
 .pagination .current {
   background: #3d67b1;
   color: white;
   font-weight: bold;
   border-color: #3d67b1;
 }
-/* line 149, src/partials/_results.scss */
+/* line 151, src/partials/_results.scss */
 .pagination a {
   text-decoration: none;
   border-color: #3d67b1;
 }
-/* line 152, src/partials/_results.scss */
+/* line 154, src/partials/_results.scss */
 .pagination a:hover {
   color: black;
   border-color: #9eb3d8;

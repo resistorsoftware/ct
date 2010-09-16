@@ -7,11 +7,14 @@
 - if @taxon.children.empty? || !params[:keywords].blank?
   -# We are at the end of the line, show whatever products belong to this taxon or category... could be Goodyear or Drag Wheels for example
   -hook :taxon_products do
-    = render :partial => "shared/products", :locals => {:products => @products, :taxon => @taxon }
+    #results_sheet
+      = render :partial => "shared/products", :locals => {:products => @products, :taxon => @taxon }
 - else
   -# We are only drilling into some category, so therefore, try and keep the client clicking by showing something about the children... maybe a Logo???
   - hook :taxon_children do
-    = render :partial => "taxon", :collection => @taxon.children
+    #results_sheet
+      %h2 Our Current Brands
+      = render :partial => "taxon", :collection => @taxon.children
 
 -# OK, what do we want to show in the sidebar when someone clicks on a category... decide here...
 - content_for :sidebar do

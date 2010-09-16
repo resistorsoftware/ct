@@ -5,32 +5,32 @@
   = t(:no_products_found)
  
 - if products.any?
-  #results_sheet
-    %form{:name => "product_form"}
-      .results
-      - products.each do |product|   
-        %div{:id => "product_#{product.id}", :class => "item"}
-          .thumb
-            = link_to small_image(product), product 
-          .description
-            %ul
-              %li
-                %h2
-                  %strong= product.name
-              %li
-                %strong Size:
-              %li
-                %strong Serv. Desc.
-              %li
-                %strong> Speed Rating
-              %li
-                %strong Performance
-            %ul.price
-              %li
-                %h3
-                  %strong #{product_price(product)}
-                  each
-        
+  .results
+  - products.each do |product|   
+    %div{:id => "product_#{product.id}", :class => "item"}
+      .thumb
+        = link_to small_image(product), product 
+      .description
+        -# links this to a custom view helper to make it easier to maintain what this looks like
+        = product_details(product, @taxon.parent.nil? ? @taxon.name.downcase.singularize : @taxon.parent.name.downcase.singularize)
+        %ul
+          %li
+            %h2
+              %strong= product.name
+          %li
+            %strong Size:
+          %li
+            %strong Serv. Desc.
+          %li
+            %strong> Speed Rating
+          %li
+            %strong Performance
+        %ul.price
+          %li
+            %h3
+              %strong #{product_price(product)}
+              each
+      
 .clearfix &nbsp; 
 
 %hr.space

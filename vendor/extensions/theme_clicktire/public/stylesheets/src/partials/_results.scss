@@ -60,6 +60,8 @@ body.result {
 			text-align: right;
 			margin: 20px;
 		}
+		@include prepend(1);
+		padding-top: 20px;
 		form{
 			@include prepend(1);
 			padding-top: 20px;

@@ -17,6 +17,11 @@ class ThemeClicktireExtension < Spree::Extension
         Spree::Config.set(:allow_ssl_in_production => 'false')
         Spree::Config.set(:allow_anonymous_checkout => 'true')
         
+        # make your helper avaliable in all views
+        Spree::BaseController.class_eval do
+          helper :clicktire
+        end
+        
         Product.class_eval do
           # a scope that finds all products having an option value specified by name, object or id
           Product.named_scope :with_option_value_regex, lambda {|option, value|
@@ -51,10 +56,7 @@ class ThemeClicktireExtension < Spree::Extension
           end
         end
           
-        # make your helper avaliable in all views
-        #Spree::BaseController.class_eval do
-        #  helper :clicktire
-        # end
+        
         #end                    
   end
 end

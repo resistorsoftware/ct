@@ -1,3 +1,4 @@
 .taxon
   %h2= link_to taxon.name, seo_url(taxon), :class => 'breadcrumbs'
-  = render :partial => "shared/products", :locals => {:products => taxon_preview(taxon), :taxon => taxon}
+  -#= render :partial => "shared/products", :locals => {:products => taxon_preview(taxon), :taxon => taxon}
+  -#= render :partial => "shared/brands", :locals => {:products => taxon_preview(taxon), :taxon => taxon}
