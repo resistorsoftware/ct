@@ -8,7 +8,7 @@
   -# We are at the end of the line, show whatever products belong to this taxon or category... could be Goodyear or Drag Wheels for example
   -hook :taxon_products do
     #results_sheet
-      = render :partial => "shared/products", :locals => {:products => @products, :taxon => @taxon }
+      = render :partial => "shared/products", :locals => {:products => @products, :taxon => @taxon, :current_taxon => @taxon.parent.nil? ? @taxon.name.downcase.singularize : @taxon.parent.name.downcase.singularize }
 - else
   -# We are only drilling into some category, so therefore, try and keep the client clicking by showing something about the children... maybe a Logo???
   - hook :taxon_children do

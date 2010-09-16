@@ -1,15 +1,15 @@
 module ClicktireHelper
 
-  # feed me a Product, and I will provide you with some nice details for your template
-  def product_details(product, taxon)
-    case taxon
-      when 'tire'
-        'Tire Details'
-      when 'wheel'
-        'Wheel Details'
+  # feed me a Tire and I will give you the property you asked for
+  def tire_properties(product, property)
+    p = Property.find_by_name(property)
+    result = ''
+    product.product_properties.each do |pp|
+      if pp.property_id == p.id
+        result = pp.value
+      end
     end
+    result
   end
-  
-  
   
 end

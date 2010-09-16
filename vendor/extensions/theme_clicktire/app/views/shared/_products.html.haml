@@ -6,30 +6,28 @@
  
 - if products.any?
   .results
+    .description
+      - if current_taxon == 'wheel'
+        = product_description(products.first)
   - products.each do |product|   
-    %div{:id => "product_#{product.id}", :class => "item"}
+    %div{:id => "product_#{product.id}", :class => "item #{current_taxon}"}
       .thumb
         = link_to small_image(product), product 
       .description
-        -# links this to a custom view helper to make it easier to maintain what this looks like
-        = product_details(product, @taxon.parent.nil? ? @taxon.name.downcase.singularize : @taxon.parent.name.downcase.singularize)
         %ul
           %li
             %h2
               %strong= product.name
-          %li
-            %strong Size:
-          %li
-            %strong Serv. Desc.
-          %li
-            %strong> Speed Rating
-          %li
-            %strong Performance
+          - if current_taxon == 'tire'
+            %li
+              %strong Performance Category
+              %span= tire_properties(product, 'performance_category')
         %ul.price
           %li
             %h3
+              starting at
               %strong #{product_price(product)}
-              each
+              
       
 .clearfix &nbsp; 
 
