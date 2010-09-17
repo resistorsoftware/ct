@@ -11,13 +11,26 @@
           - @product.images.each do |i|  
             %li= image_tag(i.attachment.url(:product), {:height => "240px", :width => "240px"})
   #short-description
-    .ct
-      %h2= @product.name
-      - hook :product_properties do
-        = render 'properties'
+    %h2= @product.name
+    - hook :product_properties do
+      = render 'properties'
+    .price-quantity  
+      - if @product.has_stock? || Spree::Config[:allow_backorders]
+        %span.quantity
+          Quantity:
+          = text_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"), 4, :class => "title", :size => 3
+        - if product_price(@product)
+          - hook :product_price do
+            %p.prices
+              = t("price")
+              %span.price.selling= product_price(@product) + " each"
+              %span.buy= link_to image_tag('/images/icons/money_dollar.png') + t("buy"), '#', :class => 'buynow', :onclick => "$('form#updatecart').submit(); return false;"
+      - else
+        = content_tag('strong', t('out_of_stock'))        
   #long-description
-    - hook :product_description do
-      = product_description(@product) rescue t("product_has_no_description")
+    .ct
+      - hook :product_description do
+        = product_description(@product) rescue t("product_has_no_description")
   #variants
   #controls
   

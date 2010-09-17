@@ -81,6 +81,30 @@ a img {
   border: none;
 }
 
+/* incase an inverted custom gradient isn't specified */
+/* line 168, src/partials/_fancy-buttons.sass */
+.fancy-button-reset-base-class, #detail-box #short-description .price-quantity span.buy a.buynow {
+  font-family: "Lucida Grande", Lucida, Arial, sans-serif;
+  background: url('../images/button_bg.png?1284738250') repeat-x bottom left;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold;
+}
+/* line 157, src/partials/_fancy-buttons.sass */
+.fancy-button-reset-base-class::-moz-focus-inner, #detail-box #short-description .price-quantity span.buy a.buynow::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/* line 160, src/partials/_fancy-buttons.sass */
+.fancy-button-reset-base-class:focus, #detail-box #short-description .price-quantity span.buy a.buynow:focus {
+  outline: none;
+}
+
 /* line 21, src/partials/_base.scss */
 a {
   color: #2254c1;
@@ -2558,25 +2582,123 @@ body.login .ct a, body.signup .ct a, body.forgotpassword .ct a {
   float: left;
   margin-right: 0;
   width: 310px;
+  background: #efefef;
+  min-height: 300px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
-  background: #efefef;
-  min-height: 300px;
+  margin-top: 10px;
 }
 /* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #detail-box #short-description {
   overflow-x: hidden;
 }
-/* line 18, src/partials/_product.sass */
+/* line 19, src/partials/_product.sass */
 #detail-box #short-description h2 {
   font-size: 16px;
   font-weight: bold;
 }
-/* line 21, src/partials/_product.sass */
-#detail-box #short-description .ct {
-  padding: 5px;
+/* line 22, src/partials/_product.sass */
+#detail-box #short-description .price-quantity {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 29, src/partials/_product.sass */
+#detail-box #short-description .price-quantity p.price {
+  font-weight: bold;
+}
+/* line 31, src/partials/_product.sass */
+#detail-box #short-description .price-quantity span.price {
+  font-style: italic;
+  font-family: Times;
+}
+/* line 34, src/partials/_product.sass */
+#detail-box #short-description .price-quantity span.buy {
+  display: block;
+}
+/* line 36, src/partials/_product.sass */
+#detail-box #short-description .price-quantity span.buy a.buynow {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: #ff0f13;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #fabdbe), color-stop(10%, #f3686a), color-stop(50%, #ec1316), color-stop(50%, #dd1215), color-stop(100%, #ef3437));
+  background-image: -moz-linear-gradient(top, #fabdbe 0%, #f3686a 10%, #ec1316 50%, #dd1215 50%, #ef3437 100%);
+  background-image: linear-gradient(top, #fabdbe 0%, #f3686a 10%, #ec1316 50%, #dd1215 50%, #ef3437 100%);
+  border-color: #b30f11;
+  text-shadow: #8f0002 0px 1px 1px;
+}
+/* line 106, src/partials/_fancy-buttons.sass */
+#detail-box #short-description .price-quantity span.buy a.buynow, #detail-box #short-description .price-quantity span.buy a.buynow:visited {
+  color: white;
+}
+/* line 26, src/partials/_fancy-buttons.sass */
+#detail-box #short-description .price-quantity span.buy a.buynow:hover, #detail-box #short-description .price-quantity span.buy a.buynow:focus {
+  background-color: #ff0004;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #f8afb0), color-stop(10%, #f25a5c), color-stop(50%, #dd1215), color-stop(50%, #cf1114), color-stop(100%, #ed2629));
+  background-image: -moz-linear-gradient(top, #f8afb0 0%, #f25a5c 10%, #dd1215 50%, #cf1114 50%, #ed2629 100%);
+  background-image: linear-gradient(top, #f8afb0 0%, #f25a5c 10%, #dd1215 50%, #cf1114 50%, #ed2629 100%);
+  border-color: #a50d10;
+  text-shadow: #7f0002 0px 1px 1px;
+}
+/* line 106, src/partials/_fancy-buttons.sass */
+#detail-box #short-description .price-quantity span.buy a.buynow:hover, #detail-box #short-description .price-quantity span.buy a.buynow:hover:visited, #detail-box #short-description .price-quantity span.buy a.buynow:focus, #detail-box #short-description .price-quantity span.buy a.buynow:focus:visited {
+  color: white;
+}
+/* line 31, src/partials/_fancy-buttons.sass */
+#detail-box #short-description .price-quantity span.buy a.buynow:active {
+  background-color: #ef0004;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #dd1215), color-stop(30%, #e71316), color-stop(50%, #d41114), color-stop(50%, #c61013), color-stop(100%, #ee2a2d));
+  background-image: -moz-linear-gradient(top, #dd1215 0%, #e71316 30%, #d41114 50%, #c61013 50%, #ee2a2d 100%);
+  background-image: linear-gradient(top, #dd1215 0%, #e71316 30%, #d41114 50%, #c61013 50%, #ee2a2d 100%);
+  border-color: #970c0e;
+  text-shadow: #700002 0px -1px -1px;
+}
+/* line 106, src/partials/_fancy-buttons.sass */
+#detail-box #short-description .price-quantity span.buy a.buynow:active, #detail-box #short-description .price-quantity span.buy a.buynow:active:visited {
+  color: white;
+}
+/* line 39, src/partials/_product.sass */
+#detail-box #long-description {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 710px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #efefef;
+}
+/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #detail-box #long-description {
+  overflow-x: hidden;
+}
+/* line 44, src/partials/_product.sass */
+#detail-box #long-description .ct {
+  padding: 10px;
+  font-size: 12px;
+  line-height: 18px;
 }

@@ -55,16 +55,15 @@ class ThemeClicktireExtension < Spree::Extension
         end
          
         Variant.class_eval do
-          def find_by_option_type(option_type)
+          def find_option_by_type(option_type)
+            ot = OptionType.find_by_name(option_type)
             result = ''
             self.option_values.each do |ov| 
-              result = ov.presentation if ov.option_type.id == 8
+              result = ov.presentation if ov.option_type.id == ot.id
             end
-            return result
+            result
           end
         end
-          
         
-        #end                    
   end
 end
