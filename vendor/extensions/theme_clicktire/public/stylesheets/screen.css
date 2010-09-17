@@ -190,14 +190,6 @@ input {
   float: left;
   margin-right: 0;
   width: 630px;
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 750px;
-}
-/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .two-col #content, * html .one-col #content {
-  overflow-x: hidden;
 }
 /* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .two-col #content, * html .one-col #content {
@@ -1553,7 +1545,6 @@ form.bp textarea {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #dcdcdc), color-stop(100%, #ffffff));
   background-image: -moz-linear-gradient(top, #dcdcdc 0%, #ffffff 20%);
   background-image: linear-gradient(top, #dcdcdc 0%, #ffffff 20%);
-  width: 730px;
 }
 /* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #filter-box, * html #checkout_sheet {
@@ -2517,4 +2508,68 @@ body.login .ct #enable_login_via_openid, body.signup .ct #enable_login_via_openi
 /* line 46, src/partials/_login.scss */
 body.login .ct a, body.signup .ct a, body.forgotpassword .ct a {
   font-size: 12px;
+}
+
+/* line 1, src/partials/_product.sass */
+#detail-box {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 710px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  background: #ededed;
+  margin-top: 10px;
+}
+/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #detail-box {
+  overflow-x: hidden;
+}
+/* line 6, src/partials/_product.sass */
+#detail-box #image-gallery {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 390px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  background: #dedede;
+  min-height: 300px;
+  display: block;
+}
+/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #detail-box #image-gallery {
+  overflow-x: hidden;
+}
+/* line 12, src/partials/_product.sass */
+#detail-box #short-description {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 310px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  background: #efefef;
+  min-height: 300px;
+}
+/* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #detail-box #short-description {
+  overflow-x: hidden;
+}
+/* line 17, src/partials/_product.sass */
+#detail-box #short-description h2 {
+  font-size: 16px;
+  font-weight: bold;
 }

@@ -3,47 +3,22 @@
   %p &nbsp;
 -   
 = render :partial => 'shared/psg_filter', :locals => {:current_taxon => @product.main_taxon}
-
-#detailbox
-  .header-detail
-    #richContentWidget
-      .richContent.hotWidget  
-        #richContentImages.richContentTab.activeContent{:style => "display: block;"}
-          = render 'image'
-          .richContentCarousel
-          .carouselThumbnails
-            %ul
-              %li
-                %a{:target => "imageViewer", :href => "http://ecx.images-amazon.com/images/I/31MAEvxkjSL._AA260_.jpg", :id => "product_image_MAIN", :class=>""}
-                  %img{:height=>"60", :border=>"0",:width=>"60", :alt=>"Product Image", :src=>"/images/th01.jpg"}
-              %li
-                %a{:target=>"imageViewer",:href=>"http://ecx.images-amazon.com/images/I/510TlxiXtzL._AA260_.jpg",:id=>"product_image_PT01",:class=>"active"}
-                  %img{:height=>"60",:border=>"0",:width=>"60", :alt=>"Product Image",:src=>"/images/th02.jpg"}
-              %li    
-                %a{:target=>"imageViewer",:href=>"http://ecx.images-amazon.com/images/I/51tdHOcieJL._AA260_.jpg",:id=>"product_image_PT02",:class=>""}
-                  %img{:height=>"60",:border=>"0",:width=>"60", :alt=>"Product Image",:src=>"/images/th03.jpg"}
-              %li
-                %a{:target=>"imageViewer",:href=>"http://ecx.images-amazon.com/images/I/51tdHOcieJL._AA260_.jpg",:id=>"product_image_PT02",:class=>""}
-                  %img{:height=>"60",:border=>"0",:width=>"60", :alt=>"Product Image",:src=>"/images/th04.jpg"}
-              %li
-                %a{:target=>"imageViewer",:href=>"http://ecx.images-amazon.com/images/I/51tdHOcieJL._AA260_.jpg",:id=>"product_image_PT02",:class=>""}
-                  %img{:height=>"60",:border=>"0",:width=>"60", :alt=>"Product Image",:src=>"/images/th05.jpg"}
-        %span.nextLink{:style=>"display: none;"}
-        %span.prevLink{:style=>"display: none;"}
-
-    .shortdescription
-      %h1= @product.name
-      - hook :product_properties do
-        = render 'properties'
-    
-
-#product-description
-  - hook :product_description do
-    = product_description(@product) rescue t("product_has_no_description")
+#detail-box
+  #image-gallery
+    - if @product.images.size > 0
+      %ul.product-image
+        - @product.images.each do |i|  
+          %li= image_tag(i.attachment.url(:product), {:height => "240px", :width => "240px"})
+  #short-description
+    %h2= @product.name
+    - hook :product_properties do
+      = render 'properties'
+  #long-description
+    - hook :product_description do
+      = product_description(@product) rescue t("product_has_no_description")
+  #variants
+  #controls
   
-
 - hook :cart_form do
   #cart-form
     = render 'cart_form'
-
-= render 'taxons'
