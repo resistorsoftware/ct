@@ -18,7 +18,7 @@
       - if @product.has_stock? || Spree::Config[:allow_backorders]
         %span.quantity
           Quantity:
-          = text_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"), 4, :class => "title", :size => 3
+          = text_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"), "4", :class => "title", :size => 3
         - if product_price(@product)
           - hook :product_price do
             %p.prices
