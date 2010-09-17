@@ -41,6 +41,10 @@ class ThemeClicktireExtension < Spree::Extension
             }
           }
           
+          # products should render their variants by size, followed by price
+          def sort_variants_by_size
+          end
+          
           # products can either be Tires or Wheels for now.. which one is it gonna be
           def main_taxon
             wheels = self.taxons.find_by_taxonomy_id(Taxonomy.find_by_name("Wheels").id)

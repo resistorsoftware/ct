@@ -5,7 +5,8 @@
       %h2= t('variants')
       %ul
         - has_checked = false
-        - @product.variants.active.each_with_index do |v,index|
+        - variants = @product.variants.active.sort_by {|v| v.find_option_by_type("size")}
+        - variants.each_with_index do |v,index|
         -  next if v.option_values.empty? || (!v.in_stock && !Spree::Config[:show_zero_stock_products])
         -  checked = !has_checked && (v.in_stock || Spree::Config[:allow_backorders])
         -  has_checked = true if checked
@@ -14,7 +15,7 @@
               = radio_button_tag "products[#{@product.id}]", v.id, checked, :disabled => !v.in_stock && !Spree::Config[:allow_backorders]
               %span.variant-description
                 - if @product.main_taxon == 'Tires'
-                  = v.find_option_by_type("size")
+                  = v.find_option_by_type("size") + " " + v.find_option_by_type("sidewall")
                 - else
                   = variant_options v
               - if variant_price_diff v
