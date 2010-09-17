@@ -5,14 +5,16 @@
 = render :partial => 'shared/psg_filter', :locals => {:current_taxon => @product.main_taxon}
 #detail-box
   #image-gallery
-    - if @product.images.size > 0
-      %ul.product-image
-        - @product.images.each do |i|  
-          %li= image_tag(i.attachment.url(:product), {:height => "240px", :width => "240px"})
+    .ct
+      - if @product.images.size > 0
+        %ul.product-image
+          - @product.images.each do |i|  
+            %li= image_tag(i.attachment.url(:product), {:height => "240px", :width => "240px"})
   #short-description
-    %h2= @product.name
-    - hook :product_properties do
-      = render 'properties'
+    .ct
+      %h2= @product.name
+      - hook :product_properties do
+        = render 'properties'
   #long-description
     - hook :product_description do
       = product_description(@product) rescue t("product_has_no_description")

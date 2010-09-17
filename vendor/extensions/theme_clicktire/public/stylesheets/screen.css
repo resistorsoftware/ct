@@ -2522,8 +2522,8 @@ body.login .ct a, body.signup .ct a, body.forgotpassword .ct a {
   -ms-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
-  background: #ededed;
   margin-top: 10px;
+  background-color: white;
 }
 /* line 138, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #detail-box {
@@ -2541,7 +2541,6 @@ body.login .ct a, body.signup .ct a, body.forgotpassword .ct a {
   -ms-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
-  background: #dedede;
   min-height: 300px;
   display: block;
 }
@@ -2549,7 +2548,11 @@ body.login .ct a, body.signup .ct a, body.forgotpassword .ct a {
 * html #detail-box #image-gallery {
   overflow-x: hidden;
 }
-/* line 12, src/partials/_product.sass */
+/* line 11, src/partials/_product.sass */
+#detail-box #image-gallery .ct {
+  padding: 10px;
+}
+/* line 13, src/partials/_product.sass */
 #detail-box #short-description {
   display: inline;
   float: left;
@@ -2568,8 +2571,12 @@ body.login .ct a, body.signup .ct a, body.forgotpassword .ct a {
 * html #detail-box #short-description {
   overflow-x: hidden;
 }
-/* line 17, src/partials/_product.sass */
+/* line 18, src/partials/_product.sass */
 #detail-box #short-description h2 {
   font-size: 16px;
   font-weight: bold;
+}
+/* line 21, src/partials/_product.sass */
+#detail-box #short-description .ct {
+  padding: 5px;
 }

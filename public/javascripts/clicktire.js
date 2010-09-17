@@ -587,9 +587,9 @@ $(function () {
       auto_dir: 'next',     // direction of auto slideshow (options: 'next', 'prev')
       auto_hover: false,    // determines if the slideshow will stop when user hovers over slideshow
       next_text: 'next',    // text to be used for the 'next' control
-      next_image: '',       // image to be used for the 'next' control
+      next_image: '/images/icon_arrow_right.png',       // image to be used for the 'next' control
       prev_text: 'prev',    // text to be used for the 'prev' control
-      prev_image: '',       // image to be used for the 'prev' control
+      prev_image: '/images/icon_arrow_left.png',       // image to be used for the 'prev' control
       controls: true        // determines if controls will be displayed 
     });
     
