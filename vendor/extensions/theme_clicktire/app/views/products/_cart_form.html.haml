@@ -2,7 +2,6 @@
   -# hook :inside_product_cart_form do
   - if @product.has_variants?
     #product-variants
-      %h2= t('variants')
       %ul
         - has_checked = false
         - variants = @product.variants.active.sort_by {|v| v.find_option_by_type("size")}
@@ -15,11 +14,11 @@
               = radio_button_tag "products[#{@product.id}]", v.id, checked, :disabled => !v.in_stock && !Spree::Config[:allow_backorders]
               %span.variant-description
                 - if @product.main_taxon == 'Tires'
-                  = v.find_option_by_type("size") + " " + v.find_option_by_type("sidewall")
+                  = render :partial => 'tire_variants', :locals => {:variant => v}
+                  -#= v.find_option_by_type("size") + " " + v.find_option_by_type("sidewall") + " Speed Rating: " + v.find_option_by_type("speed-rating") 
                 - else
                   = variant_options v
-              - if variant_price_diff v
-                %span.price.diff= variant_price_diff v
+              
 
 - content_for :head do
   = javascript_include_tag 'product'

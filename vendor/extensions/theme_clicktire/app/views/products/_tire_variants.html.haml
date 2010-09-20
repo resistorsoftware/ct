@@ -1,0 +1,7 @@
+-# given a tire, we want to set each size apart and present the nice price and options
+- options = %w{size sidewall speed-rating}
+- options.each do |option|
+  %span.label= option
+  %span.value= variant.find_option_by_type(option)
+%span.label Price:
+%span.value= product_price variant
