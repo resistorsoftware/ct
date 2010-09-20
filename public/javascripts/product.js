@@ -1,3 +1,4 @@
+// basic product page enhancements
 $(function () {
   $('#product-variants input[type=radio]').click(function (event) {
     var price = $("#variant-price_"+this.value).text();
