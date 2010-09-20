@@ -3,4 +3,8 @@ $(function () {
     var price = $("#variant-price_"+this.value).text();
     $(".selling").text(price);
   });
+  
+  $("#product-variants li").hover(function () {
+    if($(this).toggleClass('hover-variant'));
+  })
 });

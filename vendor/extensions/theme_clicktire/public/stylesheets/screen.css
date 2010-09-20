@@ -4868,3 +4868,7 @@ body.login .ct a, body.signup .ct a, body.forgotpassword .ct a {
 #cart-form #product-variants ul li span.label {
   font-size: 10px;
 }
+/* line 64, src/partials/_product.sass */
+#cart-form #product-variants ul li.hover-variant {
+  background-color: #cccccc;
+}
