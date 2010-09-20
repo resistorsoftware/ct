@@ -4,4 +4,4 @@
   %span.label= option
   %span.value= variant.find_option_by_type(option)
 %span.label Price:
-%span.value= product_price variant
+%span{:id => "variant-price_#{variant.id}"}= product_price variant

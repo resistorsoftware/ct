@@ -15,7 +15,6 @@
               %span.variant-description
                 - if @product.main_taxon == 'Tires'
                   = render :partial => 'tire_variants', :locals => {:variant => v}
-                  -#= v.find_option_by_type("size") + " " + v.find_option_by_type("sidewall") + " Speed Rating: " + v.find_option_by_type("speed-rating") 
                 - else
                   = variant_options v
               

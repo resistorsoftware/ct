@@ -23,7 +23,8 @@
           - hook :product_price do
             %p.prices
               = t("price")
-              %span.price.selling= product_price( @product.variants.active.sort_by {|v| v.find_option_by_type("size")}.first) + " each"
+              %span.price.selling= product_price( @product.variants.active.sort_by {|v| v.find_option_by_type("size")}.first)
+              %span= t('selling_units')
               %span.buy= link_to image_tag('/images/icons/money_dollar.png') + t("buy"), '#', :class => 'buynow', :onclick => "$('form#updatecart').submit(); return false;"
       - else
         = content_tag('strong', t('out_of_stock'))        
