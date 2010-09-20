@@ -4830,7 +4830,7 @@ body.login .ct a, body.signup .ct a, body.forgotpassword .ct a {
   padding: 10px;
 }
 /* line 55, src/partials/_product.sass */
-#cart-form #product-variants ul {
+#cart-form #product-variants ul.view_options {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0px;
@@ -4842,7 +4842,7 @@ body.login .ct a, body.signup .ct a, body.forgotpassword .ct a {
   *zoom: 1;
 }
 /* line 58, src/partials/_product.sass */
-#cart-form #product-variants ul li {
+#cart-form #product-variants ul.view_options li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0px;
@@ -4853,22 +4853,31 @@ body.login .ct a, body.signup .ct a, body.forgotpassword .ct a {
   padding-right: 4px;
 }
 /* line 43, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
-#cart-form #product-variants ul li:first-child, #cart-form #product-variants ul li.first {
+#cart-form #product-variants ul.view_options li:first-child, #cart-form #product-variants ul.view_options li.first {
   padding-left: 0px;
 }
 /* line 44, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
-#cart-form #product-variants ul li:last-child, #cart-form #product-variants ul li.last {
+#cart-form #product-variants ul.view_options li:last-child, #cart-form #product-variants ul.view_options li.last {
   padding-right: 0px;
 }
 /* line 60, src/partials/_product.sass */
-#cart-form #product-variants ul li span {
+#cart-form #product-variants ul.view_options li span {
   padding: 3px;
 }
 /* line 62, src/partials/_product.sass */
-#cart-form #product-variants ul li span.label {
+#cart-form #product-variants ul.view_options li span.label {
   font-size: 10px;
 }
 /* line 64, src/partials/_product.sass */
-#cart-form #product-variants ul li.hover-variant {
+#cart-form #product-variants ul.view_options li.hover-variant {
   background-color: #cccccc;
+}
+
+/* line 66, src/partials/_product.sass */
+.all-options {
+  display: none;
+}
+/* line 68, src/partials/_product.sass */
+.all-options span {
+  display: block;
 }

@@ -4,7 +4,19 @@ $(function () {
     $(".selling").text(price);
   });
   
-  $("#product-variants li").hover(function () {
-    if($(this).toggleClass('hover-variant'));
+  $("#product-variants li").hover(
+    function (e) {
+      $(this).addClass('hover-variant');
+      
+    },
+    function (e) {
+      $(this).removeClass('hover-variant');
+    }
+  );
+
+  $('#product-variants li').qtip({
+     text: false,
+     show: 'mouseover',
+     hide: 'mouseout'
   })
 });

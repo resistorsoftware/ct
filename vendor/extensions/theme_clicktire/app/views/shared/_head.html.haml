@@ -5,7 +5,9 @@
 = javascript_include_tag "json.min.js"
 = javascript_include_tag "clicktire.js"
 = javascript_include_tag "jquery-cookie.js" 
-= javascript_include_tag "jquery.gritter.js" 
+= javascript_include_tag "jquery.gritter.js"
+= javascript_include_tag "jquery.qtip-1.0.0-rc3.min.js"
+
 - unless I18n.locale.to_s[0..1] == 'en'
   = javascript_include_tag ['localization/messages_', I18n.locale.to_s[0..1], '.js'].join
 = meta_data_tags

@@ -10,6 +10,14 @@ module ClicktireHelper
       end
     end
     result
+  end 
+  
+  # given an array of options, send back a string for a tooltip
+  def tire_options(list)
+    result = '' 
+    list.each do |option|
+      
+    end
   end
   
 end

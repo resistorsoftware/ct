@@ -2,14 +2,14 @@
   -# hook :inside_product_cart_form do
   - if @product.has_variants?
     #product-variants
-      %ul
+      %ul.view_options
         - has_checked = false
         - variants = @product.variants.active.sort_by {|v| v.find_option_by_type("size")}
         - variants.each_with_index do |v,index|
         -  next if v.option_values.empty? || (!v.in_stock && !Spree::Config[:show_zero_stock_products])
         -  checked = !has_checked && (v.in_stock || Spree::Config[:allow_backorders])
         -  has_checked = true if checked
-          %li
+          %li{:title => v.options_text}
             %label
               = radio_button_tag "products[#{@product.id}]", v.id, checked, :disabled => !v.in_stock && !Spree::Config[:allow_backorders]
               %span.variant-description

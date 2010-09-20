@@ -14,6 +14,7 @@
     %h2= @product.name
     - hook :product_properties do
       = render 'properties'
+    .other-details  
     .price-quantity  
       - if @product.has_stock? || Spree::Config[:allow_backorders]
         %span.quantity
