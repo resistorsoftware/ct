@@ -1,0 +1,48 @@
+// styles for results
+body.login, body.signup, body.forgotpassword{
+	#sidebar{
+		display: none;
+	}
+	#content {  
+		@include column(9);
+		margin-left: 320px;
+		@include border-radius(5px);
+		border: #8da0af solid 1px;
+		background: white;
+		@include linear-gradient(color-stops(#eee, white 35%));
+	}
+	.ct{
+		margin:20px 60px 60px;
+    font-size: 14px;
+    h2{ font-size: 20px;}
+		.buttons input {
+			color: white;
+			font-size:16px;
+			padding:7px 17px;
+		}		
+		ol{
+			@include no-bullet;
+			@include prepend-top(30px);
+			
+			
+		}
+    label{
+				@include reglabel;
+			}
+    input {
+      width: 100%;
+      @include biginput;
+      cursor:text;
+    }
+    #user_session_remember_me_input label{
+      input{ width: 20px;}
+      width: 130px;
+      cursor:pointer;
+      font-weight:normal;
+    }
+		#enable_login_via_openid{
+			margin-top: 20px;
+		}
+		a{ font-size: 12px;}
+	}
+}

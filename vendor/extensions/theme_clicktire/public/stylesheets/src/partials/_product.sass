@@ -1,0 +1,71 @@
+#detail-box
+  +column(18, true)
+  +border-radius(5px)
+  +prepend-top(10px)
+  background-color: #fff
+  #image-gallery
+    +column(10)
+    +border-radius(5px)
+    min-height: 300px
+    display: block
+    .ct
+      padding: 10px
+  #short-description
+    +column(8, true)
+    background: #efefef
+    min-height: 300px
+    +border-radius(5px)
+    +prepend-top(10px)
+    h2
+      font-size: 16px
+      font-weight: bold
+    .price-quantity
+      margin-left: 10px
+      margin-right: 10px
+      +prepend-top(20px)
+      padding: 10px
+      background-color: #fff
+      +border-radius(5px)
+      p.price
+        font-weight: bold
+      span.price
+        font-style: italic
+        font-family: Times 
+      span.buy
+        display: block
+        a.buynow
+          +fancy-button()
+        
+  #long-description
+    +column(18, true)
+    +border-radius(5px)
+    +prepend-top(10px)
+    background-color: #efefef
+    .ct
+      padding: 10px
+      font-size: 12px
+      line-height: 18px
+#cart-form
+  +column(18, true)
+  +border-radius(5px)
+  +prepend-top(10px)
+  background-color: #efefef
+  #product-variants
+    padding: 10px
+    ul.view_options
+      +no-bullet
+      +horizontal-list-container
+      li
+        +horizontal-list-item
+        span
+          padding: 3px
+        span.label
+          font-size: 10px
+      li.hover-variant
+        background-color: #ccc
+.all-options
+  display: none
+  span
+    display: block
+    
+
