@@ -129,6 +129,19 @@ str.replace(/[\r\t\n]/g, " ")
 
 
 (function ($) {
+  
+  
+  $.getUrlParams = function (q) {
+    var urlParams = {},
+    e,
+    d = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); },
+    r = /([^&=]+)=?([^&]*)/g;
+    while (e = r.exec(q)) {
+      urlParams[d(e[1])] = d(e[2]);
+    }
+    return urlParams;
+  }
+  
   $.fn.addOptions = function (obj) {
     options = [];
     if(obj.text.length) {
@@ -596,6 +609,19 @@ $(function () {
     $(".pagination.ajax a").live('click',function (e) {
       e.preventDefault();
       console.log("You clicked an ajax pagination link, so let's fire off an ajax request to the controller ", this);
+      var params  = $.getUrlParams($(this).attr('href'));
+      console.log("Before Params ", params);
+      $.extend(params, {criteria: params['/collections?criteria'], option: 'size'});
+      console.log("After Params ", params);
+      $.ajax({
+         type: 'get',
+         url: "/collections",
+         dataType: "script",
+         data: params,
+         success: function(res) {
+           console.log(res);
+         }
+       })
     }); 
     
 });
