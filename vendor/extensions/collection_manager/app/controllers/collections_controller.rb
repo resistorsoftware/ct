@@ -49,7 +49,7 @@ class CollectionsController < ApplicationController
         products.each do |product|
           if product.has_variants?
              product.variants.each do |variant|
-               size = variant.find_by_option_type('size')
+               size = variant.find_option_by_type('size')
                # size will now be 255/45NR15 or something like that...
                # we were handed something like 255/45-15 now split in two... 
                # so we would like to map out so that the '-' substitutes for the R15, and we ignore any other letters... how to do that?
