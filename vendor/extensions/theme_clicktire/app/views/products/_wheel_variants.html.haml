@@ -1,0 +1,8 @@
+-# given a wheel, present just the nice options that differ 
+-# choices: offset, description, diameter, color, bolt-pattern
+- visible_options = %w{bolt-pattern description }
+- visible_options.each do |option|
+  %span{:class => "label"}= option
+  %span{:class => "value"}= variant.find_option_by_type(option)
+%br
+%span{:id => "variant-price_#{variant.id}", :class => "wheel-price"} Price: #{product_price variant}

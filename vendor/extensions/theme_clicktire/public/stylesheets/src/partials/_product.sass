@@ -35,7 +35,7 @@
         display: block
         a.buynow
           +fancy-button()
-        
+      
   #long-description
     +column(18, true)
     +border-radius(5px)
@@ -57,10 +57,14 @@
       +horizontal-list-container
       li
         +horizontal-list-item
+        width: 100%
+        padding: 4px
         span
           padding: 3px
         span.label
           font-size: 10px
+        span.wheel-price
+          float: right
       li.hover-variant
         background-color: #ccc
 .all-options

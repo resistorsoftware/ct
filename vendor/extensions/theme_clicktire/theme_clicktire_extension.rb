@@ -47,10 +47,12 @@ class ThemeClicktireExtension < Spree::Extension
           
           # products can either be Tires or Wheels for now.. which one is it gonna be
           def main_taxon
+            result = ''
             wheels = self.taxons.find_by_taxonomy_id(Taxonomy.find_by_name("Wheels").id)
-            wheels.parent.name unless wheels.nil?
+            result = wheels.parent.name unless wheels.nil?
             tires = self.taxons.find_by_taxonomy_id(Taxonomy.find_by_name("Tires").id)
-            tires.parent.name unless tires.nil?  
+            result = tires.parent.name unless tires.nil?
+            result   
           end                                                                       
           
           def self.find_all_variants_by_option_value(option_type, value)

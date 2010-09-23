@@ -4851,6 +4851,8 @@ body.login .ct a, body.signup .ct a, body.forgotpassword .ct a {
   float: left;
   padding-left: 4px;
   padding-right: 4px;
+  width: 100%;
+  padding: 4px;
 }
 /* line 43, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.3/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
 #cart-form #product-variants ul.view_options li:first-child, #cart-form #product-variants ul.view_options li.first {
@@ -4860,24 +4862,28 @@ body.login .ct a, body.signup .ct a, body.forgotpassword .ct a {
 #cart-form #product-variants ul.view_options li:last-child, #cart-form #product-variants ul.view_options li.last {
   padding-right: 0px;
 }
-/* line 60, src/partials/_product.sass */
+/* line 62, src/partials/_product.sass */
 #cart-form #product-variants ul.view_options li span {
   padding: 3px;
 }
-/* line 62, src/partials/_product.sass */
+/* line 64, src/partials/_product.sass */
 #cart-form #product-variants ul.view_options li span.label {
   font-size: 10px;
 }
-/* line 64, src/partials/_product.sass */
+/* line 66, src/partials/_product.sass */
+#cart-form #product-variants ul.view_options li span.wheel-price {
+  float: right;
+}
+/* line 68, src/partials/_product.sass */
 #cart-form #product-variants ul.view_options li.hover-variant {
   background-color: #cccccc;
 }
 
-/* line 66, src/partials/_product.sass */
+/* line 70, src/partials/_product.sass */
 .all-options {
   display: none;
 }
-/* line 68, src/partials/_product.sass */
+/* line 72, src/partials/_product.sass */
 .all-options span {
   display: block;
 }
