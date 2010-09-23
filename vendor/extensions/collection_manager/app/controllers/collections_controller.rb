@@ -10,7 +10,7 @@ class CollectionsController < ApplicationController
       format.html
       format.js {
         render :update do |page|
-          page.replace 'content', :partial => 'collections/results', :locals => {:variants => @variants, :products => @products}
+          page.replace 'replaceable', :partial => 'collections/results', :locals => {:variants => @variants, :products => @products, :taxon => @t}
         end
       }
     end
