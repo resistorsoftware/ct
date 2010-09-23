@@ -3,38 +3,40 @@
   %p &nbsp;
 -   
 = render :partial => 'shared/psg_filter', :locals => {:current_taxon => @product.main_taxon}
-- form_for :order, :url => orders_url do |f|  
-  #detail-box
-    #image-gallery
-      .ct
-        - if @product.images.size > 0
-          %ul.product-image
-            - @product.images.each do |i|  
-              %li= image_tag(i.attachment.url(:product), {:height => "240px", :width => "240px"})
-    #short-description
-      %h2= @product.name
-      - hook :product_properties do
-        = render 'properties'
-      .other-details  
-      .price-quantity  
-        - if @product.has_stock? || Spree::Config[:allow_backorders]
-          %span.quantity
-            Quantity:
-            = text_field_tag "quantity", "4", {:class => "title", :size => 3}
-          - if product_price(@product)
-            - hook :product_price do
-              %p.prices
-                = t("price")
-                %span.price.selling= product_price( @product.variants.active.sort_by {|v| v.find_option_by_type("size")}.first)
-                %span= t('selling_units')
-                %span.buy= link_to image_tag('/images/icons/money_dollar.png') + t("buy"), '#', :class => 'buynow', :onclick => "$('form').submit(); return false;"
-        - else
-          = content_tag('strong', t('out_of_stock'))        
-    #long-description
-      .ct
-        - hook :product_description do
-          = product_description(@product) rescue t("product_has_no_description")
+#results_sheet
+  #replaceable
+    - form_for :order, :url => orders_url do |f|  
+      #detail-box
+        #image-gallery
+          .ct
+            - if @product.images.size > 0
+              %ul.product-image
+                - @product.images.each do |i|  
+                  %li= image_tag(i.attachment.url(:product), {:height => "240px", :width => "240px"})
+        #short-description
+          %h2= @product.name
+          - hook :product_properties do
+            = render 'properties'
+          .other-details  
+          .price-quantity  
+            - if @product.has_stock? || Spree::Config[:allow_backorders]
+              %span.quantity
+                Quantity:
+                = text_field_tag "quantity", "4", {:class => "title", :size => 3}
+              - if product_price(@product)
+                - hook :product_price do
+                  %p.prices
+                    = t("price")
+                    %span.price.selling= product_price( @product.variants.active.sort_by {|v| v.find_option_by_type("size")}.first)
+                    %span= t('selling_units')
+                    %span.buy= link_to image_tag('/images/icons/money_dollar.png') + t("buy"), '#', :class => 'buynow', :onclick => "$('form').submit(); return false;"
+            - else
+              = content_tag('strong', t('out_of_stock'))        
+        #long-description
+          .ct
+            - hook :product_description do
+              = product_description(@product) rescue t("product_has_no_description")
   
-  - hook :cart_form do
-    #cart-form
-      = render 'cart_form'
+      - hook :cart_form do
+        #cart-form
+          = render 'cart_form'

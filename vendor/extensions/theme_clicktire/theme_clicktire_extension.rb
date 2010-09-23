@@ -20,6 +20,7 @@ class ThemeClicktireExtension < Spree::Extension
         # make your helper avaliable in all views
         Spree::BaseController.class_eval do
           helper :clicktire
+          helper :products
         end
         
         Product.class_eval do

@@ -1,2 +1,3 @@
-module CollectionsHelper
+module CollectionsHelper      
+    
 end

@@ -1,6 +1,40 @@
-#replaceable
-  - variants.each do |result|
-    .taxon #{result.options_text} #{result.price}
+-# products will take care of the paging for us, variants are what we render
 
-  - if products.respond_to?(:total_pages)  
-    = will_paginate products, :class => 'pagination ajax'  
+#replaceable
+  - if products.empty?
+    = t(:no_products_found)
+  
+  - if products.any?
+    - variants.each do |variant|   
+      %div{:id => "product_#{variant.product.id}", :class => "item #{taxon.name.downcase.singularize}"}
+        .thumb
+          = link_to small_image(variant.product), variant.product 
+        .description
+          %ul
+            %li
+              %h2
+                %strong= variant.product.name
+            %li
+              %strong Performance Category
+              %span= tire_properties(variant.product, 'performance_category')
+            %li
+              %strong Size
+              %span= variant.find_option_by_type('size')  
+            %li
+              = link_to "View Product", variant.product
+          %ul.price
+            %li
+              %h3
+                starting at
+                %strong #{product_price(variant.product)}
+          
+
+      .clearfix &nbsp;
+        
+    
+    - if products.respond_to?(:total_pages)  
+      = will_paginate products, :class => 'pagination ajax'
+  
+  
+:javascript
+  $('body').removeClass().addClass('tire result');

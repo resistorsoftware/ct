@@ -591,6 +591,11 @@ $(function () {
       prev_text: 'prev',    // text to be used for the 'prev' control
       prev_image: '/images/icon_arrow_left.png',       // image to be used for the 'prev' control
       controls: true        // determines if controls will be displayed 
-    });
+    }); 
+                         
+    $(".pagination.ajax a").live('click',function (e) {
+      e.preventDefault();
+      console.log("You clicked an ajax pagination link, so let's fire off an ajax request to the controller ", this);
+    }); 
     
 });

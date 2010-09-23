@@ -7,10 +7,10 @@ class CollectionsController < ApplicationController
     @products = retrieve_products
     @variants = retrieve_variants(@products)
     respond_to do |format|
-      format.html
+      format.html {}
       format.js {
         render :update do |page|
-          page.replace 'replaceable', :partial => 'collections/results', :locals => {:variants => @variants, :products => @products, :taxon => @t}
+          page.replace 'replaceable', :partial => 'collections/results', :locals => {:variants => @variants, :products => @products, :taxon => Taxon.find_by_name(params[:t])}
         end
       }
     end
@@ -40,7 +40,6 @@ class CollectionsController < ApplicationController
           :per_page => per_page,
           :page     => curr_page
       })
-      puts "\n\n\nProducts #{@products.inspect}\n\n\n"
       @products
      end
      
